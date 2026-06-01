@@ -222,10 +222,11 @@ Show this visual:
 │  DAY 1 PRIMITIVE MAP                                    │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  Lesson 4:  Model choice         You picked a model     │
-│  Lesson 5:  Atomic tools         Agent used read/write   │
-│  Lesson 6:  Agentic loop         THINK → TOOL → THINK   │
-│  Lesson 7:  Harness engineering  Cursor/Claude Code wrap │
+│  Lesson 3:  Model choice         You picked a model     │
+│  Lesson 4:  Atomic tools         Agent used read/write   │
+│  Lesson 5:  Agentic loop         THINK → TOOL → THINK   │
+│  Lesson 6:  Harness engineering  Cursor/Claude Code wrap │
+│  Lesson 7:  MCP & tool design    Tools reach across net  │
 │  Lesson 8:  Context engineering  Structured your context │
 │  Lesson 9:  Markdown as UI       .md files = interface   │
 │  Lesson 10: System prompts       AGENTS.md / CLAUDE.md   │

@@ -1,4 +1,4 @@
-# 5. An Intentionally Vague Prompt → Atomic Tools
+# 4. An Intentionally Vague Prompt → Atomic Tools
 
 > **Magic Moment:** A 3-word prompt accomplishes a multi-step task because the agent has atomic tools that compose like LEGO — and you watch it happen in real time.
 

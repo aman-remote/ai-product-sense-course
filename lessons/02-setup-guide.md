@@ -1,4 +1,4 @@
-# 3. Setup Guide → Environment as Context
+# 2. Setup Guide → Environment as Context
 
 > **Magic Moment:** You realize that "setting up tools" IS the first act of context engineering — the directory structure you open Cursor in, the files it can see, the model you choose — these are all product decisions that affect output quality.
 
@@ -152,7 +152,7 @@ Show this visual:
 > - Viewer → human interface
 >
 > **What would you like to do next?**
-> - **A)** Move to Lesson 4 — your first hands-on with the agent (model choice in action)
+> - **A)** Move to Lesson 3 — your first hands-on with the agent (model choice in action)
 > - **B)** Run `./setup.sh` and explore the repo structure
 > - **C)** I'm stuck on setup — help me troubleshoot
 

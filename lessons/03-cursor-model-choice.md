@@ -1,4 +1,4 @@
-# 4. Get Comfortable with Cursor → Model Choice & Abstraction
+# 3. Get Comfortable with Cursor → Model Choice & Abstraction
 
 > **Magic Moment:** You watch the same parody prompt produce wildly different results when you swap models — and suddenly realize "model choice" isn't a technical detail, it's a product decision you already make (you just didn't know it).
 
@@ -19,7 +19,7 @@ CRITICAL RULES:
 
 ### Setup Check
 
-> "For this lesson you need Cursor open with any project folder (the one from Lesson 3 works great, or just open an empty folder). Make sure you can see the left sidebar, a file open in the editor, and the chat panel on the right."
+> "For this lesson you need Cursor open with any project folder (the one from Lesson 2 works great, or just open an empty folder). Make sure you can see the left sidebar, a file open in the editor, and the chat panel on the right."
 >
 > "Can you see all three areas? If you don't see the chat panel, hit `Cmd+L` (Mac) or `Ctrl+L` (Windows)."
 
@@ -207,7 +207,7 @@ Show this visual:
 > - Model abstraction means you decouple product from provider. Swap brains without breaking features.
 >
 > **What would you like to do next?**
-> - **A)** Move on to Lesson 5 — atomic tools and what agents can actually DO
+> - **A)** Move on to Lesson 4 — atomic tools and what agents can actually DO
 > - **B)** Try more model comparisons with a prompt from your real work
 > - **C)** Explore Cursor's agent mode deeper — have it refactor or build something
 

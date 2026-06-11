@@ -48,3 +48,6 @@ FIX: make demos non-trivial (loop where the agent must discover state / recover)
 - **P2 (polish):** idiom pass; first-use glosses for "harness" and "slop"; lead L16 with the reliable slash-command before the flaky model-invoked skill.
 
 Caveat: 5 LLM role-plays are directional. The convergent items (sample-folder blocker hit by 2 personas independently; tool-filename trap hit by 2) are the highest-confidence.
+
+## Struggle transcripts
+See `SYNTHETIC-TEST-TRANSCRIPTS.md` for turn-by-turn simulated transcripts showing each failure mode in action (the beginner's terminal spiral, the silently-ignored AGENTS.md, the Notion admin wall, the missing Personal OS, the skeptic's disengagement, the idiom stalls). This report says what broke; the transcripts show it.

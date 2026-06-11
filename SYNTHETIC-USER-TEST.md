@@ -4,6 +4,8 @@ Method: 5 AI personas spanning the real audience axes role-played being taught e
 
 Personas: Anna (true beginner, terminal-phobic), Dev (skeptical ex-engineer), Priya (time-poor senior PM), Kenji (fluent non-native English, Japan), Marcus (locked-down laptop, no shareable data, joined mid-course).
 
+> **Audience calibration (post-test correction).** The typical student is a ChatGPT/Claude-literate PM — knows what a system prompt is, comfortable installing an app and running a setup command, not a true novice. The "Anna" terminal-panic persona was a useful stress test but a false floor: fixes driven purely by her panic (e.g. demoting Claude Code to optional, over-glossing common terms) were reverted because they (a) broke later lessons that require Claude Code and (b) patronize a capable user. Kept: fixes that help any user regardless of skill (silent-failure bugs, missing-prerequisite fallbacks, overgeneralizations that lose the skeptic, accessibility/idiom fixes for non-native speakers). The persona findings below stand; the *response* to Anna's was retuned to "assume competence."
+
 ## Top findings (ranked by how many personas independently hit them)
 
 ### 1. Missing sample "Personal OS" = hard blocker (Marcus, Priya)
@@ -15,7 +17,7 @@ L9/11/12/18 push "your actual tasks", "YOUR codebase / @codebase", "real, sent, 
 
 ### 3. Setup (L2) front-loads the scariest work and gates everything after it (Anna)
 The terminal `curl | bash`, nested Node/git installs, and a model-dropdown hunt land right when a beginner is most fragile — and L5/6/7 are gated behind it. High quit probability in lesson 2.
-FIX: make Cursor-GUI the required beginner path; demote Claude Code/terminal/curl to an optional "when ready" box (the lesson already half-hedges this).
+FIX (retuned): NOT demoting Claude Code — later lessons require it. Instead L2 now installs both tools in three brisk, plain steps (Cursor, clone, Claude Code) with no anxiety-management framing. A ChatGPT-literate PM can run one install command; the original "Anna panic" fix was reverted as both bug-inducing (broke L5/6/16/17) and patronizing.
 
 ### 4. Silent-failure traps that read as "it's broken" not "I did it wrong" (Priya, Kenji)
 - L10: writes `AGENTS.md` but Claude Code reads `CLAUDE.md` / Cursor reads `.cursorrules` — if the filename doesn't match the tool, the fresh-chat persistence test shows no change and the magic moment silently dies. Highest-impact break.

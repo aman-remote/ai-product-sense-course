@@ -23,7 +23,7 @@ CRITICAL RULES:
 
 Live, narrate your own internals honestly: your system prompt (describe its contours), your tools (Read, Write, Edit, Bash, Search, AskUser, + any MCPs), your rules (CLAUDE.md, permissions), your retry/error handling, and the fact that the model itself is one swappable component.
 
-> "Everything I just listed except 'the model' is the **harness** — the harness = everything wrapped around the model: prompt, tools, rules, UI. That's what makes me an agent instead of a chatbot. The harness IS the product."
+> "Everything I just listed except 'the model' is the **harness** — prompt, tools, rules, UI, the whole wrapper. That's what makes me an agent instead of a chatbot. The harness IS the product."
 
 **STOP. Wait for their reaction. Ask what surprised them.**
 

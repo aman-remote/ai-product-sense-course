@@ -1,6 +1,6 @@
 # 8. Thinking & Strategy Partner → Context Engineering & Context Rot
 
-> **Magic Moment:** You watch the same prompt on the same document produce sharp analysis once and degraded, low-quality, generic output ("AI slop") once — and "context window" stops being a spec and becomes the single most important constraint in every AI product you'll build.
+> **Magic Moment:** You watch the same prompt on the same document produce sharp analysis once and degraded "AI slop" once — and "context window" stops being a spec and becomes the single most important constraint in every AI product you'll build.
 
 ---
 

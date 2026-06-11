@@ -43,7 +43,7 @@ did i break it??
 **Student:** ohhh ok that worked, i see Tasks and Knowledge and a README on the left now. that was so much less scary lol. why didn't it just say to do this first
 
 **Where it broke:** The lesson led an absolute beginner into the optional terminal install first; the missing-Node error cascaded into a sudo/permissions spiral and she nearly quit out of fear of damaging her machine. The GUI path was one step away the whole time.
-**Fix applied:** The Cursor GUI clone is now the single required path; the terminal/Claude Code route is demoted to an explicitly skippable "when you're ready (optional)" box.
+**Fix applied (retuned):** Claude Code stays required (later lessons need it). L2 now installs both tools in three brisk, plain steps with offered GUI-or-terminal clone and no anxiety framing — the original "make the terminal optional" fix was reverted because it broke downstream lessons and patronized a capable, ChatGPT-literate audience. (This transcript shows the *pre-retune* over-correction, kept as a record of the calibration mistake.)
 
 ---
 

@@ -6,48 +6,60 @@
 
 ## Instructions for Claude
 
-You are teaching this interactively. This lesson needs the student's hands on the keys — they install the real tools. You demo/explain, then THEY do it; help the moment anything breaks. The theory (setup = context engineering) was covered live and in Notion — reinforce it in a sentence at the end, don't lecture. Detect their OS from context and show only the matching commands.
+You are teaching this interactively. The student installs the real tools (Cursor and Claude Code) — both are used across the course. You explain each piece in a sentence and troubleshoot if something breaks; assume a capable, ChatGPT/Claude-literate PM, so don't over-explain or hand-hold. The theory (setup = context engineering) was covered live and in Notion — reinforce it in one sentence at the end. Detect their OS from context and show only the matching commands.
 
 CRITICAL RULES:
 - **ONE step per message.** STOP and wait after each one.
 - **Keep each message SHORT** — 3-5 sentences max.
-- The student runs the installs; you narrate what each piece is and troubleshoot when they get stuck.
+- The student runs the installs; you name what each piece is and troubleshoot if they get stuck.
 - Use ASCII visuals only to mirror something they just set up.
-- Use the AskUserQuestion tool when you need their input (e.g. what they already have installed).
+- Use the AskUserQuestion tool when you need their input (e.g. what they already have).
 
 ---
 
-### Step 1: Get Cursor Running (Your Turn)
+### Step 1: Get Cursor Running
 
-> "First tool: Cursor — VS Code with an AI agent built in. It's your command center: files on the left, editor in the middle, chat/agent on the right, terminal at the bottom."
+> "First tool: Cursor — VS Code with an AI agent built in. Files on the left, editor in the middle, chat/agent on the right, terminal at the bottom."
 
-Ask what they already have. If they don't have Cursor: have them download it from cursor.com and open it. If they do: have them open it. Then have them open Settings, turn OFF "auto" model selection, and pick the strongest model available (claude-4.6-opus > gpt-5.3 > gemini-3 — the 🧠 means reasoning model).
+Ask what they already have. Have them download Cursor from cursor.com (or open it if installed), then open Settings, turn OFF "auto" model selection, and pick the strongest reasoning model (look for the 🧠 — exact names move fast, just pick the top reasoning option).
 
-> Reassure them: the exact names in their dropdown may differ from these — versions move fast. They just need to pick the top reasoning option (look for the 🧠). The specific name doesn't matter.
+> "That model dropdown is the single most important knob in the tool — it's your quality ceiling. We'll prove why next lesson."
 
-> "That model dropdown you just set is the single most important knob in the tool — it's your quality ceiling. We'll prove why next lesson."
-
-**STOP. Help if anything's broken (org block, can't find settings). Wait for confirmation.**
+**STOP. Help if anything's broken (org block → Cline/Copilot). Wait for confirmation.**
 
 ---
 
-### Step 2: Your Turn — Clone the Project & See the Boundary (GUI, no terminal)
+### Step 2: Clone the Project
 
-> "Now the project we'll 'manage' all course: a personal-OS made of markdown files. We'll clone it straight from Cursor's GUI — no terminal needed."
+> "Now the project we'll 'manage' all course: a personal-OS made of markdown files."
 
-**Your turn — all in Cursor's GUI:** File → New Window → **Clone from URL**, paste:
+Have them clone it — either way works:
+- **Cursor GUI:** File → New Window → **Clone from URL**, paste the URL, pick a folder, Open.
+- **Terminal:** `git clone https://github.com/amanaiproduct/personal-os.git && cd personal-os`
+
 ```
 https://github.com/amanaiproduct/personal-os.git
 ```
-Pick a folder when prompted, then **Open** it in Cursor.
 
-**Important:** You should now see `Tasks/`, `Knowledge/`, `README.md`, `setup.sh` in the file explorer on the left.
+They should see `Tasks/`, `Knowledge/`, `README.md`, `setup.sh` in the file explorer.
 
-**Stretch:** Open the same folder as a vault in Obsidian (if installed) — same files, two views: agent + note viewer.
+> "Opening Cursor *in this folder* just drew a boundary: the agent sees these files and nothing outside (unless told). That's identical to how production AI scopes its RAG."
 
-> "Opening Cursor *in this folder* just drew a boundary: the agent can see these files and nothing outside (unless told). That boundary is identical to how production AI scopes its RAG."
+**STOP. Wait for confirmation (if Cursor offers to install git, say Yes).**
 
-**STOP. Help if 'Clone from URL' fails (if Cursor asks to install git, just say Yes / or ask Cursor's agent "install git for me"). Wait for confirmation.**
+---
+
+### Step 3: Get Claude Code Running
+
+> "Second tool: Claude Code — a terminal agent. Same model power as Cursor's chat, pure text interface, like texting a senior engineer. Several later lessons use it (subagents, modes, skills), so let's get it in now."
+
+Detect their OS and give ONLY the matching block, then have them run `claude` and log in:
+- **macOS/Linux:** `curl -fsSL https://claude.ai/install.sh | bash`
+- **Windows (PowerShell):** `irm https://claude.ai/install.ps1 | iex`
+
+> "Run `claude` in your project folder and say hi to confirm it's working."
+
+**STOP. Help if install fails (almost always Node.js missing → nodejs.org → LTS). Wait for confirmation.**
 
 ---
 
@@ -67,28 +79,7 @@ TOOLS → what it can do     VIEWER → how you see output
 
 **Share prompt:** "What model did you pick, and why? Did 'auto' tempt you?"
 
----
-
-### ⚡ When you're ready (optional): the terminal route
-
-> "You finished the whole lesson without touching a terminal — that's by design. This box is for later, when you're curious. Skip it entirely if you want; nothing below is required."
-
-**Optional tool: Claude Code** — a terminal agent. Same power as Cursor's chat, pure text interface, like texting a senior engineer. Detect their OS and give ONLY the matching block, then have them run `claude` and log in:
-
-- **macOS/Linux:** open Terminal (Cmd+Space → "Terminal", or Ctrl+Alt+T on Linux), then `curl -fsSL https://claude.ai/install.sh | bash`
-- **Windows:** open PowerShell (not ISE/CMD), then `irm https://claude.ai/install.ps1 | iex`
-
-> "If it asks permission, say Yes — you can undo anything. Fully optional; if it fights you, skip it and come back another day."
-
-**If install fails, it's almost always Node.js missing (nodejs.org → LTS).**
-
-**Optional — clone via terminal instead of the GUI:**
-```bash
-git clone https://github.com/amanaiproduct/personal-os.git
-cd personal-os
-```
-
-**Super-stretch:** Run `./setup.sh` and skim what it scaffolds.
+**Stretch:** Open the same folder as a vault in Obsidian — same files, two views (agent + note viewer). And run `./setup.sh` to see what it scaffolds.
 
 ---
 

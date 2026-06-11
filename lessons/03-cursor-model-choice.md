@@ -69,7 +69,7 @@ Read lyrics.txt. Write a parody in parody-v2.txt — a PM letting go of cut scop
 
 ### 🎉 What Just Happened
 
-> "Same prompt, same context, different model, different output — that's model choice as a product decision, and you just made it with your own eyes. Every AI product wraps the model in a harness so the brain can swap without breaking the interface: Harvey routes easy tasks to cheap models and hard ones to Opus; many production apps swap the underlying model without changing their UI. You build around the harness, not the model."
+> "Same prompt, same context, different model, different output — that's model choice as a product decision, and you just made it with your own eyes. Many AI products wrap the model in a harness so the brain can swap without breaking the interface: products like Harvey reportedly route easy tasks to cheap models and hard ones to Opus; many production apps swap the underlying model without changing their UI. You build around the harness, not the model."
 
 **What next?**
 - **A)** Lesson 4 — atomic tools and what agents can actually DO
@@ -94,7 +94,7 @@ Directory (files/folders) · Editor (read/edit) · Chat/Agent (talk to the model
 - **Harvey**: routes by complexity — cheap/fast for lookups, powerful for legal reasoning.
 - **Model-agnostic harnesses**: products swap the underlying model behind a stable interface; the user-facing app does not change.
 - **Cursor**: exposes the choice directly; "Auto" is the billing proxy.
-- **Every serious AI startup**: wraps model calls in an abstraction layer to avoid provider lock-in.
+- **Most serious AI startups**: wrap model calls in an abstraction layer to avoid provider lock-in.
 
 ### Misconceptions (correct only if raised)
 - "All models are basically the same now" — They aren't. Style, reasoning depth, tool-calling reliability, cost differ. The parody test proves it.

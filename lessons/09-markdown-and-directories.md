@@ -62,6 +62,8 @@ Open a task file, check the frontmatter, and see if you agree with the prioritie
 
 > "**Stretch:** `Review Tasks/ and reprioritize — the board meeting is Thursday. Update the frontmatter and tell me what changed and why.` **Super-stretch:** run `git diff` to see exactly what the agent changed, and `git checkout` to revert a bad triage."
 
+(Precondition for the git steps: if this folder isn't a git repo yet, run `git init` first.)
+
 **STOP. Let them run it. React to what their triage produced.**
 
 ---

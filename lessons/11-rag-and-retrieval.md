@@ -23,7 +23,7 @@ CRITICAL RULES:
 
 Run this live on a small sample folder (create one with an AGENTS.md, a couple Tasks/ files, a GOALS.md, a Knowledge/ note if needed). Ask yourself the broad question out loud — "What's the most important thing in this project?" — and narrate as you list the tree and read each file, calling out which ones you opened.
 
-Then do the showstopper: assemble an onboarding doc for a new hire (what this is, active work, priorities, key decisions, where to find things). Point at how it's pulled from specific files.
+Then do the impressive part: assemble an onboarding doc for a new hire (what this is, active work, priorities, key decisions, where to find things). Point at how it's pulled from specific files.
 
 > "I didn't know the answer — I retrieved it by reading your files, then generated a grounded response. Retrieval + generation = RAG."
 
@@ -54,11 +54,13 @@ Two flavors: on-the-fly (agent reads files) vs indexed (@codebase, semantic)
 
 > "Now point it at YOUR project — ideally the one with Tasks/, AGENTS.md, and knowledge files. The more files, the more impressive."
 
+(No such multi-file project yet, or can't use work data? Point the agent at the `sample-personal-os/` folder at the repo root — it's richer than the demo folder and works perfectly here.)
+
 **Important:** Switch Cursor to **Ask** mode (read, don't write) and run:
 ```
 Pretend you're writing an onboarding doc for a new team member joining this project. Cover: what it is, what's being worked on, priorities, key decisions, and where to find things.
 ```
-Then a targeted one: `Find all P0 tasks, summarize them, and flag any dependencies.` Watch which files it opens.
+Then a targeted one: `Find your highest-priority items (whatever you label them — P0, P1, urgent, etc.), summarize them, and flag any dependencies.` Watch which files it opens.
 
 > "**Stretch:** try `@codebase What themes and patterns run across all my tasks and notes?` — indexed retrieval, often catches files the on-the-fly read missed. **Super-stretch:** `Find contradictions across my docs` or `What's missing from this project?`"
 

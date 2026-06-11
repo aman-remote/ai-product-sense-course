@@ -32,7 +32,7 @@ Try to fetch OpenClaw's actual system prompt live — search the `openclaw/openc
 
 ### Step 2: Name It (briefly)
 
-> "Autonomy isn't a smarter model — it's two harness knobs."
+> "Autonomy isn't a smarter model — it's two knobs (permissions + cadence) plus a messaging bridge."
 
 Show this visual:
 
@@ -67,7 +67,7 @@ Same model. Same tools. Same loop. New config.
 
 ### 🎉 What Just Happened
 
-> "Every 'magical' OpenClaw capability decomposes into things you already know: a system prompt, tools, the agentic loop, memory-as-files, and harness-level autonomy settings. The whole game of AI product sense is holding BOTH at once — feeling the magic AND seeing it's just good architecture. That's how you spot where the next wave goes instead of just following it."
+> "Most of the magic of every OpenClaw capability decomposes into things you already know: a system prompt, tools, the agentic loop, memory-as-files, and harness-level autonomy settings. The whole game of AI product sense is holding BOTH at once — feeling the magic AND seeing it's just good architecture. That's how you spot where the next wave goes instead of just following it."
 
 **What next?**
 - **A)** Lesson 15 — AI prototyping with plans and feedback loops

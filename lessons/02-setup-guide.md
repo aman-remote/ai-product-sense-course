@@ -23,52 +23,37 @@ CRITICAL RULES:
 
 Ask what they already have. If they don't have Cursor: have them download it from cursor.com and open it. If they do: have them open it. Then have them open Settings, turn OFF "auto" model selection, and pick the strongest model available (claude-4.6-opus > gpt-5.3 > gemini-3 — the 🧠 means reasoning model).
 
+> Reassure them: the exact names in their dropdown may differ from these — versions move fast. They just need to pick the top reasoning option (look for the 🧠). The specific name doesn't matter.
+
 > "That model dropdown you just set is the single most important knob in the tool — it's your quality ceiling. We'll prove why next lesson."
 
 **STOP. Help if anything's broken (org block, can't find settings). Wait for confirmation.**
 
 ---
 
-### Step 2: Get Claude Code Running (Your Turn)
+### Step 2: Your Turn — Clone the Project & See the Boundary (GUI, no terminal)
 
-> "Second tool: Claude Code — a terminal agent. Same power as Cursor's chat, pure text interface, like texting a senior engineer. Let's install it."
+> "Now the project we'll 'manage' all course: a personal-OS made of markdown files. We'll clone it straight from Cursor's GUI — no terminal needed."
 
-Detect their OS and give ONLY the matching block, then have them run `claude` and log in:
-
-- **macOS/Linux:** open Terminal (Cmd+Space → "Terminal", or Ctrl+Alt+T on Linux), then `curl -fsSL https://claude.ai/install.sh | bash`
-- **Windows:** open PowerShell (not ISE/CMD), then `irm https://claude.ai/install.ps1 | iex`
-
-> "If it asks permission, say Yes — you can undo anything. Optional but recommended; if it fights you, we can skip and come back."
-
-**STOP. If install fails, it's almost always Node.js missing (nodejs.org → LTS). Help, then wait.**
-
----
-
-### Step 3: Your Turn — Clone the Project & See the Boundary
-
-> "Now the project we'll 'manage' all course: a personal-OS made of markdown files. Clone it and open it in Cursor."
-
-**Your turn — in Cursor (File → New Window → Clone from URL) or terminal:**
-```bash
-git clone https://github.com/amanaiproduct/personal-os.git
-cd personal-os
+**Your turn — all in Cursor's GUI:** File → New Window → **Clone from URL**, paste:
 ```
+https://github.com/amanaiproduct/personal-os.git
+```
+Pick a folder when prompted, then **Open** it in Cursor.
 
-**Important:** Open that folder in Cursor. You should see `Tasks/`, `Knowledge/`, `README.md`, `setup.sh`.
+**Important:** You should now see `Tasks/`, `Knowledge/`, `README.md`, `setup.sh` in the file explorer on the left.
 
 **Stretch:** Open the same folder as a vault in Obsidian (if installed) — same files, two views: agent + note viewer.
 
-**Super-stretch:** Run `./setup.sh` and skim what it scaffolds.
-
 > "Opening Cursor *in this folder* just drew a boundary: the agent can see these files and nothing outside (unless told). That boundary is identical to how production AI scopes its RAG."
 
-**STOP. Help if the clone fails (git missing → ask Cursor's agent "install git for me"). Wait for confirmation.**
+**STOP. Help if 'Clone from URL' fails (if Cursor asks to install git, just say Yes / or ask Cursor's agent "install git for me"). Wait for confirmation.**
 
 ---
 
 ### 🎉 What Just Happened
 
-> "You didn't just 'do setup' — you made four product decisions: which MODEL (quality ceiling), which DIRECTORY (context boundary), which TOOLS (what it can do), which VIEWER (how you see output). Every AI product makes these same four. Harvey picks Claude + legal docs + tools + UI; Notion AI picks its model + workspace + actions + editor. Setup IS the first context-engineering decision."
+> "You didn't just 'do setup' — you made four product decisions: which MODEL (quality ceiling), which DIRECTORY (context boundary), which TOOLS (what it can do), which VIEWER (how you see output). Most AI products make these same four. Harvey picks Claude + legal docs + tools + UI; Notion AI picks its model + workspace + actions + editor. Setup IS the first context-engineering decision."
 
 ```
 MODEL → quality ceiling   DIRECTORY → context boundary
@@ -81,6 +66,29 @@ TOOLS → what it can do     VIEWER → how you see output
 - **C)** I'm stuck on setup — let's troubleshoot together
 
 **Share prompt:** "What model did you pick, and why? Did 'auto' tempt you?"
+
+---
+
+### ⚡ When you're ready (optional): the terminal route
+
+> "You finished the whole lesson without touching a terminal — that's by design. This box is for later, when you're curious. Skip it entirely if you want; nothing below is required."
+
+**Optional tool: Claude Code** — a terminal agent. Same power as Cursor's chat, pure text interface, like texting a senior engineer. Detect their OS and give ONLY the matching block, then have them run `claude` and log in:
+
+- **macOS/Linux:** open Terminal (Cmd+Space → "Terminal", or Ctrl+Alt+T on Linux), then `curl -fsSL https://claude.ai/install.sh | bash`
+- **Windows:** open PowerShell (not ISE/CMD), then `irm https://claude.ai/install.ps1 | iex`
+
+> "If it asks permission, say Yes — you can undo anything. Fully optional; if it fights you, skip it and come back another day."
+
+**If install fails, it's almost always Node.js missing (nodejs.org → LTS).**
+
+**Optional — clone via terminal instead of the GUI:**
+```bash
+git clone https://github.com/amanaiproduct/personal-os.git
+cd personal-os
+```
+
+**Super-stretch:** Run `./setup.sh` and skim what it scaffolds.
 
 ---
 

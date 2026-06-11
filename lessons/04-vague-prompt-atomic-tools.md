@@ -1,6 +1,6 @@
 # 4. An Intentionally Vague Prompt → Atomic Tools
 
-> **Magic Moment:** You watch a 3-word prompt turn into a finished multi-step task — and then make the agent reveal that its whole toolkit is ~10 dead-simple tools that compose like LEGO.
+> **Magic Moment:** You watch a 3-word prompt turn into a finished multi-step task — and then make the agent reveal that its whole toolkit is roughly 10-15 dead-simple tools that compose like LEGO.
 
 ---
 
@@ -17,11 +17,11 @@ CRITICAL RULES:
 
 ---
 
-### Step 1: Watch Me Spring a Trap With 3 Words
+### Step 1: Watch 3 Words Trigger a Whole Task
 
-> "Watch this. I'm going to plant two files, then give myself the vaguest instruction imaginable and let it rip. Watch the sequence, not the result."
+> "Watch this. I'm going to plant two files, then give myself the vaguest instruction imaginable and let it run. Watch the sequence, not the result."
 
-Run it live: create `~/song-experiment/` with `song-lyrics.md` (a few original made-up song lines) and `song-workflow.md` (instructions: read the lyrics, rewrite as a pirate sea shanty, save as `pirate-version.md`). Then act on the prompt **"Do this one"** — narrate each move: "Listing the directory… found a workflow file… reading it… reading the lyrics… now writing the shanty."
+Run it live: create `~/song-experiment/` with `song-lyrics.md` (a few original made-up song lines) and `song-workflow.md` (instructions: read the lyrics, rewrite as a pirate sea shanty (an old sailors' work song), save as `pirate-version.md`). Then act on the prompt **"Do this one"** — narrate each move: "Listing the directory… found a workflow file… reading it… reading the lyrics… now writing the shanty."
 
 > "Three words. And I just listed → read → read → wrote a finished task. I never held it all in my head — each step was one tiny action."
 
@@ -42,7 +42,7 @@ Show this visual:
    each box = ONE atomic action; the model picks which & when
 ```
 
-> "Composition is the intelligence. The tools are just hands — there are only about a dozen of them."
+> "Composition is the intelligence. The tools are just hands — there are only roughly 10-15 of them."
 
 **STOP. Wait for their response.**
 
@@ -54,10 +54,10 @@ Show this visual:
 
 **Your turn — paste into Claude Code:**
 ```
-Explain how you just used tools to do that task — in atoms, no jargon, every term and command, play-by-play in order.
+Explain how you just used tools to do that task — in atoms, no jargon, every term and command, step-by-step in order.
 ```
 
-**Important:** Then ask it to list its full toolkit: `What tools do you have access to? List every one with a one-line description.` Count them — you'll land around 10-15.
+**Important:** Then ask it to list its full toolkit: `What tools do you have access to? List every one with a one-line description.` Count them — you'll land around roughly 10-15.
 
 **Stretch:** Plant your own trap (two files + a vague pointer) and fire your own 3-word prompt; watch the sequence.
 
@@ -69,7 +69,7 @@ Explain how you just used tools to do that task — in atoms, no jargon, every t
 
 ### 🎉 What Just Happened
 
-> "Three words became a finished task because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on ~10-15 atomic tools — read, write, search, execute — that's it. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and every serious coding agent."
+> "Three words became a finished task because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on roughly 10-15 atomic tools — read, write, search, execute — that's it. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and many coding agents."
 
 **What next?**
 - **A)** Lesson 5 — watch the agentic loop unfold live

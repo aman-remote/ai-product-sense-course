@@ -59,9 +59,11 @@ Show this visual:
 
 **Important:** In your project, run:
 ```
-Help me write a proper AGENTS.md. Ask me one at a time: (1) what is this project, (2) my top 3 priorities now, (3) how should you communicate with me, (4) what should you always do, (5) what should you never do. Then create AGENTS.md from my answers.
+First, detect which tool I'm in and write the correctly-named file: CLAUDE.md if I'm in Claude Code, AGENTS.md (or .cursorrules) if I'm in Cursor — the filename has to match the tool or it won't load. Then help me write a proper one. Ask me one at a time: (1) what is this project, (2) my top 3 priorities now, (3) how should you communicate with me, (4) what should you always do, (5) what should you never do. Then create the file from my answers.
 ```
-Then start a fresh chat and test it on a real decision you're facing. Notice it carrying your preferences with zero reminding.
+> Note: the filename depends on the tool — Claude Code reads `CLAUDE.md`, Cursor reads `AGENTS.md` or `.cursorrules`. If the name doesn't match the tool, the file is silently ignored and the next step shows no change.
+
+Then start a fresh chat and test it on a real decision you're facing — first say: "Detect which tool we're in and confirm you loaded the right rules file (CLAUDE.md / AGENTS.md / .cursorrules)." Notice it carrying your preferences with zero reminding.
 
 > "**Stretch:** paste your existing ChatGPT custom instructions or Claude Project instructions and have it adapt them into your AGENTS.md. **Super-stretch:** ask it to recommend what should stay at root vs. move to subdirectory AGENTS.md files (don't apply yet — just the plan)."
 
@@ -107,7 +109,7 @@ A system prompt is the instruction set prepended to every user message before th
 - **Claude:** Project instructions = per-project system prompt; memory tool adds learned preferences.
 - **Notion AI:** workspace context = implicit system prompt.
 - **Harvey:** firm + practice-area + case context = layered hierarchy.
-- **Every AI product:** the system prompt is where the team encodes "how this product behaves."
+- **Most AI products:** the system prompt is where the team encodes "how this product behaves."
 
 ### Misconceptions (correct only if raised)
 - "It's just the first message" — it's loaded first every session and frames everything after it, which is why it shapes behavior so strongly.

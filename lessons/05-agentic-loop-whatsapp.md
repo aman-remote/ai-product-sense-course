@@ -44,7 +44,7 @@ User asks ──► THINK ──► need a tool? ──yes──► TOOL ──�
               (loop until done, then respond)
 ```
 
-> "Same loop in Claude Code, Cursor, Notion AI, Harvey. The only thing special about a local agent is you get to *see* it run."
+> "Same loop in Claude Code and Cursor — and, by all accounts, in production agents like Notion AI and Harvey. The only thing special about a local agent is you get to *see* it run."
 
 **STOP. Wait for their response.**
 

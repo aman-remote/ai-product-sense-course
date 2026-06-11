@@ -23,7 +23,7 @@ CRITICAL RULES:
 
 Pick a vivid, common feature (e.g. a meeting summarizer that knows the user's priorities). Write a tight system prompt for it, then run a sample interaction live where you act AS that feature on a fake input.
 
-> "That's a shipped AI feature. The system prompt IS the product spec. The conversation IS the interface. Everything else is just distribution and scale."
+> "That's a shipped AI feature. The system prompt IS the product spec. The conversation IS the interface. The system prompt is the easy 10%. The hard 90% — evals, data access, latency, failure modes — is exactly what the rest of this course is about."
 
 **STOP. Wait for their reaction.**
 

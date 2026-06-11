@@ -23,7 +23,7 @@ CRITICAL RULES:
 
 Live, narrate your own internals honestly: your system prompt (describe its contours), your tools (Read, Write, Edit, Bash, Search, AskUser, + any MCPs), your rules (CLAUDE.md, permissions), your retry/error handling, and the fact that the model itself is one swappable component.
 
-> "Everything I just listed except 'the model' is the **harness** — that's what makes me an agent instead of a chatbot. The harness IS the product."
+> "Everything I just listed except 'the model' is the **harness** — the harness = everything wrapped around the model: prompt, tools, rules, UI. That's what makes me an agent instead of a chatbot. The harness IS the product."
 
 **STOP. Wait for their reaction. Ask what surprised them.**
 
@@ -47,7 +47,7 @@ Show this visual:
  └──────────────────────────────────────┘
 ```
 
-> "LangGraph/CrewAI are *frameworks* to build a harness; Cursor/Claude Code ARE the harness, assembled. React is to Notion as LangGraph is to Claude Code."
+> "LangGraph/CrewAI are *frameworks* to build a harness; Cursor/Claude Code ARE the harness, assembled. Think lumber vs. house: a framework is the lumber, a harness is the finished house you live in."
 
 **STOP. Wait for their response.**
 
@@ -64,7 +64,7 @@ Tell me about CLAUDE.md and any rules files you can see. How do they shape your 
 
 **Important:** Then ask about memory: `If I close this terminal and reopen it, what do you remember? What persists and what doesn't?` Notice: conversation = short-term (gone), files on disk = long-term (persist).
 
-**Stretch:** Press `Shift+Tab` to cycle modes (Normal → Auto-Accept → Plan) and watch autonomy change with the *same* model and tools.
+**Stretch:** Press `Shift+Tab` (in Claude Code) to cycle modes (Normal → Auto-Accept → Plan) and watch autonomy change with the *same* model and tools.
 
 **Super-stretch:** Edit CLAUDE.md to add a behavior rule, then give the agent a task and watch the rule take effect.
 

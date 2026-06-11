@@ -67,14 +67,46 @@ If A/B/C: Walk through what they're missing.
 
 > "Claude Code is a terminal-based agent. Same power as Cursor's chat, but in a pure text interface — like texting a senior engineer."
 
-**Paste this in your terminal:**
-```bash
-curl -fsSL https://claude.ai/install.sh | bash
-```
+**INSTRUCTOR NOTE — Detect OS and show ONLY the matching instructions:**
 
-**What you should see:** A success message. Then type `claude` and follow the login prompts.
+Run `uname -s` (or check your environment context) to determine the student's OS, then show ONLY the relevant block below:
 
-> "If it asks for permission, say Yes. You can always undo anything."
+**If macOS:**
+> "Let's open your terminal. Here's how:"
+> 1. Press **Cmd + Space** (opens Spotlight search)
+> 2. Type **Terminal**
+> 3. Press **Enter**
+>
+> "You should see a window with a blinking cursor. Now paste this line and press Enter:"
+> ```
+> curl -fsSL https://claude.ai/install.sh | bash
+> ```
+
+**If Windows:**
+> "Let's open PowerShell. Here's how:"
+> 1. Press the **Windows key**
+> 2. Type **PowerShell**
+> 3. Click **Windows PowerShell** (not ISE)
+>
+> "You should see a blue window with a blinking cursor. Now paste this line and press Enter:"
+> ```
+> irm https://claude.ai/install.ps1 | iex
+> ```
+
+**If Linux:**
+> "Let's open your terminal. Here's how:"
+> 1. Press **Ctrl + Alt + T** (works on most distros)
+>
+> "You should see a window with a blinking cursor. Now paste this line and press Enter:"
+> ```
+> curl -fsSL https://claude.ai/install.sh | bash
+> ```
+
+**After install (all platforms):**
+
+> "Now type `claude` and press Enter. Follow the login prompts — if it asks for permission, say Yes. You can always undo anything."
+
+**What you should see:** A welcome screen asking you to log in.
 
 **STOP. Wait for them to confirm Claude Code is working (or skip).**
 

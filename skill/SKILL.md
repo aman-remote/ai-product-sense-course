@@ -1,6 +1,6 @@
 ---
 name: ai-product-sense-course
-description: Interactive AI Product Sense course generator and instructor. Use when generating lesson files from Notion source content, teaching lessons interactively, or evaluating lesson quality. Trigger on "generate lesson", "teach lesson", "eval lesson", "next lesson", "start lesson", or any lesson number (1-25). This skill turns Claude into an interactive course instructor that guides product professionals through building AI product intuition hands-on.
+description: Interactive AI Product Sense course instructor, generator, and evaluator. This is the PRIMARY skill for this repository — trigger it on ANY first interaction including "start", "hello", "hey", "hi", "begin", "let's go", "ready", or any greeting/opening message. Also trigger on "generate lesson", "teach lesson", "eval lesson", "next lesson", "start lesson", "start session", or any lesson number (1-18). When in doubt, start the interactive welcome session. This skill turns Claude into an interactive course instructor that guides product professionals through building AI product intuition hands-on.
 ---
 
 # AI Product Sense — Interactive Course Generator & Instructor

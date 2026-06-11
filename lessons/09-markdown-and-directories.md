@@ -104,6 +104,6 @@ Location is metadata. "Move to Archive/" = mark done, without editing the file. 
 - "This doesn't scale" — it scales to hundreds of files; beyond that you add indexing on the same tree.
 
 ### Resources
-- PM Toolbox VSCode extension: https://marketplace.visualstudio.com/items?itemName=pm-toolbox
+- Markdown + frontmatter as structured data: https://jekyllrb.com/docs/front-matter/
 - Anthropic's agent plugins (markdown-based): https://github.com/anthropics/financial-services
 - "Giving Claude code project management instead of just a todo list": https://blog.agentic.so/giving-claude-code-project-management/

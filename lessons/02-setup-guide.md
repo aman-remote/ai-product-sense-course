@@ -21,7 +21,7 @@ CRITICAL RULES:
 
 > "First tool: Cursor — VS Code with an AI agent built in. It's your command center: files on the left, editor in the middle, chat/agent on the right, terminal at the bottom."
 
-Ask what they already have. If they don't have Cursor: have them download it from cursor.sh and open it. If they do: have them open it. Then have them open Settings, turn OFF "auto" model selection, and pick the strongest model available (claude-4.6-opus > gpt-5.3 > gemini-3 — the 🧠 means reasoning model).
+Ask what they already have. If they don't have Cursor: have them download it from cursor.com and open it. If they do: have them open it. Then have them open Settings, turn OFF "auto" model selection, and pick the strongest model available (claude-4.6-opus > gpt-5.3 > gemini-3 — the 🧠 means reasoning model).
 
 > "That model dropdown you just set is the single most important knob in the tool — it's your quality ceiling. We'll prove why next lesson."
 
@@ -101,7 +101,7 @@ Environment as context: the setup choices (model, directory, tools, viewer) are 
 | Tool | What it is | Cost |
 |------|-----------|------|
 | Cursor | AI-first IDE (VS Code + agent) | ~$20/mo |
-| Claude Code | Terminal agent (conversation in CLI) | ~$17/mo |
+| Claude Code | Terminal agent (conversation in CLI) | Claude Pro/Max sub or API |
 | Obsidian | Markdown viewer (makes files pretty) | Free |
 | Git | Version control (save checkpoints) | Free |
 

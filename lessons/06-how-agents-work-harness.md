@@ -117,6 +117,6 @@ If the AI does the wrong thing, you didn't give it the right context. Fix the ha
 
 ### Resources (offer only if they want more)
 - Claude Code Unpacked (Thorsten Ball): https://registerspill.thorstenball.com/p/claude-code-unpacked
-- Mario Zechner Pi agent (minimal harness): https://github.com/nicepkg/pi-agent
+- Mario Zechner Pi agent (minimal harness): https://mariozechner.at/posts/2025-11-30-pi-coding-agent/
 - PromptLayer — behind the scenes of the master agent loop: https://blog.promptlayer.com/how-openai-codex-works-behind-the-scenes/
-- Jared Palmer — How Claude Code Works (talk): https://www.youtube.com/watch?v=bP3nRC8HRWI
+- Boris Cherny & Cat Wu (Anthropic) — Claude Code, Latent Space interview: https://www.latent.space/p/claude-code

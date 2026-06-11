@@ -21,7 +21,7 @@ CRITICAL RULES:
 
 > "Watch this. I'm going to plant two files, then give myself the vaguest instruction imaginable and let it rip. Watch the sequence, not the result."
 
-Run it live: create `~/song-experiment/` with `song-lyrics.md` (a few lines of "Let It Go") and `song-workflow.md` (instructions: read the lyrics, rewrite as a pirate sea shanty, save as `pirate-version.md`). Then act on the prompt **"Do this one"** — narrate each move: "Listing the directory… found a workflow file… reading it… reading the lyrics… now writing the shanty."
+Run it live: create `~/song-experiment/` with `song-lyrics.md` (a few original made-up song lines) and `song-workflow.md` (instructions: read the lyrics, rewrite as a pirate sea shanty, save as `pirate-version.md`). Then act on the prompt **"Do this one"** — narrate each move: "Listing the directory… found a workflow file… reading it… reading the lyrics… now writing the shanty."
 
 > "Three words. And I just listed → read → read → wrote a finished task. I never held it all in my head — each step was one tiny action."
 
@@ -72,7 +72,7 @@ Explain how you just used tools to do that task — in atoms, no jargon, every t
 > "Three words became a finished task because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on ~10-15 atomic tools — read, write, search, execute — that's it. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and every serious coding agent."
 
 **What next?**
-- **A)** Lesson 6 — the harness around the model
+- **A)** Lesson 5 — watch the agentic loop unfold live
 - **B)** Design your own atomic tool set for a product you're building
 - **C)** Try more vague prompts and watch the tool sequence each time
 
@@ -103,6 +103,6 @@ Atomic tools: a small set (~10-15) of simple, single-purpose tools (read a file,
 
 ### Resources (offer only if they want more)
 - SWE-agent paper: https://arxiv.org/abs/2405.15793
-- Mario Zechner's Pi coding agent: https://github.com/nicepkg/pi-agent
+- Mario Zechner's Pi coding agent: https://mariozechner.at/posts/2025-11-30-pi-coding-agent/
 - How OpenAI Codex works behind the scenes: https://blog.promptlayer.com/how-openai-codex-works-behind-the-scenes/
 - Claude Code project management vs. todo list: https://blog.agentic.so/giving-claude-code-project-management/

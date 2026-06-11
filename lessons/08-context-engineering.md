@@ -43,7 +43,7 @@ FULL:   [system][doc][q1][a1][q2][a2][draft][revision][q3]... → GENERIC
         signal drowns in noise as the list only grows ▲
 ```
 
-> "Jared Zoneraich (HumanLayer) says it best: 'When your context gets full, the model gets stupid.' Context engineering = the smallest set of high-signal tokens for the task."
+> "Jared Zoneraich (PromptLayer) says it best: 'When your context gets full, the model gets stupid.' Context engineering = the smallest set of high-signal tokens for the task."
 
 **STOP. Wait for their response.**
 
@@ -109,12 +109,12 @@ Context engineering: selecting and structuring the information given to an LLM t
 
 ### Key quotes
 - "Context engineering is finding the smallest possible set of high-signal tokens that maximize the likelihood of some desired outcome." — Anthropic
-- "When your context gets full, the model gets stupid." — Jared Zoneraich, CEO, HumanLayer
+- "When your context gets full, the model gets stupid." — Jared Zoneraich, founder of PromptLayer
 - Karpathy: the context window is the model's "working memory" — finite, precious, easily cluttered.
 
 ### Resources
-- Anthropic context engineering blog: https://www.anthropic.com/research/building-effective-agents
+- Anthropic — Effective context engineering for AI agents: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
 - Andrej Karpathy on context windows: https://x.com/karpathy
 - HumanLayer CLAUDE.md guide: https://humanlayer.dev/blog/claude-md
-- Chroma context rot research: https://research.trychroma.com/evaluating-chunking
+- Chroma — Context Rot research: https://www.trychroma.com/research/context-rot
 - Manus context engineering blog: https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus

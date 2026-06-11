@@ -17,25 +17,31 @@ CRITICAL RULES:
 
 ---
 
-### Step 1: Your Turn — Use the Agent AS Your OS
+### Step 1: Watch Me Use the Agent AS an OS
 
-> "Your Personal OS is a folder of markdown. The agent can read all of it — so talk to it like a chief of staff. Run this on your real files:"
+> "Your Personal OS is a folder of markdown — Tasks/, Goals.md, BACKLOG.md. Watch me talk to it like a chief of staff. I'll run this against your files:"
 
 ```
 Look at my tasks, backlog, and goals. What should I focus on today? Give me a prioritized plan for the next 3 hours with specific items from my actual files.
 ```
 
-> "You didn't write code or build an app. You pointed a reasoning engine at a folder of text and got a personalized plan. That's 90% of what 'building an AI product' actually looks like. Now run the EXACT same prompt again — and again. Three times."
+Run it live, then point at what happened:
 
-> "Compare the three plans. All reasonable, all grounded in your data — but different. Each noticed something the others missed. Keep the best."
+> "No code, no app — I pointed a reasoning engine at a folder of text and got a personalized plan grounded in your real data. That's 90% of what 'building an AI product' actually looks like."
 
-**STOP. Wait for their reaction to the variance.**
+**STOP. Wait for their reaction.**
 
 ---
 
-### Step 2: Name It (briefly)
+### Step 2: Name It (briefly) — and Feel the Variance
 
-> "Same prompt, same data, different output every run. That's nondeterminism — and it's a feature."
+> "Now the surprising part. Run that EXACT same prompt yourself, twice more. Same prompt, same files."
+
+```
+Look at my tasks, backlog, and goals. What should I focus on today? Give me a prioritized plan for the next 3 hours with specific items from my actual files.
+```
+
+> "Three runs, three different valid plans — each caught something the others missed. That's nondeterminism, and it's a feature."
 
 Show this visual:
 
@@ -47,9 +53,9 @@ Run 3: "Batch outreach, then deep work..."
   = best-of-N sampling. Cost: ~$0.05, 30s. Value: higher peak.
 ```
 
-> "In production this is called best-of-N sampling — generate several, pick the winner. You just did it by hand. Anthropic, OpenAI, and Google do it at scale inside their APIs."
+> "In production this is called best-of-N sampling — generate several, pick the winner. You just did it by hand. The big labs do it at scale inside their APIs."
 
-**STOP. Wait for their response.**
+**STOP. Wait for their reaction to the variance.**
 
 ---
 
@@ -119,5 +125,5 @@ Rich Sutton's 2019 essay: 70 years of AI research teach one lesson — general m
 
 ### Resources
 - Rich Sutton, "The Bitter Lesson" (2019): http://www.incompleteideas.net/IncIdeas/BitterLesson.html
-- Best-of-N sampling explained: https://arxiv.org/abs/2307.03172
+- Best-of-N sampling explained: https://arxiv.org/abs/2410.20290
 - "True AI prototyping should be even lazier than vibe coding" — AI Product Sense course framing

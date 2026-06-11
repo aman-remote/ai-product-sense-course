@@ -100,7 +100,7 @@ A system prompt is the instruction set prepended to every user message before th
 - Too verbose/terse? State communication style explicitly.
 - CLAUDE.md vs AGENTS.md vs .cursorrules? Same concept, different tools — pick ONE source of truth, point the others at it.
 - Works in one chat not another? New chat = fresh load; old chats used the old version.
-- Future: Anthropic is building "dreaming" — async memory that persists/evolves across threads automatically. AGENTS.md is the manual version.
+- Where this is heading: providers are adding automatic cross-session memory (e.g. ChatGPT/Claude memory features) that persists and evolves without a manual file. AGENTS.md is the explicit, you-control-it version of the same idea.
 
 ### Where this shows up in production
 - **ChatGPT:** Custom Instructions + Memory = persistent system prompt; Custom GPTs add project-specific prompts on top.
@@ -110,7 +110,7 @@ A system prompt is the instruction set prepended to every user message before th
 - **Every AI product:** the system prompt is where the team encodes "how this product behaves."
 
 ### Misconceptions (correct only if raised)
-- "It's just the first message" — architecturally distinct; gets highest attention priority.
+- "It's just the first message" — it's loaded first every session and frames everything after it, which is why it shapes behavior so strongly.
 - "I must repeat preferences each chat" — that's what AGENTS.md solves: write once, applied forever.
 - "CLAUDE.md and AGENTS.md differ" — same pattern, different names; pick one source of truth.
 
@@ -119,4 +119,4 @@ A system prompt is the instruction set prepended to every user message before th
 - OpenAI harness/prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering
 - Anthropic memory tool docs: https://docs.anthropic.com/en/docs/agents-and-tools/memory
 - Manus context engineering blog: https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus
-- TiM paper (Thread-in-Memory): https://arxiv.org/abs/2401.11839
+- TiM (Think-in-Memory) — LLMs with long-term evolving memory: https://arxiv.org/abs/2311.08719

@@ -22,7 +22,7 @@ CRITICAL RULES:
 
 > "Watch this. Everyone's feed is full of OpenClaw — an AI that lives on a server and texts you real work while you sleep. I'm going to open its actual brain and show you there's nothing new inside."
 
-Fetch and walk through `https://github.com/openclaw/openclaw/blob/main/src/agents/system-prompt.ts` live. Narrate as you read: "Here's the identity... here are its tools... here are the rules for when to act... here's the memory instruction."
+Try to fetch OpenClaw's actual system prompt live — search the `openclaw/openclaw` repo for its system-prompt file (the path moves; find the current one rather than assuming a URL). If the fetch fails or the repo can't be reached, don't stall: describe the harness skeleton from memory instead. Either way, narrate: "Here's the identity... here are its tools... here are the rules for when to act... here's the memory instruction."
 
 > "Notice anything? Identity + tools + rules + memory. That's the exact harness skeleton from Lesson 6. The viral magic is the *same* coding agent — just on a server, auto-accepting its own tool calls, reading a HEARTBEAT.md on a timer, with a messaging bridge bolted on."
 
@@ -102,5 +102,5 @@ Running an agent with skipped permissions and broad access on your real machine 
 - Tal Raviv — "How does Clawdbot/Moltbot work? A free video course for non-technical product people": https://www.talraviv.co/p/how-does-clawdbotmoltbot-work-a-free
 - Aman Khan — "How to Get Clawdbot/Moltbot/OpenClaw Set Up in an Afternoon": https://amankhan1.substack.com/p/how-to-get-clawdbotmoltbotopenclaw
 - "OpenClaw Is Not Magic; It's Just Good Architecture": https://labs.adaline.ai/p/openclaw-architecture-not-magic
-- Mario Zechner — Pi, the minimal agent at OpenClaw's core: https://lucumr.pocoo.org/2026/1/31/pi/
+- Mario Zechner — Pi, the minimal agent at OpenClaw's core: https://mariozechner.at/posts/2025-11-30-pi-coding-agent/
 - OpenClaw heartbeat reference: https://github.com/openclaw/openclaw/blob/main/docs/gateway/heartbeat.md

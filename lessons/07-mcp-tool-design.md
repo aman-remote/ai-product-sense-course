@@ -25,7 +25,7 @@ Ask which tool they use at work (Notion easiest; also Linear, Slack, Postgres). 
 
 **Your turn — paste into Claude Code (adjust for your tool):**
 ```
-/mcp add notion
+claude mcp add --transport http notion https://mcp.notion.com/mcp
 ```
 
 > "Follow the auth prompts — usually generate an API token in the tool's settings and paste it in. You just gave the agent new hands: same model, bigger toolkit."
@@ -132,8 +132,8 @@ CLI: zero setup, familiar Unix tools, often faster, composable — but model mus
 
 ### Resources (offer only if they want more)
 - Block's MCP Playbook: https://block.github.io/goose/docs/tutorials/mcp-block-playbook
-- Figma MCP: https://www.figma.com/blog/introducing-figma-mcp/
-- Linear MCP: https://github.com/linear/linear-mcp
+- Figma MCP server: https://www.figma.com/blog/introducing-figmas-dev-mode-mcp-server/
+- Linear MCP (hosted): https://mcp.linear.app/ (announce: https://linear.app/changelog/2025-05-01-mcp)
 - Anthropic — Building Effective Agents: https://www.anthropic.com/research/building-effective-agents
 - MCPCat blog: https://mcpcat.com/blog
 - Mario Zechner — What If You Don't Need MCP?: https://marioslab.io/posts/pi-agent/what-if-you-dont-need-mcp/

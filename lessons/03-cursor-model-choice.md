@@ -21,7 +21,7 @@ CRITICAL RULES:
 
 > "Watch this. I'm not going to just generate text like a chatbot — I'm going to create real files on disk. Watch the difference."
 
-Run this live: create `lyrics.txt` with a few lines of "Let It Go", then create `parody.txt` — a parody about a PM letting go of all the edge cases they had to cut from scope. Narrate as you go: "Writing the first file… now reading it back… now writing the parody."
+Run this live: create `lyrics.txt` with a few original lines of a cheesy power ballad you make up on the spot, then create `parody.txt` — a parody about a PM letting go of all the edge cases they had to cut from scope. Narrate as you go: "Writing the first file… now reading it back… now writing the parody."
 
 > "Notice — those are actual files in your directory now, not chat text. That's tool calling: the model reached out and changed your filesystem."
 
@@ -69,7 +69,7 @@ Read lyrics.txt. Write a parody in parody-v2.txt — a PM letting go of cut scop
 
 ### 🎉 What Just Happened
 
-> "Same prompt, same context, different model, different output — that's model choice as a product decision, and you just made it with your own eyes. Every AI product wraps the model in a harness so the brain can swap without breaking the interface: Harvey routes easy tasks to cheap models and hard ones to Opus; Notion AI migrated providers and users never noticed. You build around the harness, not the model."
+> "Same prompt, same context, different model, different output — that's model choice as a product decision, and you just made it with your own eyes. Every AI product wraps the model in a harness so the brain can swap without breaking the interface: Harvey routes easy tasks to cheap models and hard ones to Opus; many production apps swap the underlying model without changing their UI. You build around the harness, not the model."
 
 **What next?**
 - **A)** Lesson 4 — atomic tools and what agents can actually DO
@@ -92,7 +92,7 @@ Directory (files/folders) · Editor (read/edit) · Chat/Agent (talk to the model
 
 ### Where this shows up in production
 - **Harvey**: routes by complexity — cheap/fast for lookups, powerful for legal reasoning.
-- **Notion AI**: migrated OpenAI → Anthropic transparently; users never noticed.
+- **Model-agnostic harnesses**: products swap the underlying model behind a stable interface; the user-facing app does not change.
 - **Cursor**: exposes the choice directly; "Auto" is the billing proxy.
 - **Every serious AI startup**: wraps model calls in an abstraction layer to avoid provider lock-in.
 
@@ -104,4 +104,4 @@ Directory (files/folders) · Editor (read/edit) · Chat/Agent (talk to the model
 ### Resources (offer only if they want more)
 - Cursor model selection docs: https://docs.cursor.com/chat/model-selection
 - Anthropic model comparison: https://docs.anthropic.com/en/docs/about-claude/models
-- Latent Space on model routing: https://www.latent.space/p/model-routing
+- Anthropic — model selection guide: https://docs.anthropic.com/en/docs/about-claude/models/overview

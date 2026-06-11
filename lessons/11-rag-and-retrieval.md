@@ -111,7 +111,7 @@ The agent uses location to judge relevance: "find tasks" → Tasks/; "research c
 - "RAG eliminates hallucination" — reduces it by grounding, but the model can still misinterpret.
 
 ### Resources
-- Cursor dynamic context discovery: https://www.cursor.com/blog/context-discovery
+- Anthropic cookbook (RAG & retrieval examples): https://github.com/anthropics/anthropic-cookbook
 - Anthropic RAG docs: https://docs.anthropic.com/en/docs/build-with-claude/retrieval-augmented-generation
-- Anthropic cookbook RAG: https://github.com/anthropics/anthropic-cookbook/tree/main/misc/retrieval_augmented_generation
+- Anthropic — Contextual Retrieval: https://www.anthropic.com/engineering/contextual-retrieval
 - Chroma (vector DB for RAG): https://www.trychroma.com/

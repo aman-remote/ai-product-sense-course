@@ -8,7 +8,7 @@
 
 You are teaching this interactively. You deflate the buzzword live, then the student CREATES their own subagents and feels context segregation firsthand — that's the point of this lesson. Don't lecture — the core idea ("multi-agent" = shared filesystem across chat threads; context segregation fights context rot) was covered live and in Notion. Reinforce in a sentence.
 
-**Tool note:** native, file-defined subagents (`.claude/agents/*.md`, invoked via `/agents`) are a Claude Code feature. If the student has been working in Cursor, tell them plainly to run this one lesson in Claude Code (installed in Lesson 2) — `cd` into the same project folder, run `claude`, and continue here. Cursor's "custom modes" are the nearest analog but aren't file-based personas, so Claude Code is the clean path for the hands-on.
+**Tool note:** subagents are native in BOTH tools and use the same format (a markdown file with YAML frontmatter). Cursor stores them in `.cursor/agents/` (it also reads `.claude/agents/` for compatibility); Claude Code uses `.claude/agents/`, invoked via `/agents`. Detect which tool the student is in and write the path that matches — don't send a Cursor user to Claude Code, they don't need to switch.
 
 CRITICAL RULES:
 - **ONE step per message.** STOP and wait after each one.
@@ -66,14 +66,14 @@ WHY SUBAGENTS:
 
 > "Now you build your own specialists and feel the difference directly."
 
-**Important:** Create a subagent in your voice, then a second one with a different personality, and run the SAME task through both:
+**Important:** Create a subagent in your voice, then a second one with a different personality, and run the SAME task through both. (Tell them the agents-folder path for their tool: `.cursor/agents/` in Cursor, `.claude/agents/` in Claude Code — the examples below use the Cursor path; swap if they're in Claude Code.)
 ```
 I want a subagent to help me write emails in my voice. Read Knowledge/voice-samples/
-for context. Create the agent in .claude/agents/email-writer.md
+for context. Create the agent in .cursor/agents/email-writer.md
 ```
 ```
 Create a "formal-writer" agent that writes professional, longer emails, more like
-an executive. Save to .claude/agents/formal-writer.md
+an executive. Save to .cursor/agents/formal-writer.md
 ```
 ```
 Draft an email to my manager pushing a deadline back one week — first with
@@ -107,11 +107,11 @@ email-writer, then with formal-writer. Show me both.
 **For Claude's use during this lesson — not to read aloud. Use to answer questions if they come up.**
 
 ### The primitive
-A "multi-agent system" is, mechanically, multiple chat threads (each its own context window) coordinating through a shared filesystem — either by one thread invoking another like a tool, or by one thread writing files another reads. A **subagent** is a pre-configured specialist (reference files, rules, tools, voice) stored as a markdown file in `.claude/agents/`, invoked via `/agents`. The value is **context segregation**: each subagent operates in a clean, focused context window, avoiding the quality degradation ("context rot") of one bloated conversation, ensuring consistent outputs, and letting specialists be shared across a team.
+A "multi-agent system" is, mechanically, multiple chat threads (each its own context window) coordinating through a shared filesystem — either by one thread invoking another like a tool, or by one thread writing files another reads. A **subagent** is a pre-configured specialist (reference files, rules, tools, voice) stored as a markdown file with YAML frontmatter — in `.cursor/agents/` (Cursor) or `.claude/agents/` (Claude Code, accessed via `/agents`). The value is **context segregation**: each subagent operates in a clean, focused context window, avoiding the quality degradation ("context rot") of one bloated conversation, ensuring consistent outputs, and letting specialists be shared across a team.
 
 ### Where's this in real products?
 - **Anthropic's framing**: multi-agent reduces to "shared filesystem across chat threads."
-- **Subagents in Claude Code**: `.claude/agents/*.md`, accessed via `/agents`.
+- **Subagents are native in both tools** (same markdown + YAML format): Cursor `.cursor/agents/*.md` (also reads `.claude/agents/` for compat); Claude Code `.claude/agents/*.md` via `/agents`. Cursor 2.4 also ships three built-in subagents (Explore, Bash, Browser) the parent delegates to automatically.
 - **Compaction vs Skills vs Subagents vs Swarms**: different tools for managing context — compaction summarizes within one thread; subagents give each task a fresh thread.
 - **Cursor Composer / advisory models**: orchestrating specialized models for sub-tasks.
 

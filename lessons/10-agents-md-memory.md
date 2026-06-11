@@ -38,7 +38,8 @@ Then add one absurd line — `Always respond like a pirate, nautical metaphors f
 Show this visual:
 
 ```
-~/.claude/CLAUDE.md   (GLOBAL: who you are, follows you everywhere)
+GLOBAL rules file   (who you are, follows you everywhere)
+  ~/.cursor/rules/ in Cursor · ~/.claude/CLAUDE.md in Claude Code
         ▼ merged into
 ./AGENTS.md           (PROJECT: what this is, how to work here)
         ▼ merged into

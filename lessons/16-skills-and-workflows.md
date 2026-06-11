@@ -8,7 +8,7 @@
 
 You are teaching this interactively. You demo what a slash command really is live, then the student CREATES their own skill and slash command — that's the point of this lesson. Don't lecture — the core idea (workflows are explicit, skills are model-invoked, both are just markdown; progressive disclosure) was covered live and in Notion. Reinforce in a sentence.
 
-**Tool note:** file-defined skills (`.claude/skills/SKILL.md`) and `/`-slash commands are Claude Code features. If the student has been in Cursor, have them run this lesson in Claude Code (installed in Lesson 2) — same project folder, run `claude`. Cursor's analog is a Command in `.cursor/commands/` plus rules in `.cursor/rules/`; mention it, but Claude Code is the clean path for the skill demo.
+**Tool note:** skills are native in BOTH tools — a `SKILL.md` file the agent loads when relevant, invokable from the slash menu. Cursor (2.4+) and Claude Code both support them. Detect the tool and use its path: Cursor `.cursor/skills/` (rules in `.cursor/rules/`, commands in `.cursor/commands/`); Claude Code `.claude/skills/`. Don't send a Cursor user to Claude Code — they have everything they need.
 
 CRITICAL RULES:
 - **ONE step per message.** STOP and wait after each one.
@@ -61,7 +61,7 @@ Show this visual:
 Create a skill called "focus-plan" that helps me decide what to work on today.
 It should: 1) read my Tasks/ folder for P0 and P1 items, 2) check due dates,
 3) consider my available time (ask me if not provided), 4) return my top 3
-priorities with time estimates. Save it to .claude/skills/focus-plan/SKILL.md
+priorities with time estimates. Save it to .cursor/skills/focus-plan/SKILL.md
 with proper frontmatter.
 ```
 Then add an explicit slash command to your AGENTS.md:
@@ -111,8 +111,8 @@ Level 3: /standup                           → full workflow. Built ONLY after
 ```
 
 ### Where's this in real products?
-- **Claude Code slash commands** (`/memory`, `/compact`, `/clear`): pre-built workflows.
-- **Anthropic Agent Skills**: model-invoked markdown abilities; providers are post-training models to call them more reliably.
+- **Slash commands** (`/memory`, `/compact`, `/clear` in Claude Code; the slash menu in Cursor): pre-built workflows.
+- **Agent Skills**: model-invoked markdown abilities (`SKILL.md`), native in both Cursor (2.4+) and Claude Code; providers post-train models to call them more reliably.
 - **Hybrid agentic workflows**: deterministic components (slash commands) + non-deterministic ones (model-invoked skills).
 - **Public skill libraries**: claude-plugins.dev, ClawHub, Anthropic's frontend-design skill.
 

@@ -57,16 +57,16 @@ Show this visual:
 
 > "Now you drive. Make the agent expose the parts of its harness you can actually change."
 
-**Your turn — paste into Claude Code:**
+**Your turn — paste into your agent:**
 ```
-Tell me about CLAUDE.md and any rules files you can see. How do they shape your behavior, and what changes if I edit them?
+Tell me about your rules files — CLAUDE.md, AGENTS.md, or .cursorrules, whichever you can see. How do they shape your behavior, and what changes if I edit them?
 ```
 
-**Important:** Then ask about memory: `If I close this terminal and reopen it, what do you remember? What persists and what doesn't?` Notice: conversation = short-term (gone), files on disk = long-term (persist).
+**Important:** Then ask about memory: `If I close this window and reopen it, what do you remember? What persists and what doesn't?` Notice: conversation = short-term (gone), files on disk = long-term (persist).
 
-**Stretch:** Press `Shift+Tab` (in Claude Code) to cycle modes (Normal → Auto-Accept → Plan) and watch autonomy change with the *same* model and tools.
+**Stretch:** Cycle the agent's autonomy modes and watch behavior change with the *same* model and tools — `Shift+Tab` in Claude Code (Normal → Auto-Accept → Plan), or the mode selector in Cursor (Agent / Plan / Ask).
 
-**Super-stretch:** Edit CLAUDE.md to add a behavior rule, then give the agent a task and watch the rule take effect.
+**Super-stretch:** Edit your rules file (CLAUDE.md or AGENTS.md/.cursorrules) to add a behavior rule, then give the agent a task and watch the rule take effect.
 
 **STOP. Let them run it. React to what they observed.**
 
@@ -78,10 +78,10 @@ Tell me about CLAUDE.md and any rules files you can see. How do they shape your 
 
 **What next?**
 - **A)** Lesson 7 — MCP and thoughtful tool design
-- **B)** Explore CLAUDE.md and modify it to change agent behavior
+- **B)** Explore your rules file (CLAUDE.md / AGENTS.md) and modify it to change agent behavior
 - **C)** Map the harness components for an AI product you're building or evaluating
 
-**Share prompt:** "Bring back: what did Claude Code say when you asked it to describe itself? What part of the harness surprised you most?"
+**Share prompt:** "Bring back: what did your agent say when you asked it to describe itself? What part of the harness surprised you most?"
 
 ---
 

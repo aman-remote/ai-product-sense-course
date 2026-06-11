@@ -23,10 +23,12 @@ CRITICAL RULES:
 
 Ask which tool they use at work (Notion easiest; also Linear, Slack, Postgres). Briefly show what a connected agent gains (e.g. `notion-search`, `notion-fetch`, `notion-create-pages`). Then have THEM install it.
 
-**Your turn — paste into Claude Code (adjust for your tool):**
+**Your turn — install it in whichever agent you're using:**
+- **Claude Code (terminal):**
 ```
 claude mcp add --transport http notion https://mcp.notion.com/mcp
 ```
+- **Cursor:** Settings → MCP → **Add new MCP server** (or add it to `.cursor/mcp.json`), name `notion`, URL `https://mcp.notion.com/mcp`.
 
 > "Follow the auth prompts — usually generate an API token in the tool's settings and paste it in. You just gave the agent new hands: same model, bigger toolkit."
 

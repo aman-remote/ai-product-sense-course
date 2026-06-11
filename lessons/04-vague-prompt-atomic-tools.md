@@ -50,9 +50,9 @@ Show this visual:
 
 ### Step 3: Your Turn — Make the Agent Confess Its Toolkit
 
-> "Now you drive. In your own Claude Code session, make the agent narrate its own internals."
+> "Now you drive. In your own agent — Cursor chat or Claude Code, whichever you're in — make it narrate its own internals."
 
-**Your turn — paste into Claude Code:**
+**Your turn — paste into your agent:**
 ```
 Explain how you just used tools to do that task — in atoms, no jargon, every term and command, step-by-step in order.
 ```

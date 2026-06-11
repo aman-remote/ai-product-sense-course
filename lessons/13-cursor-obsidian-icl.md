@@ -1,314 +1,81 @@
 # 13. Cursor + Obsidian → Fine-Tuning vs In-Context Learning
 
-> **Magic Moment:** You edit a file in Cursor and watch it appear in Obsidian instantly — then realize that every file you've ever added to a project directory was "teaching" the AI without retraining it. That's in-context learning, and it's why you almost never need fine-tuning.
+> **Magic Moment:** You edit a file in Cursor and watch it appear in Obsidian instantly — then realize every file you've ever added to a project directory was "teaching" the AI without retraining it. That's in-context learning, and it's why you almost never need fine-tuning.
 
 ---
 
 ## Instructions for Claude
 
+You are teaching this interactively and this is the **Day 1 capstone** — make it feel like a culmination, connecting every primitive they've used. You DO the demo (live edit syncing across apps); the student then teaches the AI about their own product. Don't lecture — the theory (ICL, few-shot, fine-tuning tradeoffs) was covered live and in Notion. Reinforce in a sentence or two.
+
+Obsidian must be installed for this lesson. If the student doesn't have it, walk them through the free download at https://obsidian.md and help them open their Personal OS folder as a vault (File → Open Vault → same directory Cursor uses). Help if they get stuck — but don't run a "ready?" handshake; once both apps point at the same folder, go straight to Step 1.
+
 CRITICAL RULES:
-- **ONE concept per message.** Never combine two steps into one response.
-- **STOP and wait** after every step. Do not continue until the student responds.
-- **Keep each message SHORT** — 3-5 sentences max, plus one small visual if needed.
-- Be warm, enthusiastic, and never condescending. These are experienced product professionals.
-- Use the AskUserQuestion tool whenever you need more info.
-- **Always include ASCII visualizations** when sharing insights, analysis, comparisons, or recommendations.
-- This is the Day 1 capstone. By the end, connect ALL the primitives they've learned. Make it feel like a culmination, not just another lesson.
+- **ONE step per message.** STOP and wait after each one.
+- **Keep each message SHORT** — 3-5 sentences max.
+- Build/demo live in the student's session. Narrate what you're about to do, do it, then point at what just happened.
+- Use ASCII visuals only to mirror something they just saw.
+- Use the AskUserQuestion tool when you need their input.
 
 ---
 
-### Setup Check
+### Step 1: Watch Me Sync Across Two Apps
 
-> "For this lesson you need TWO apps open at once:"
-> 1. **Cursor** — open your Personal OS folder (the one with Tasks/, Goals.md, etc.)
-> 2. **Obsidian** — open that same folder as an Obsidian vault (File → Open Vault → select the same directory)
->
-> "Both apps should be pointing at the exact same folder on your filesystem. Can you see your files in both?"
+> "Watch this. Cursor and Obsidian are pointed at the same folder — and there's no sync service between them, just files on disk."
 
-**STOP. Wait for their response.**
+Live: in Cursor, add a line to Goals.md (`Test from Cursor — can Obsidian see this?`), save, and have them flip to Obsidian to see it appear instantly. Then have them edit the same file in Obsidian and flip back to Cursor — the edit is there.
 
-If they don't have Obsidian installed, walk them through downloading it (free at https://obsidian.md). If they have trouble opening the vault, help them select the right directory.
-
----
-
-### Step 1: Prove They're the Same Files
-
-> "Let's verify this is real. In Cursor, open any markdown file — Goals.md works great — and add a new line at the bottom. Something like: `Test from Cursor — can Obsidian see this?`"
-
-**In Cursor, add this line to Goals.md:**
-```
-Test from Cursor — can Obsidian see this?
-```
-
-> "Save the file. Now switch to Obsidian and open the same file."
-
-**What you should see:**
-- The line you typed in Cursor appears in Obsidian immediately
-- Same file, two views, zero sync delay
-
-> "Now do it the other direction. In Obsidian, edit that same file — add another line. Switch back to Cursor."
-
-**What you should see:**
-- Cursor shows the edit made in Obsidian
-- Two-way, real-time, because it's the same filesystem
-
-> "There's no sync service. No API. No database. These are plain text files on your hard drive. Both apps just read them."
+> "Two-way, real-time, zero sync delay. No API, no database — both apps just read the same plain text on your hard drive."
 
 **STOP. Wait for their reaction.**
 
 ---
 
-### Step 2: See the Two Interfaces
+### Step 2: Name It (briefly)
 
-> "Now look at the same content through both lenses:"
+> "You've built a system with two frontends and a shared data layer — no code, no DB, no API. Cursor is the agent interface; Obsidian is the human interface."
 
 Show this visual:
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│  SAME FILES, TWO INTERFACES                             │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  ┌─────────────────────┐  ┌─────────────────────┐      │
-│  │  CURSOR              │  │  OBSIDIAN            │      │
-│  │  "Agent Interface"   │  │  "Human Interface"   │      │
-│  │                      │  │                      │      │
-│  │  You talk to the AI  │  │  You read, write,    │      │
-│  │  and it reads/writes │  │  browse, and think   │      │
-│  │  your files.         │  │  with your files.    │      │
-│  │                      │  │                      │      │
-│  │  Best for:           │  │  Best for:           │      │
-│  │  • Bulk operations   │  │  • Reading & review  │      │
-│  │  • Analysis          │  │  • Quick edits       │      │
-│  │  • Generation        │  │  • Visual navigation │      │
-│  │  • Refactoring       │  │  • Graph view        │      │
-│  │  • Asking questions  │  │  • Daily journaling  │      │
-│  └─────────────────────┘  └─────────────────────┘      │
-│                  \              /                        │
-│                   \            /                         │
-│                  ┌──────────────┐                       │
-│                  │  ~/your-os/  │                       │
-│                  │  (plain .md  │                       │
-│                  │   files)     │                       │
-│                  └──────────────┘                       │
-│                                                         │
-│  The data layer is just a folder. The interfaces are    │
-│  interchangeable. Add more interfaces anytime.          │
-└─────────────────────────────────────────────────────────┘
+  CURSOR (agent)            OBSIDIAN (human)
+  talk to AI, bulk ops,     read, review, quick edits,
+  analysis, generation      browse, graph view, journal
+            \              /
+             ~/your-os/  (plain .md files)
+  Data layer = a folder. Interfaces are interchangeable.
 ```
 
-> "You've built a system with two frontends and a shared data layer. You did it without writing a line of code, without a database, without an API. Just a folder of markdown files. This is the simplest possible architecture for an AI-powered product."
+> "This is the simplest possible architecture for an AI-powered product: plain files as the data layer, multiple interchangeable interfaces reading the same source."
 
 **STOP. Wait for their response.**
 
 ---
 
-### Step 3: Teach the AI Something New
+### Step 3: Your Turn — Teach the AI Your Product
 
-> "Here's where it gets interesting. Create a new file in Obsidian — something the AI hasn't seen before."
+> "Now teach the AI something it's never seen — about YOUR work."
 
-**In Obsidian, create a new file called `my-product-context.md` and write 3-5 bullet points about:**
-- What product you work on
-- Who your users are
-- What your biggest current challenge is
-
-> "Save it. Now switch to Cursor and ask Claude a question that requires this context."
-
-**Paste this into the Cursor chat panel (Agent mode):**
+**Important:** In Obsidian, create `my-product-context.md` with 3-5 bullets: what product you work on, who your users are, your biggest current challenge. Save. Then in Cursor (Agent mode):
 ```
 Based on everything you know about my work from the files in this project, what's one thing I should stop doing and one thing I should double down on?
 ```
+Watch it cite the file you just made in Obsidian. You taught it — no retraining, no fine-tuning pipeline. That's in-context learning.
 
-**What you should see:**
-- Claude reads your new file along with your existing tasks, goals, and backlog
-- Its answer references specifics from the file you JUST created in Obsidian
-- The recommendation is tailored to YOUR product and situation
+> "**Stretch — few-shot:** give it two examples of how you write task descriptions (Title / Why / Next step), then: `Rewrite any tasks in Tasks/ missing those fields, matching my format.` It learns the pattern from examples alone. **Super-stretch:** add a voice-dna.md with samples of your writing and have it draft something in your voice."
 
-> "You just taught the AI about your product. Not by retraining it. Not by uploading data to a fine-tuning pipeline. You created a markdown file in Obsidian, and the agent in Cursor could read it instantly. That's in-context learning."
-
-**STOP. Wait for their reaction.**
+**STOP. Let them run it. React to how it used their new file.**
 
 ---
 
-### Step 4: The Primitive — Fine-Tuning vs In-Context Learning
+### 🎉 What Just Happened
 
-> "Two ways to make an AI 'know' something:"
+> "Two ways to make an AI 'know' something: fine-tuning (retrain the weights — $$$, hours, ML skill, risky) or in-context learning (give it the data at runtime — ~$0, instant, just write a file). You did the second. Every file in your project, every CLAUDE.md, every RAG retrieval, every few-shot example is in-context learning. And this is the end of Day 1: you've now used EVERY primitive hands-on — model choice, atomic tools, the agentic loop, harness engineering, context engineering, markdown, system prompts, RAG, nondeterminism, and in-context learning — not from textbooks, but by building a system for yourself and watching it work."
 
-Show this visual:
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  TWO WAYS TO TEACH AN AI                                │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  FINE-TUNING                  IN-CONTEXT LEARNING       │
-│  ───────────                  ──────────────────        │
-│  Retrain the model            Give the model your       │
-│  on your data.                data at runtime.          │
-│                                                         │
-│  Cost: $$$-$$$$               Cost: ~$0                 │
-│  Time: hours to days          Time: instant             │
-│  Skill: ML engineering        Skill: write a file       │
-│  Updates: retrain again       Updates: edit the file    │
-│  Risk: can break the model    Risk: basically zero      │
-│                                                         │
-│  When you need it:            When you need it:         │
-│  • Very specific output       • Almost everything       │
-│    format at scale              else (95% of cases)     │
-│  • Proprietary domain         • Personal context        │
-│    (radiology, law)           • Project knowledge       │
-│  • Latency-critical and       • Custom instructions     │
-│    can't afford long            and preferences         │
-│    context                                              │
-│                                                         │
-│  ┌─────────────────────────────────────────┐            │
-│  │  YOU JUST DID IN-CONTEXT LEARNING.      │            │
-│  │                                         │            │
-│  │  You created my-product-context.md      │            │
-│  │  and the agent immediately "knew"       │            │
-│  │  about your product.                    │            │
-│  │                                         │            │
-│  │  No retraining. No ML. No cost.         │            │
-│  └─────────────────────────────────────────┘            │
-└─────────────────────────────────────────────────────────┘
-```
-
-> "Every file in your project directory is in-context learning. Every time you add a markdown doc, you're training the agent on new knowledge — without touching the model's weights. That's enormously powerful, and it's available to anyone who can create a text file."
-
-**STOP. Wait for their reaction.**
-
----
-
-### Step 5: Few-Shot Prompting — In-Context Learning With Examples
-
-> "There's a specific version of in-context learning you should know about: few-shot prompting. Instead of telling the model what to do, you show it examples."
-
-**Paste this into Cursor chat:**
-```
-Here are two examples of how I write task descriptions:
-
-Example 1:
-Title: Ship onboarding email sequence
-Why: 40% of new users drop off before day 3. Need to re-engage them.
-Next step: Draft 3 emails, get copy review from Sarah.
-
-Example 2:
-Title: Fix dashboard load time
-Why: P95 latency is 4.2s, target is under 2s. Users complain weekly.
-Next step: Profile the API calls, find the bottleneck.
-
-Now look at my tasks in Tasks/. Rewrite any that are missing the "Why" and "Next step" fields, using this same format.
-```
-
-**What you should see:**
-- Claude reads your tasks
-- Rewrites them to match your example format
-- Style, structure, and level of detail all match your examples
-
-> "You gave two examples. The model learned the pattern. No fine-tuning, no retraining — just examples in context. This is few-shot prompting, and it's one of the most useful techniques in production AI products."
-
-**STOP. Wait for their reaction.**
-
----
-
-### Step 6: Name Everything You've Learned
-
-> "This is the end of Day 1. Let's map every primitive you've touched:"
-
-Show this visual:
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  DAY 1 PRIMITIVE MAP                                    │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  Lesson 3:  Model choice         You picked a model     │
-│  Lesson 4:  Atomic tools         Agent used read/write   │
-│  Lesson 5:  Agentic loop         THINK → TOOL → THINK   │
-│  Lesson 6:  Harness engineering  Cursor/Claude Code wrap │
-│  Lesson 7:  MCP & tool design    Tools reach across net  │
-│  Lesson 8:  Context engineering  Structured your context │
-│  Lesson 9:  Markdown as UI       .md files = interface   │
-│  Lesson 10: System prompts       AGENTS.md / CLAUDE.md   │
-│  Lesson 11: RAG                  Agent reads your files   │
-│  Lesson 12: Nondeterminism       Multiple runs, pick best│
-│             + Bitter Lesson      Context > rules          │
-│  Lesson 13: In-context learning  Files teach the model   │
-│             + Few-shot prompting Examples in context      │
-│                                                         │
-│  ┌─────────────────────────────────────────┐            │
-│  │  YOUR PERSONAL OS USES ALL OF THEM:     │            │
-│  │                                         │            │
-│  │  Folder of .md files      → context eng │            │
-│  │  Agent reads them         → RAG          │            │
-│  │  CLAUDE.md instructions   → system prompt│            │
-│  │  Agent loops to plan      → agentic loop │            │
-│  │  read/write/search tools  → atomic tools │            │
-│  │  Model picks priorities   → model choice │            │
-│  │  Different each run       → nondetermin. │            │
-│  │  Add a file, agent knows  → ICL          │            │
-│  │  Give examples, it learns → few-shot     │            │
-│  └─────────────────────────────────────────┘            │
-│                                                         │
-│  You didn't study these in textbooks.                   │
-│  You used them by building a system for yourself.       │
-└─────────────────────────────────────────────────────────┘
-```
-
-> "Every primitive in production AI products — you've now used directly. Not in theory. Not by reading a paper. By building something for yourself and watching it work. That's what Day 1 was for."
-
-**STOP. Wait for their reaction.**
-
----
-
-### Step 7: Connect to Product — Why This Changes Your Job
-
-> "Think about what this means for the products you build or manage:"
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  IN-CONTEXT LEARNING IN PRODUCTION                      │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  Custom GPTs instructions    = in-context learning      │
-│  AGENTS.md / CLAUDE.md       = in-context learning      │
-│  RAG (retrieving docs)       = in-context learning      │
-│  Files in project directory  = in-context learning      │
-│  Few-shot examples in prompt = in-context learning      │
-│  System prompts              = in-context learning      │
-│                                                         │
-│  When your team says "we need to fine-tune," ask:       │
-│                                                         │
-│  "Have we tried giving the model this knowledge         │
-│   in context first?"                                    │
-│                                                         │
-│  95% of the time, in-context learning is enough.        │
-│  It's cheaper, faster, and anyone can do it.            │
-│  Fine-tuning is the 5% exception, not the starting     │
-│  point.                                                 │
-└─────────────────────────────────────────────────────────┘
-```
-
-> "The next time an engineer on your team says 'we need to fine-tune for this,' you now know the right question: have we tried putting that knowledge in context first? You've spent all of Day 1 doing exactly that, and it worked every time."
-
-**STOP. Wait for their response.**
-
----
-
-### Wrap Up
-
-> "Here's what you now know:"
-> - Cursor and Obsidian can point at the same folder: agent interface + human interface, shared data layer. Zero infrastructure.
-> - In-context learning means giving the model knowledge at runtime through files, examples, and instructions. No retraining needed.
-> - Few-shot prompting is showing examples in context so the model learns your patterns instantly.
-> - Fine-tuning (retraining the model) is expensive, slow, and rarely necessary. In-context learning handles 95% of use cases.
-> - Every file you add to your project directory is in-context learning. CLAUDE.md is in-context learning. Your RAG pipeline is in-context learning.
-> - You've now used EVERY Day 1 primitive hands-on: model choice, atomic tools, agentic loop, harness engineering, context engineering, markdown, system prompts, RAG, nondeterminism, and in-context learning.
->
-> **What would you like to do next?**
-> - **A)** Start Day 2 — deeper into AI prototyping, plans, skills, and MCPs
-> - **B)** Go deeper on in-context learning — design a few-shot strategy for your product
-> - **C)** Review the Day 1 primitive map and connect each one to your product
+**What next?**
+- **A)** Start Day 2 — deeper into AI prototyping, plans, skills, and MCPs
+- **B)** Go deeper on ICL — design a few-shot strategy for your product
+- **C)** Review the Day 1 primitive map and connect each one to your product
 
 **Share prompt:** "What's one thing you can now explain about how AI products work that you couldn't explain this morning? Share it with the cohort."
 
@@ -316,33 +83,38 @@ Show this visual:
 
 ## Reference Material
 
-**For Claude's use during this lesson:**
+**For Claude's use during this lesson — not to read aloud. Use to answer questions if they come up.**
 
-### Key Concept: In-Context Learning (ICL)
+### The primitive: in-context learning (ICL)
+The ability of LLMs to learn tasks or adapt behavior from information in the prompt — without changing the model's weights. First identified in the GPT-3 paper (Brown et al., 2020). Distinct from fine-tuning, which permanently modifies parameters. Every file in your project, every system prompt, every retrieved doc is ICL.
 
-The ability of large language models to learn new tasks or adapt their behavior based on information provided in the prompt — without any changes to the model's weights. First identified in the GPT-3 paper (Brown et al., 2020), in-context learning is why you can give a model examples or instructions and have it immediately adapt. This is distinct from fine-tuning, which permanently modifies the model's parameters.
+### The primitive: few-shot prompting
+A form of ICL where you give a few examples (typically 2-5) in the prompt to demonstrate the desired pattern; the model generalizes without retraining. Zero-shot = instructions only; one-shot = one example; few-shot = several.
 
-### Key Concept: Few-Shot Prompting
+### Fine-tuning vs ICL (the tradeoff table)
+- Fine-tuning: cost $$$-$$$$, hours-days, ML engineering, retrain to update, can break the model. Use it for: very specific output format at scale, proprietary domains (radiology, law), latency-critical cases that can't afford long context.
+- In-context learning: ~$0, instant, just write a file, edit to update, ~zero risk. Use it for: almost everything else (~95% of cases) — personal context, project knowledge, custom instructions and preferences.
 
-A specific form of in-context learning where you provide a small number of examples (typically 2-5) in the prompt to demonstrate the desired pattern. The model generalizes from these examples without retraining. Zero-shot = no examples (just instructions). One-shot = one example. Few-shot = multiple examples.
+### Day 1 primitive map (for the capstone recap)
+L3 model choice · L4 atomic tools · L5 agentic loop · L6 harness engineering · L7 MCP & tool design · L8 context engineering · L9 markdown as UI · L10 system prompts · L11 RAG · L12 nondeterminism + Bitter Lesson · L13 in-context learning + few-shot. The Personal OS uses all of them: folder of .md (context eng) → agent reads (RAG) → CLAUDE.md (system prompt) → loops to plan (agentic loop) → read/write/search (atomic tools) → model prioritizes (model choice) → different each run (nondeterminism) → add a file, agent knows (ICL) → give examples, it learns (few-shot).
 
-### How This Shows Up in Production
-- **Custom GPTs / Claude Projects**: Users write instructions that are injected into every conversation. Pure in-context learning.
-- **RAG systems**: Retrieve relevant documents and inject them into the prompt. The model "knows" about your data without being trained on it.
-- **AGENTS.md / CLAUDE.md**: Project-level instructions that shape agent behavior. In-context learning at the system level.
-- **Notion AI**: Reads your workspace content and uses it in responses. Not fine-tuned on your notes — it reads them in context.
-- **Harvey (legal AI)**: Retrieves relevant case law and puts it in context. The model wasn't trained on every case — it reads them at query time.
+### Why both interfaces matter
+Obsidian gives product people a familiar, visual way to manage knowledge; Cursor gives the agent access to that same knowledge. Together: the simplest AI-tool architecture — plain files as the data layer, multiple interfaces over one source.
 
-### Common Misconceptions
-- "We need to fine-tune to make it work with our data" — Almost always wrong. RAG + good system prompts handle most cases. Fine-tuning is for specific output format requirements at high volume, or deeply specialized domains.
-- "In-context learning is just prompting" — It's more than that. It includes the full context window: system prompts, retrieved documents, conversation history, files in the project, and examples. The entire context shapes behavior.
-- "Fine-tuning gives better results" — Not necessarily. For many tasks, well-engineered in-context learning outperforms fine-tuning because you can update context instantly without retraining, and the base model's general capabilities remain intact.
+### Where this shows up in production
+- **Custom GPTs / Claude Projects:** user instructions injected into every conversation — pure ICL.
+- **RAG systems:** retrieve docs, inject into prompt — model "knows" your data untrained.
+- **AGENTS.md / CLAUDE.md:** project instructions shaping behavior — ICL at the system level.
+- **Notion AI:** reads workspace content in context, not fine-tuned on your notes.
+- **Harvey:** retrieves relevant case law into context at query time.
 
-### Why Both Interfaces Matter
-Obsidian gives product professionals a familiar, visual way to manage their knowledge. Cursor gives the AI agent access to that same knowledge. Together they demonstrate the simplest possible architecture for an AI-powered personal tool: plain files as the data layer, multiple interfaces reading from the same source.
+### Misconceptions (correct only if raised)
+- "We must fine-tune for our data" — almost always wrong; RAG + good system prompts handle most cases. Fine-tuning is for specific output format at high volume or deeply specialized domains.
+- "ICL is just prompting" — it's the full context window: system prompts, retrieved docs, history, project files, examples.
+- "Fine-tuning gives better results" — often not; well-engineered ICL updates instantly and keeps the base model's general capabilities intact.
 
 ### Resources
 - "Language Models are Few-Shot Learners" (GPT-3 paper): https://arxiv.org/abs/2005.14165
-- Anthropic's guide to prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering
+- Anthropic prompt engineering guide: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering
 - Obsidian: https://obsidian.md
 - "In-context learning in large language models" (survey): https://arxiv.org/abs/2301.00234

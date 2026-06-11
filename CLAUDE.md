@@ -16,8 +16,8 @@ The course skill is at `skill/SKILL.md`. It has three modes:
 ## Lessons
 
 - 18 lessons across 2 days, stored in `lessons/`
-- Lessons 1–4 are complete; 5–18 are TODO
-- Each lesson pairs a hands-on use case with an AI engineering primitive
+- Lessons 1–13 (Day 1) and 14–18 (Day 2) are all complete
+- Each lesson is **instructions to Claude on how to teach interactively** — NOT a doc the student reads. Claude DOES the demo live, then the student drives a hands-on turn. Theory is covered live/in Notion and parked in each lesson's Reference Material (Claude-only). See `LESSON-FORMAT.md`.
 
 ## Key rules
 

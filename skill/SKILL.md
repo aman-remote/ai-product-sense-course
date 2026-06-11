@@ -20,118 +20,84 @@ When asked to generate a lesson from Notion source content, follow this exact pr
 
 ### Output Format (MANDATORY)
 
-Every generated lesson MUST follow this exact structure:
+The lesson file is **instructions to Claude on how to teach interactively** — NOT a doc the student reads, NOT a runbook of copy-paste prompts. The full spec is in `LESSON-FORMAT.md`; follow it exactly. `lessons/05-agentic-loop-whatsapp.md` is the canonical example to match.
+
+Core rules:
+- **Claude DOES, not TELLS.** Claude runs the demo live and narrates ("Watch this" → does it → points at the result). Reserve copy-paste prompts for the student's "Your Turn" step.
+- **No setup check / readiness handshake.** The student already pasted the file in. Open cold on Step 1. (Keep only genuinely-needed prerequisite checks, e.g. "is Obsidian installed", phrased as "check X / help if missing".)
+- **Theory was covered live + in Notion — do NOT re-lecture.** Reinforce in 1-2 sentences; park the full explanation and ALL curated links in the bottom Reference Material (Claude-only, not read aloud).
+- Trim theory to at most 1-2 small ASCII visuals total. No 4-6 diagram "theory steps".
+
+Every generated lesson MUST follow this structure:
 
 ```markdown
 # [Number]. [Title — Use Case] → [Primitive/Concept]
 
-> **Magic Moment:** [One sentence — the "wait, it can do THAT?" revelation the student experiences]
+> **Magic Moment:** [One sentence — the "wait, it can do THAT?" revelation]
 
 ---
 
 ## Instructions for Claude
 
+[1-3 sentences: you teach interactively, you DO the demo, theory is covered
+ elsewhere so reinforce briefly not lecture.]
+
 CRITICAL RULES:
-- **ONE concept per message.** Never combine two steps into one response.
-- **STOP and wait** after every step. Do not continue until the student responds.
-- **Keep each message SHORT** — 3-5 sentences max, plus one small visual if needed.
-- Be warm, patient, never condescending. This is for product professionals, not beginners.
-- Use the AskUserQuestion tool whenever you need more info.
-- **Always include ASCII visualizations** when sharing insights, analysis, comparisons, or recommendations.
-- Connect every concept to their real product work — never teach in a vacuum.
+- **ONE step per message.** STOP and wait after each.
+- **Keep each message SHORT** — 3-5 sentences max.
+- Build/demo live in the student's session; narrate, then point at what happened.
+- Use ASCII visuals only to mirror what they just saw (not as theory slides).
+- Use the AskUserQuestion tool when you need their input.
 
 ---
 
-### Setup Check
-
-[Confirm prerequisites — what they need open/ready]
-
-**STOP. Wait for their response.**
-
----
-
-### Step 1: [Action verb — the hook]
-
-[Clear instruction that gets them DOING something immediately]
-
-**Paste this into [Cursor/Claude Code]:**
-\```
-[Copy-pasteable prompt that produces visible results]
-\```
-
-**What you should see:** [Expected output so they know it worked]
-
-**STOP. Wait for their response.**
-
----
-
-### Step 2: [Action verb — building on step 1]
-
-[Next step that deepens understanding through action]
-
-**STOP. Wait for their response.**
-
----
-
-### Step 3: [The magic moment — where the "primitive" clicks]
-
-[This is where the underlying AI engineering concept becomes viscerally obvious]
-
-> "[Explanation connecting what just happened to the production AI primitive]"
-
+### Step 1: Watch Me [do the thing]
+[Claude runs the demo live and narrates. "Watch this."]
 **STOP. Wait for their reaction.**
 
 ---
 
-### Step 4: [Apply it — connect to their product work]
-
-> "Now think about [their product]. Where does [this primitive] show up?"
-
-[Guide them to see this pattern in real products they use or build]
-
+### Step 2: Name It (briefly)
+[One sentence naming the primitive + ONE small ASCII visual if it helps.]
 **STOP. Wait for their response.**
 
 ---
 
-### Wrap Up
+### Step 3: Your Turn
+[Student drives on THEIR product/data. Important task; optionally Stretch /
+ Super-stretch for fast finishers. The only step with a student-run prompt.]
+**STOP. Let them run it, react to what they observed.**
 
-> "[Recap: use case → primitive → why it matters for product sense]"
->
-> **What would you like to do next?**
-> - **A)** Move on to Lesson [N+1] — [topic teaser]
-> - **B)** Go deeper on [this concept]
-> - **C)** Apply this to your own product right now
+---
 
-**Share prompt:** "[One prompt for the cohort — 'Bring back: ___']"
+### 🎉 What Just Happened
+[3-5 sentences: why it worked, the mechanic under the hood. Then A/B/C "what
+ next" options + a Share prompt for the cohort.]
 
 ---
 
 ## Reference Material
 
-**For Claude's use during this lesson:**
+**For Claude's use during this lesson — not to read aloud. Use to answer questions if they come up.**
 
-### Key Concept: [Primitive Name]
-[2-3 sentence explanation of the AI engineering primitive being taught]
+### The primitive
+[2-3 sentence explanation of the AI engineering primitive.]
 
-### How This Shows Up in Production
-[Examples of real products using this primitive]
+### Where this shows up in production
+[Real products using this primitive.]
 
-### Common Misconceptions
-[What product people typically get wrong about this]
+### Misconceptions (correct only if raised)
+[What product people typically get wrong.]
 
-### Resources
-[Links from the Notion source, relevant papers, videos]
+### Resources (offer only if they want more)
+[Every link from the Notion source — papers, videos, posts.]
 ```
 
-### Tone & Style Rules (from reference course)
-- Write like pair-programming with a smart PM friend
-- Every sentence earns its spot — no filler
-- Use emoji sparingly: 🎉 for magic moments, ⚠️ for gotchas, 💡 for tips
-- Include "Expected output" after every prompt
-- Build confidence first → then blow their mind
-- Address the reader as "you"
-- The "Use Case" section = hands-on (what they DO)
-- The "Primitive" section = the concept (what they LEARN)
+### Tone & Style Rules
+- Write like pair-programming with a smart PM friend. Every sentence earns its spot.
+- Use emoji sparingly: 🎉 for magic moments, ⚠️ for gotchas, 💡 for tips.
+- Address the reader as "you".
+- The demo (Steps 1-2) = Claude does it. The "Your Turn" (Step 3) = the student does it on their real work.
 
 ### Course-Specific Principles
 - **Product people as audience**: They know discovery, strategy, users. Tech intuition is new.
@@ -199,8 +165,10 @@ When asked to evaluate a lesson, score it on these dimensions (1-5 each):
 
 ### Red Flags (auto-fail, must fix):
 - Any step longer than 5 sentences without a STOP
-- No copy-pasteable prompt in the lesson
-- Primitive not connected to a real product example
+- A "Setup Check" / "are you ready?" handshake (the student already pasted the file in — open cold)
+- Claude tells the student to "paste this and watch" instead of DOING the demo itself in Steps 1-2
+- No student-run "Your Turn" step (Step 3 must hand the keys to the student on their own work)
+- Theory re-lectured in the body instead of parked in Reference Material (more than 1-2 ASCII visuals = too much theory up front)
+- Primitive not connected to a real product example (in Reference Material)
 - Generic advice that could apply to any topic
-- Missing "What you should see" after a prompt
-- No ASCII visualization anywhere in the lesson
+- Curated resource links dropped instead of moved into Reference Material

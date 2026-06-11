@@ -33,7 +33,7 @@ Each lesson is an **interactive script for Claude to follow**, not a document fo
 12. Personal OS → Nondeterminism & the Bitter Lesson
 13. Cursor + Obsidian → Fine-tuning vs in-context learning
 
-### Day 2: Going Deep (in progress)
+### Day 2: Going Deep (5 lessons)
 
 14. OpenClaw Hands-On → Agent harness in practice
 15. AI Prototyping → Plans & feedback loops

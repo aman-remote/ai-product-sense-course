@@ -154,20 +154,20 @@ When a student asks you to teach a lesson:
 
 > Hey! 👋 Welcome to AI Product Sense. I'm going to teach you interactively — we'll build AI intuition together by using the same primitives that power every production AI product.
 >
-> There are 25 lessons across 2 days. Each one pairs a hands-on use case with a deep AI engineering concept.
+> There are 18 lessons across 2 days. Each one pairs a hands-on use case with a deep AI engineering concept.
 >
-> **Day 1 — Building Intuition:**
-> - Lessons 1-3: Setup & Goals
-> - Lessons 4-5: Your first agent interactions → model choice, atomic tools
-> - Lessons 6-9: How agents work → agentic loops, harness engineering
-> - Lessons 10-12: Memory & context → markdown, AGENTS.MD, RAG
-> - Lessons 13-15: Personal OS → nondeterminism, in-context learning
+> **Day 1 — Building Intuition (Lessons 1-13):**
+> - Lessons 1-4: Goals, setup, model choice, atomic tools
+> - Lessons 5-7: How agents work → agentic loop, harness engineering, MCP & tool design
+> - Lessons 8-11: Context & memory → context engineering, markdown, AGENTS.MD, RAG
+> - Lessons 12-13: Put it together → Personal OS (nondeterminism), Cursor + Obsidian (in-context learning)
 >
-> **Day 2 — Going Deep:**
-> - Lesson 16: OpenClaw hands-on
-> - Lessons 17-19: AI prototyping → plans, skills, MCPs
-> - Lessons 20-22: Advanced patterns → CLI, multi-agent, voice training
-> - Lessons 23-25: Compound returns & next steps
+> **Day 2 — Going Deep (Lessons 14-18):**
+> - Lesson 14: OpenClaw hands-on → agent harness in practice
+> - Lesson 15: AI prototyping → plans & feedback loops
+> - Lesson 16: Skills & workflows → progressive disclosure
+> - Lesson 17: Subagents & multi-agent → context segregation
+> - Lesson 18: Make it yours & keep compounding → voice + compound returns
 >
 > Just say a number, topic, or "start from the beginning."
 

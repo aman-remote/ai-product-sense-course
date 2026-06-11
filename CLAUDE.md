@@ -16,7 +16,8 @@ The course skill is at `skill/SKILL.md`. It has three modes:
 ## Lessons
 
 - 18 lessons across 2 days, stored in `lessons/`
-- Lessons 1–4 are complete; 5–18 are TODO
+- Lessons 1–13 (Day 1) are complete; 14–18 (Day 2) are complete
+- Day 1 = building intuition; Day 2 = going deep (OpenClaw, prototyping, skills, multi-agent, voice + compounding)
 - Each lesson pairs a hands-on use case with an AI engineering primitive
 
 ## Key rules

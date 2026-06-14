@@ -1,4 +1,4 @@
-# 10. AGENTS.MD → System Prompts & Persistent Memory
+# 7. AGENTS.MD → System Prompts & Persistent Memory
 
 > **Magic Moment:** You watch one line in a text file change the agent's entire personality — then realize that text file IS the system prompt, the same mechanism behind every Custom GPT, every Claude Project, every production AI product.
 

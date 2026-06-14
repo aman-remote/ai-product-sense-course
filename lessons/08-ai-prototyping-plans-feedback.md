@@ -1,4 +1,4 @@
-# 15. AI Prototyping → Plans & Feedback Loops
+# 8. AI Prototyping → Plans & Feedback Loops
 
 > **Magic Moment:** You watch an agent interview you in Plan mode and write a spec to a text file *before* touching any code — and realize "Plan mode" isn't magic. It's a thin productization of a habit every great team already has: put the plan in writing so it survives context switches.
 

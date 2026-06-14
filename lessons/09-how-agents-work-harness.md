@@ -1,4 +1,4 @@
-# 6. How Coding Agents Work → Harness Engineering
+# 9. How Coding Agents Work → Harness Engineering
 
 > **Magic Moment:** You make the agent describe its own internals and watch the "agent" dissolve into a wrapper — system prompt, tools, rules, retry logic, UI — with the model as just one swappable piece.
 

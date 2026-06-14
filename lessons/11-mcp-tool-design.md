@@ -1,4 +1,4 @@
-# 7. MCP: Connect to SaaS & Thoughtful Tool Design → MCP & Tool Design
+# 11. MCP: Connect to SaaS & Thoughtful Tool Design → MCP & Tool Design
 
 > **Magic Moment:** You install a real MCP connector, watch the agent answer a strategic question across your own tools, then have it critique its own tools as a product designer — and realize "tool design for agents" is a brand-new product discipline.
 

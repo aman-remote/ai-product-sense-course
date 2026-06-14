@@ -1,4 +1,4 @@
-# 16. Skills & Workflows → Progressive Disclosure
+# 10. Skills & Workflows → Progressive Disclosure
 
 > **Magic Moment:** You discover that `/memory` and `/compact` are just shortcuts that read a file or run a step — and that you can write your own. A "skill" turns out to be nothing but a markdown file the agent loads when relevant. You can teach your agent a new ability by writing a paragraph.
 

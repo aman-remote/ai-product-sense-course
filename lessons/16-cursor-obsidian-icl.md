@@ -1,4 +1,4 @@
-# 13. Cursor + Obsidian → Fine-Tuning vs In-Context Learning
+# 16. Cursor + Obsidian → Fine-Tuning vs In-Context Learning
 
 > **Magic Moment:** You edit a file in Cursor and watch it appear in Obsidian instantly — then realize every file you've ever added to a project directory was "teaching" the AI without retraining it. That's in-context learning, and it's why you almost never need fine-tuning.
 

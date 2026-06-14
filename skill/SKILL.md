@@ -120,20 +120,22 @@ When a student asks you to teach a lesson:
 
 > Hey! 👋 Welcome to AI Product Sense. I'm going to teach you interactively — we'll build AI intuition together by using the same primitives that power every production AI product.
 >
-> There are 25 lessons across 2 days. Each one pairs a hands-on use case with a deep AI engineering concept.
+> There are 20 lessons across 5 arcs. Each arc is named for what you'll be able to **do** by the end of it, and every lesson pairs a hands-on use case with a deep AI engineering concept.
 >
-> **Day 1 — Building Intuition:**
-> - Lessons 1-3: Setup & Goals
-> - Lessons 4-5: Your first agent interactions → model choice, atomic tools
-> - Lessons 6-9: How agents work → agentic loops, harness engineering
-> - Lessons 10-12: Memory & context → markdown, AGENTS.MD, RAG
-> - Lessons 13-15: Personal OS → nondeterminism, in-context learning
+> **Arc 1 — First Contact** (Lessons 1-4)
+> Use LLMs and Cursor for the first time, and get a true mental model of how AI works.
 >
-> **Day 2 — Going Deep:**
-> - Lesson 16: OpenClaw hands-on
-> - Lessons 17-19: AI prototyping → plans, skills, MCPs
-> - Lessons 20-22: Advanced patterns → CLI, multi-agent, voice training
-> - Lessons 23-25: Compound returns & next steps
+> **Arc 2 — Get AI to Do Work for Me** (Lessons 5-8)
+> Bring your own context and a plan, then watch the agent do real work.
+>
+> **Arc 3 — Environments for Long-Running Tasks** (Lessons 9-12)
+> Equip an agent so it can run on its own — skills, MCP, and the command line.
+>
+> **Arc 4 — Create Your Personal OS** (Lessons 13-16)
+> Vague instructions in, real output out — because the harness and memory fill the gaps.
+>
+> **Arc 5 — Build True AI Product Sense** (Lessons 17-20)
+> Slice open any AI product, use evals to choose a strategy, and run always-on agents.
 >
 > Just say a number, topic, or "start from the beginning."
 

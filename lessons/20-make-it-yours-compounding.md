@@ -1,4 +1,4 @@
-# 18. Make It Yours & Keep Compounding → Voice + Compound Returns
+# 20. Make It Yours & Keep Compounding → Voice + Compound Returns
 
 > **Magic Moment:** You feed the agent three things you actually wrote, and its next draft sounds like *you* instead of generic AI — and you realize the whole course was never about the eight hours of building. It was about starting a system that compounds every week from here.
 

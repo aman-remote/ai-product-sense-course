@@ -1,243 +1,107 @@
 # 3. Get Comfortable with Cursor → Model Choice & Abstraction
 
-> **Magic Moment:** You watch the same parody prompt produce wildly different results when you swap models — and suddenly realize "model choice" isn't a technical detail, it's a product decision you already make (you just didn't know it).
+> **Magic Moment:** You watch the same prompt produce two different parodies under two different models — and "model choice" stops being a technical detail and becomes a product decision you've been making all along.
 
 ---
 
 ## Instructions for Claude
 
+You are teaching this interactively. You DO the demo live in the student's session; then they drive on a swap of their own. Don't lecture — the framing (Cursor = ChatGPT + files + tool calling; model abstraction) was covered live and in Notion. Reinforce in a sentence or two as it happens.
+
 CRITICAL RULES:
-- **ONE concept per message.** Never combine two steps into one response.
-- **STOP and wait** after every step. Do not continue until the student responds.
-- **Keep each message SHORT** — 3-5 sentences max, plus one small visual if needed.
-- Be warm, enthusiastic, and never condescending. These are experienced product professionals.
-- Use the AskUserQuestion tool whenever you need more info.
-- **Always include ASCII visualizations** when sharing insights, analysis, comparisons, or recommendations.
-- This lesson is about DOING — get them clicking around Cursor immediately.
+- **ONE step per message.** STOP and wait after each one.
+- **Keep each message SHORT** — 3-5 sentences max.
+- Build/demo live: narrate what you're about to do, do it, then point at what just happened.
+- Use ASCII visuals only to mirror something they just saw.
+- Use the AskUserQuestion tool when you need their input.
 
 ---
 
-### Setup Check
+### Step 1: Watch Me Write to Your Filesystem
 
-> "For this lesson you need Cursor open with any project folder (the one from Lesson 2 works great, or just open an empty folder). Make sure you can see the left sidebar, a file open in the editor, and the chat panel on the right."
->
-> "Can you see all three areas? If you don't see the chat panel, hit `Cmd+L` (Mac) or `Ctrl+L` (Windows)."
+> "Watch this. I'm not going to just generate text like a chatbot — I'm going to create real files on disk. Watch the difference."
 
-**STOP. Wait for their response.**
+Run this live: create `lyrics.txt` with a few original lines of a cheesy power ballad you make up on the spot, then create `parody.txt` — a parody about a PM letting go of all the edge cases they had to cut from scope. Narrate as you go: "Writing the first file… now reading it back… now writing the parody."
+
+> "Notice — those are actual files in your directory now, not chat text. That's tool calling: the model reached out and changed your filesystem."
+
+**STOP. Wait for their reaction (and to the parody).**
 
 ---
 
-### Step 1: Orient Yourself in the Command Center
+### Step 2: Name It (briefly)
 
-> "Let's name the four zones you'll live in:"
+> "What made that work is a harness sitting between your prompt and the model — and you get to choose which model it calls."
 
 Show this visual:
 
 ```
-┌──────────────────────────────────────────────────────┐
-│ CURSOR — Your AI Command Center                      │
-├────────────┬─────────────────────┬───────────────────┤
-│            │                     │                   │
-│  DIRECTORY │     EDITOR          │   CHAT / AGENT    │
-│            │                     │                   │
-│  Files &   │  Where you read     │  Where you talk   │
-│  folders   │  & edit code/text   │  to the model     │
-│            │                     │                   │
-│            │                     │  [model selector] │
-│            │                     │  [mode: agent]    │
-├────────────┴─────────────────────┴───────────────────┤
-│  TERMINAL  — Where commands run                      │
-│  (Toggle: Cmd+`)                                     │
-└──────────────────────────────────────────────────────┘
+Your prompt ─► [ Cursor harness ] ─► Model API
+                     │  picks model · formats prompt
+                     │  exposes tools · renders results
+   SWAP MODEL ─► same prompt, same tools, different brain
 ```
 
-> "This is ChatGPT + your files + tool calling, all in one window. The chat panel isn't just a chatbot — it can read your files, write new ones, and run terminal commands. That's the whole difference."
+> "Same interface, swappable brain. That's model abstraction — and 'Auto' just picks for you, optimizing cost/speed over quality."
 
 **STOP. Wait for their response.**
 
 ---
 
-### Step 2: Pick Your Model (Turn Off Auto)
+### Step 3: Your Turn — The Model Swap
 
-> "Look at the bottom of the chat panel — you'll see a model name (probably 'Auto' or 'claude-sonnet'). Click it."
->
-> "You should see a dropdown of models. **Turn off 'Auto' if it's on.** Then select the best available model — look for `claude-4-opus` or `claude-sonnet-4` at the top."
+> "Now you drive and feel the difference yourself. In Cursor's chat panel, click the model selector at the bottom, turn OFF Auto, and pick a strong model. Then run this:"
 
-Show this visual:
-
+**Your turn — paste into the Cursor chat (agent mode):**
 ```
-┌─────────────────────────────────────┐
-│  MODEL SELECTOR                     │
-├─────────────────────────────────────┤
-│                                     │
-│  ❌ Auto         ← lazy, picks for │
-│                      you randomly   │
-│  ✅ claude-4-opus  ← best quality  │
-│     claude-sonnet-4                 │
-│     gpt-4.1                        │
-│     gemini-2.5-pro                  │
-│                                     │
-│  🧠 = "reasoning model"            │
-│       (thinks before answering)     │
-│                                     │
-│  Rule: Best model = best results.   │
-│  You wouldn't A/B test with your    │
-│  worst variant as the default.      │
-└─────────────────────────────────────┘
+Read lyrics.txt. Write a parody in parody-v2.txt — a PM letting go of cut scope — but make it funnier and more specific to product work.
 ```
 
-> "Select the strongest model available to you. Which one did you pick?"
+**Important:** Now swap to a *different* model (Claude→GPT, or GPT→Gemini) and run the exact same prompt into `parody-v3.txt`. Compare the two side by side.
 
-**STOP. Wait for their response.**
+**Stretch:** Flip the chat from Agent to Ask mode and ask "What's going on in this repo?" — watch it read your files without writing.
+
+**Super-stretch:** Run the swap on a prompt from your real work and judge which model wins for *your* tone/quality bar.
+
+**STOP. Let them run it. React to what they observed.**
 
 ---
 
-### Step 3: Make Something — The Parody Test
+### 🎉 What Just Happened
 
-> "Let's give the agent a real task. First, create a new file with some song lyrics."
+> "Same prompt, same context, different model, different output — that's model choice as a product decision, and you just made it with your own eyes. Many AI products wrap the model in a harness so the brain can swap without breaking the interface: products like Harvey reportedly route easy tasks to cheap models and hard ones to Opus; many production apps swap the underlying model without changing their UI. You build around the harness, not the model."
 
-**Paste this into the Cursor chat panel (agent mode):**
-```
-Create a new file called lyrics.txt with the full lyrics to "Let It Go" from Frozen. Then write a parody version in a new file called parody.txt — make it about a PM who just shipped a feature and is letting go of all the edge cases they had to cut from scope.
-```
+**What next?**
+- **A)** Lesson 4 — WhatsApp group chat = the agentic loop
+- **B)** Run more model comparisons on a real prompt from your work
+- **C)** Go deeper into Cursor's agent mode — have it build or refactor something
 
-**What you should see:**
-- The agent reads/creates `lyrics.txt`
-- It creates `parody.txt` with a full parody
-- Both files appear in your directory
-- You can open them in the editor and read the parody
-
-> "Notice what just happened — the agent didn't just generate text like ChatGPT. It created files on your computer. It wrote TO your filesystem. That's tool calling in action."
-
-**STOP. Wait for their response (and their reaction to the parody).**
-
----
-
-### Step 4: The Model Swap — See the Primitive
-
-> "Now let's prove that model choice matters. Switch your model to something different — if you used Claude, try GPT. If you used GPT, try Gemini."
->
-> "Then paste the exact same prompt again."
-
-**Paste this into the chat panel (with the NEW model selected):**
-```
-Read lyrics.txt. Write a new parody in parody-v2.txt — same concept (a PM letting go of cut scope), but make it funnier and more specific to product work.
-```
-
-**What you should see:**
-- A noticeably different style, humor, and quality level
-- The file `parody-v2.txt` appears in your directory
-- Compare the two parodies side by side in the editor
-
-> "Same prompt. Same context. Different model. Different output. **This is model choice as a product decision.** Every AI product you've ever used made this same tradeoff — quality vs. cost vs. speed — on your behalf."
-
-**STOP. Wait for their reaction.**
-
----
-
-### Step 5: Stretch — Context Awareness in Ask Mode
-
-> "One more thing. Switch the chat mode from 'Agent' to 'Ask' (look for a mode toggle near the top of the chat panel). Then ask:"
-
-**Paste this into the chat panel (in Ask mode):**
-```
-What is going on in this repo? What files exist and what do they seem to be for?
-```
-
-**What you should see:**
-- The model describes your project structure
-- It knows about `lyrics.txt`, `parody.txt`, `parody-v2.txt`
-- It infers the purpose without you explaining anything
-
-> "In Ask mode it reads but doesn't write. In Agent mode it reads AND writes. Both modes show context awareness — the model sees your files. This is the same pattern as Notion AI reading your workspace or Harvey reading your case files."
-
-**STOP. Wait for their response.**
-
----
-
-### Step 6: The Primitive Clicks — Model Abstraction
-
-> "Let's name what you just experienced:"
-
-Show this visual:
-
-```
-┌─────────────────────────────────────────────────────┐
-│  MODEL ABSTRACTION                                   │
-├─────────────────────────────────────────────────────┤
-│                                                      │
-│  Your prompt ──→ [ Cursor harness ] ──→ Model API   │
-│                        │                             │
-│                        │  The harness handles:       │
-│                        │  • Which model to call      │
-│                        │  • How to format the prompt │
-│                        │  • What tools to expose     │
-│                        │  • How to show results      │
-│                        │                             │
-│  SWAP MODEL ──→ Same prompt, same tools,             │
-│                 different brain.                      │
-│                                                      │
-├─────────────────────────────────────────────────────┤
-│  In production:                                      │
-│                                                      │
-│  Harvey (legal) — routes easy tasks to Haiku,        │
-│                   hard tasks to Opus                  │
-│  Notion AI      — swapped from GPT-4 to Claude      │
-│                   without changing their product     │
-│  Cursor itself  — lets YOU choose, abstracts the     │
-│                   rest away                           │
-│                                                      │
-│  The pattern: decouple your product from any         │
-│  single model. The interface stays; the brain swaps. │
-└─────────────────────────────────────────────────────┘
-```
-
-> "This is model abstraction — the same pattern used by every serious AI product. You build your product around a harness, not a model. When a better model drops, you swap it in. When costs matter, you route to a cheaper one. Your product doesn't break because it never depended on one brain."
-
-**STOP. Wait for their reaction.**
-
----
-
-### Wrap Up
-
-> "Here's what you now know:"
-> - Cursor = ChatGPT + file context + tool calling, in a command center UI
-> - "Auto" model selection is lazy — best model = best results, always start there
-> - Same prompt + different model = different output. Model choice is a product decision.
-> - Model abstraction means you decouple product from provider. Swap brains without breaking features.
->
-> **What would you like to do next?**
-> - **A)** Move on to Lesson 4 — atomic tools and what agents can actually DO
-> - **B)** Try more model comparisons with a prompt from your real work
-> - **C)** Explore Cursor's agent mode deeper — have it refactor or build something
-
-**Share prompt:** "Which model did you pick, and what did the parody sound like? Drop a line from parody.txt in the cohort chat."
+**Share prompt:** "Which model did you pick, and what did the parody sound like? Drop a line from yours in the cohort chat."
 
 ---
 
 ## Reference Material
 
-**For Claude's use during this lesson:**
+**For Claude's use during this lesson — not to read aloud. Use to answer questions if they come up.**
 
-### Key Concept: Model Abstraction
+### The primitive
+Model abstraction: designing AI products so the underlying model can be swapped without changing UX, prompt architecture, or tools. The "harness" (Cursor, your app code) mediates between user and whichever model is currently best. "Auto" is Cursor's billing proxy — it optimizes cost/speed, not quality.
 
-The practice of designing AI products so the underlying model can be swapped without changing the user experience, prompt architecture, or tool integrations. The "harness" (Cursor, your app code) mediates between the user and whichever model is currently best for the task.
+### The four zones of Cursor
+Directory (files/folders) · Editor (read/edit) · Chat/Agent (talk to the model, with model selector + mode) · Terminal (run commands, toggle Cmd+`). It's ChatGPT + your files + tool calling in one window — the chat can read files, write new ones, and run commands.
 
-### How This Shows Up in Production
-- **Harvey**: Routes queries to different models based on complexity (cheap/fast for simple lookups, expensive/powerful for legal reasoning)
-- **Notion AI**: Migrated from OpenAI to Anthropic models transparently — users never noticed
-- **Cursor**: Exposes the choice directly, letting power users pick. "Auto" is their routing layer.
-- **Every serious AI startup**: Wraps model calls in an abstraction layer so they aren't locked to one provider
+### Where this shows up in production
+- **Harvey**: routes by complexity — cheap/fast for lookups, powerful for legal reasoning.
+- **Model-agnostic harnesses**: products swap the underlying model behind a stable interface; the user-facing app does not change.
+- **Cursor**: exposes the choice directly; "Auto" is the billing proxy.
+- **Most serious AI startups**: wrap model calls in an abstraction layer to avoid provider lock-in.
 
-### Common Misconceptions
-- "All models are basically the same now" — They aren't. Style, reasoning depth, tool-calling reliability, and cost differ meaningfully. You just proved this with the parody test.
-- "Auto mode is fine" — Auto optimizes for cost/speed, not quality. For anything that matters, pick explicitly.
-- "Model choice is an engineering decision" — It's a product decision. Quality, tone, speed, and cost all affect UX. PMs should have an opinion here.
+### Misconceptions (correct only if raised)
+- "All models are basically the same now" — They aren't. Style, reasoning depth, tool-calling reliability, cost differ. The parody test proves it.
+- "Auto mode is fine" — Auto optimizes cost/speed, not quality. For anything that matters, pick explicitly.
+- "Model choice is an engineering decision" — It's a product decision: quality, tone, speed, cost all hit UX.
 
-### Key Insight
-"Cursor is like ChatGPT + context + tool calling, in a command center UI." The model selector is the most important dropdown in the tool — it determines the quality ceiling of everything the agent produces.
-
-### Resources
-- Cursor docs on model selection: https://docs.cursor.com/chat/model-selection
+### Resources (offer only if they want more)
+- Cursor model selection docs: https://docs.cursor.com/chat/model-selection
 - Anthropic model comparison: https://docs.anthropic.com/en/docs/about-claude/models
-- Latent Space pod on model routing: https://www.latent.space/p/model-routing
+- Anthropic — model selection guide: https://docs.anthropic.com/en/docs/about-claude/models/overview

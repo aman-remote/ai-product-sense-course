@@ -1,4 +1,4 @@
-# 6. How Coding Agents Work → Harness Engineering
+# 9. How Coding Agents Work → Harness Engineering
 
 > **Magic Moment:** You make the agent describe its own internals and watch the "agent" dissolve into a wrapper — system prompt, tools, rules, retry logic, UI — with the model as just one swappable piece.
 
@@ -77,7 +77,7 @@ Tell me about your rules files — CLAUDE.md, AGENTS.md, or .cursorrules, whiche
 > "You took the agent apart: the model is one swappable component, and everything else — system prompt, tools, rules, retry logic, UI, model picker — is the harness, which is the product. Two truths fall out: when AI fails, the fix is almost always better *context*, not a smarter model; and 'memory' is just files (the conversation is short-term, disk is long-term — there's no magic memory module). Even autonomy is a harness setting, not a model feature."
 
 **What next?**
-- **A)** Lesson 7 — MCP and thoughtful tool design
+- **A)** Lesson 10 — skills & workflows (progressive disclosure)
 - **B)** Explore your rules file (CLAUDE.md / AGENTS.md) and modify it to change agent behavior
 - **C)** Map the harness components for an AI product you're building or evaluating
 

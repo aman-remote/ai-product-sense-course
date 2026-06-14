@@ -1,4 +1,4 @@
-# 9. Markdown & Directories → Structured Text as Interface
+# 6. Markdown & Directories → Structured Text as Interface
 
 > **Magic Moment:** You watch a messy brain-dump backlog get parsed into organized task files with metadata, then queried like a database — "what are my P0s?" — with no app, no database, no installs. Then you do it to your own backlog.
 
@@ -73,7 +73,7 @@ Open a task file, check the frontmatter, and see if you agree with the prioritie
 > "You turned unstructured text into a structured, queryable system with one sentence. YAML frontmatter = database fields; the markdown body = rich content; the directory tree = relationships; filenames = primary keys; git = free version control. You don't need Notion, Jira, or Airtable for an agent to manage your work — markdown + directories IS the interface, the same way it reads and writes code."
 
 **What next?**
-- **A)** Lesson 10 — AGENTS.md and persistent memory
+- **A)** Lesson 7 — AGENTS.md and persistent memory
 - **B)** Build out your real task system with more of your actual work
 - **C)** Try more queries — "What outreach is overdue?" or "Draft a weekly summary from my tasks"
 

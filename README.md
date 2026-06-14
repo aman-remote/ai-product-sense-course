@@ -8,38 +8,52 @@ An interactive, hands-on course for product professionals to build deep intuitio
 
 Each lesson is an **interactive script for Claude to follow**, not a document for you to read. Open Claude Code or Cursor, point it at a lesson file, and it will teach you step-by-step — building things live with your real product context, pausing for your input, and adapting to your experience level.
 
-## Course Structure
+## Course Structure — Five Capability Arcs
 
-### Day 1: Building Intuition (13 lessons)
+The course is organized by **what you can do at the end of each arc**, not by calendar day. Each arc builds on the last.
 
-**Block 1: Foundations**
+### Arc 1 — First Contact
+*Use LLMs and Cursor for the first time, and get a true mental model of how AI works.*
 1. Goals & How to Build AI Product Sense → The LLM application layer
 2. Setup Guide → Environment as context
 3. Get Comfortable with Cursor → Model choice & abstraction
-4. Vague Prompt → Atomic tools
+4. WhatsApp Group Chat = Agentic AI → The agentic loop
 
-**Block 2: How Agents Work**
-5. WhatsApp Group Chat = Agentic AI → The agentic loop
-6. How Coding Agents Work → Harness engineering
-7. MCP: Connect to SaaS & Tool Design → MCP, tool declarations, CLI vs MCP
+### Arc 2 — Get AI to Do Work for Me
+*Bring your own context and a plan, then watch the agent do real work.*
+5. An Intentionally Vague Prompt → Atomic tools
+6. Markdown & Directories → Structured text as interface
+7. AGENTS.md → System prompts & persistent memory
+8. AI Prototyping → Plans & feedback loops
 
-**Block 3: Context & Memory**
-8. Thinking & Strategy Partner → Context engineering & rot
-9. Markdown & Directories → Structured text as interface
-10. AGENTS.MD → System prompts & persistent memory
-11. Ask Cursor Questions → RAG & retrieval
+### Arc 3 — Environments for Long-Running Tasks
+*Equip an agent so it can run on its own — skills, MCP, and the command line.*
+9. How Coding Agents Work → Harness engineering
+10. Skills & Workflows → Progressive disclosure
+11. MCP: Connect to SaaS → Tool declarations & remote MCP
+12. Command Line: The Ultimate Tool → CLI vs MCP, terminal as swiss-army tool
 
-**Block 4: Put It Together**
-12. Personal OS → Nondeterminism & the Bitter Lesson
-13. Cursor + Obsidian → Fine-tuning vs in-context learning
+### Arc 4 — Create Your Personal OS
+*Vague instructions in, real output out — because the harness and memory fill the gaps.*
+13. Thinking & Strategy Partner → Context engineering & context rot
+14. Ask Cursor Questions → RAG & retrieval
+15. Personal OS → Nondeterminism & the Bitter Lesson
+16. Cursor + Obsidian → In-context learning & your voice
 
-### Day 2: Going Deep (5 lessons)
+### Arc 5 — Build True AI Product Sense
+*Slice open any AI product, use evals to choose a strategy, and run always-on agents.*
+17. Subagents & Multi-Agent Systems → Context segregation
+18. Slice Open Any Product + Evals → Evals & product strategy
+19. OpenClaw Hands-On → Always-on, scheduled, mobile agent harness
+20. Make It Yours & Keep Compounding → Voice + compound returns
 
-14. OpenClaw Hands-On → Agent harness in practice
-15. AI Prototyping → Plans & feedback loops
-16. Skills & Workflows → Progressive disclosure
-17. Multi-Agent Systems → Context segregation
-18. Make It Yours & Keep Compounding → Voice + compound returns
+## Reference Shelf
+
+Quick-reference material, not lessons — pull these up any time:
+
+- `reference/prompting-guide.md` — copy-paste prompt library for coding agents
+- `reference/troubleshooting.md` — install, environment, and runtime fixes
+- `reference/cheat-sheet.md` — terminal, git, and the vibe-coding loop for non-technical PMs
 
 ## How to Run a Lesson
 
@@ -59,7 +73,9 @@ ai-product-sense-course/
 │   ├── 01-goals-and-ai-product-sense.md
 │   ├── 02-setup-guide.md
 │   ├── ...
-│   └── 13-cursor-obsidian-icl.md
+│   └── 20-make-it-yours-compounding.md
+├── reference/             ← prompting guide, troubleshooting, cheat sheet
+├── sample-personal-os/    ← a worked Personal OS to explore in Arc 4
 └── evals/
     └── eval-01.md         ← quality evaluations against the rubric
 ```

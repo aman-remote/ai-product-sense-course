@@ -1,4 +1,4 @@
-# 8. Thinking & Strategy Partner → Context Engineering & Context Rot
+# 13. Thinking & Strategy Partner → Context Engineering & Context Rot
 
 > **Magic Moment:** You watch the same prompt on the same document produce sharp analysis once and degraded "AI slop" once — and "context window" stops being a spec and becomes the single most important constraint in every AI product you'll build.
 
@@ -70,7 +70,7 @@ Note how sharp it is. Then ask 5+ deep follow-ups in the SAME chat, and re-run t
 > "The context window is the model's whole working memory for one request, and it only grows. Rules of thumb: brainstorming — fill it up; coding — stay under ~50% and start fresh chats often; critical accuracy — keep it under ~25%, one doc one question. Fresh chats are free, and your AGENTS.md preserves context across them. Context engineering — deciding *what* the model sees and *when* — is arguably the most important AI product skill right now."
 
 **What next?**
-- **A)** Lesson 9 — markdown & directories as an agent interface
+- **A)** Lesson 14 — RAG & retrieval (asking the agent about your files)
 - **B)** Practice: run the same task at three different context budgets and compare
 - **C)** Map your own daily tasks to a context budget (brainstorm / build / critical)
 

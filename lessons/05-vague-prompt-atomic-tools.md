@@ -1,4 +1,4 @@
-# 4. An Intentionally Vague Prompt → Atomic Tools
+# 5. An Intentionally Vague Prompt → Atomic Tools
 
 > **Magic Moment:** You watch a 3-word prompt turn into a finished multi-step task — and then make the agent reveal that its whole toolkit is roughly 10-15 dead-simple tools that compose like LEGO.
 
@@ -72,7 +72,7 @@ Explain how you just used tools to do that task — in atoms, no jargon, every t
 > "Three words became a finished task because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on roughly 10-15 atomic tools — read, write, search, execute — that's it. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and many coding agents."
 
 **What next?**
-- **A)** Lesson 5 — watch the agentic loop unfold live
+- **A)** Lesson 6 — markdown & directories as an agent interface
 - **B)** Design your own atomic tool set for a product you're building
 - **C)** Try more vague prompts and watch the tool sequence each time
 

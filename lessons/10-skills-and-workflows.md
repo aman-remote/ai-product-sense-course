@@ -1,4 +1,4 @@
-# 16. Skills & Workflows → Progressive Disclosure
+# 10. Skills & Workflows → Progressive Disclosure
 
 > **Magic Moment:** You discover that `/memory` and `/compact` are just shortcuts that read a file or run a step — and that you can write your own. A "skill" turns out to be nothing but a markdown file the agent loads when relevant. You can teach your agent a new ability by writing a paragraph.
 
@@ -88,7 +88,7 @@ Run `/standup`, then chain them: `/standup then triage my backlog`.
 > "A slash command is a workflow with a shortcut; a skill is a folder with a SKILL.md the agent loads when relevant — and you can write both in plain English. The design discipline is progressive disclosure: start with loose plain requests, and only codify a workflow the third time you catch yourself typing the same instructions. And the bridge to your Personal OS: a workflow is stateless steps, but workflow + memory + judgment = an agent. That's what you've been building."
 
 **What next?**
-- **A)** Lesson 17 — Subagents & multi-agent systems (context segregation)
+- **A)** Lesson 11 — MCP and thoughtful tool design
 - **B)** Go deeper: install a community skill and inspect it
 - **C)** Apply it: build a skill for a task you do every week at work
 

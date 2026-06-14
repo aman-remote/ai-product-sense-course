@@ -56,7 +56,7 @@ WHY SUBAGENTS:
   4. Shareable              — commit to the repo, whole team gets it
 ```
 
-> "A bloated context window degrades quality — remember context rot from Day 1. Subagents give each task a clean room."
+> "A bloated context window degrades quality — remember context rot from Lesson 13. Subagents give each task a clean room."
 
 **STOP. Wait for their response.**
 
@@ -94,7 +94,7 @@ email-writer, then with formal-writer. Show me both.
 > "Two clearly different drafts from one request — same model, different clean rooms, different instructions. That's context segregation: 'correlated vs uncorrelated context window' is just fancy for 'same chat thread vs fresh chat thread.' Decision rule going forward: explicit trigger → slash command; agent-recognized → skill; specialized delegated work → subagent. 'Agent teams' and 'swarms' are just your Personal OS with more named specialists reading and writing the same folders."
 
 **What next?**
-- **A)** Lesson 18 — Make It Yours & Keep Compounding (the finale)
+- **A)** Lesson 18 — Slice Open Any Product + Evals (product strategy)
 - **B)** Go deeper: wire two subagents together (one drafts, one reviews)
 - **C)** Apply it: design the subagent team you'd want for your real job
 

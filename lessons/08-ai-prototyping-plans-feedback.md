@@ -79,7 +79,7 @@ if it actually works. If anything is broken, fix it and check again.
 > "Long-horizon agents work because of two things: plans written to files that survive compaction and new sessions, and feedback loops that let an agent see its own output and self-correct. This isn't a coding trick — Anthropic's Agent SDK uses the same pattern (an initializer agent sets up the environment, a coding agent makes incremental progress leaving clean artifacts each session). 90% planning, 10% coding — alignment and memory were always the bottleneck, not typing code."
 
 **What next?**
-- **A)** Lesson 16 — Skills & Workflows (progressive disclosure)
+- **A)** Lesson 9 — how coding agents work (harness engineering)
 - **B)** Go deeper: add more feedback loops (tests, logs) and watch it run longer unattended
 - **C)** Apply it: map the plan + feedback loop for an AI feature you're building at work
 

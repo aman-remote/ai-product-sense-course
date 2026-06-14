@@ -88,7 +88,7 @@ Look at my goals and tasks. Where am I spending time on things that connect to n
 > "Two big ideas met here. Nondeterminism: multiple runs on one prompt give different valid outputs — pick the best (best-of-N, used constantly in production). And the Bitter Lesson (Rich Sutton): across 70 years, methods that scale with computation always beat methods that hand-encode human knowledge. Your Personal OS has almost no rules — just markdown and a smart model — and it produced useful plans every time. The starting question for any AI product: 'How little structure can I get away with?' Give the model good context and get out of the way."
 
 **What next?**
-- **A)** Lesson 13 — Cursor + Obsidian and in-context learning (Day 1 capstone)
+- **A)** Lesson 16 — Cursor + Obsidian and in-context learning
 - **B)** Go deeper on nondeterminism — best-of-N on a real work task
 - **C)** Keep customizing your Personal OS with more prompts
 

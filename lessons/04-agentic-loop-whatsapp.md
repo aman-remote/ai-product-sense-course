@@ -69,7 +69,7 @@ Add a risks.md reviewing the plan and budget, then update budget.md with a 15% c
 > "Every agent runs this same loop: read the whole conversation, decide to think or act, append the result, repeat. The model is stateless — it re-reads from the top each turn, which is why writing things to files (like that plan) matters so much. You'll see this loop everywhere now."
 
 **What next?**
-- **A)** Lesson 6 — the harness around the model
+- **A)** Lesson 5 — an intentionally vague prompt & atomic tools
 - **B)** Push it: give me a task that loops 10+ times and count the cycles
 - **C)** Map this loop to a product you use daily
 

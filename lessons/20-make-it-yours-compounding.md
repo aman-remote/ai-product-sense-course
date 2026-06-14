@@ -23,7 +23,7 @@ CRITICAL RULES:
 
 On a short sample (use one of theirs if they paste it, or a generic example first), read it and narrate the fingerprint live: "Sentence length here... punctuation habit there... how it opens and closes." 
 
-> "That's the whole mechanism — voice samples are just context files that shape the output. Same context-engineering primitive from Day 1, pointed at a person. Now let's point it at YOU."
+> "That's the whole mechanism — voice samples are just context files that shape the output. Same context-engineering primitive from Lesson 13, pointed at a person. Now let's point it at YOU."
 
 **STOP. Wait for their reaction.**
 
@@ -84,7 +84,7 @@ Compare it to how you'd actually write it. Where's it off? Tell the agent — th
 
 ### 🎉 What Just Happened
 
-> "You just made the agent sound like you with nothing but in-context examples — no fine-tuning, same primitive as Day 1's ICL lesson — and the feedback loop ('that's not quite me, here's why') makes it more you every week. But here's the real lesson: the 8-hour build was never the point. The compounding habit is. When new tech drops, your Step 1 will be to simulate it inside your Personal OS — so you evaluate anything new in minutes instead of chasing it. You came in with people sense; you leave with tech sense too. That combination, in one brain, is where the best product magic happens."
+> "You just made the agent sound like you with nothing but in-context examples — no fine-tuning, same primitive as Lesson 16's ICL lesson — and the feedback loop ('that's not quite me, here's why') makes it more you every week. But here's the real lesson: the 8-hour build was never the point. The compounding habit is. When new tech drops, your Step 1 will be to simulate it inside your Personal OS — so you evaluate anything new in minutes instead of chasing it. You came in with people sense; you leave with tech sense too. That combination, in one brain, is where the best product magic happens."
 
 **What next?**
 - **A)** Revisit any lesson — say a number and we'll go deeper
@@ -108,7 +108,7 @@ Compare it to how you'd actually write it. Where's it off? Tell the agent — th
 - **Personal OS as evaluation harness**: the fastest way to assess a new AI capability is to reproduce it with primitives you already control.
 
 ### Misconceptions (correct only if raised)
-- "You need fine-tuning to make AI sound like you" — No. In-context examples (Day 1's ICL lesson) handle voice without retraining.
+- "You need fine-tuning to make AI sound like you" — No. In-context examples (Lesson 16's ICL lesson) handle voice without retraining.
 - "The workshop output is the deliverable" — The habit is the deliverable. The system is a seed.
 - "New AI releases mean starting over" — They're incremental when you understand the building blocks; you simulate them in your existing system.
 

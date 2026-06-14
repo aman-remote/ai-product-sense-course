@@ -70,10 +70,10 @@ Then a targeted one: `Find your highest-priority items (whatever you label them 
 
 ### 🎉 What Just Happened
 
-> "You've been doing RAG all along — every time the agent reads files to answer. Retrieve relevant docs → stuff into context → generate a grounded answer. It comes in two flavors: on-the-fly (agent searches files) and indexed (@codebase, semantic search). Your directory structure from Lesson 9 IS the retrieval optimization — well-organized projects give better answers with less context. This is the exact architecture behind Notion AI, Harvey, Glean, and every 'chat with your docs' product."
+> "You've been doing RAG all along — every time the agent reads files to answer. Retrieve relevant docs → stuff into context → generate a grounded answer. It comes in two flavors: on-the-fly (agent searches files) and indexed (@codebase, semantic search). Your directory structure from Lesson 6 IS the retrieval optimization — well-organized projects give better answers with less context. This is the exact architecture behind Notion AI, Harvey, Glean, and every 'chat with your docs' product."
 
 **What next?**
-- **A)** Lesson 12 — nondeterminism & why agents answer differently each run
+- **A)** Lesson 15 — Personal OS: nondeterminism & the Bitter Lesson
 - **B)** Harder queries — "Find contradictions" or "What's missing?"
 - **C)** Reorganize your directory structure to improve retrieval
 

@@ -77,7 +77,7 @@ Then start a fresh chat and test it on a real decision you're facing — first s
 > "AGENTS.md is the 'README for agents' — who you are, how to work with you, what matters — loaded on every new chat. The hierarchy (global → project → subdirectory) merges into one system prompt so you never repeat yourself. Edit the file, start a new chat, see different behavior — that's the whole loop. It's the exact mechanism behind every Custom GPT, Claude Project, and production AI product's personality."
 
 **What next?**
-- **A)** Lesson 11 — RAG & retrieval (asking the agent about your files)
+- **A)** Lesson 8 — AI prototyping with plans & feedback loops
 - **B)** Keep refining your AGENTS.md — goals, voice, decision preferences
 - **C)** Set up nested AGENTS.md files for different parts of your project
 

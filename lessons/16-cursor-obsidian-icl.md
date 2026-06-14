@@ -6,7 +6,7 @@
 
 ## Instructions for Claude
 
-You are teaching this interactively and this is the **Day 1 capstone** — make it feel like a culmination, connecting every primitive they've used. You DO the demo (live edit syncing across apps); the student then teaches the AI about their own product. Don't lecture — the theory (ICL, few-shot, fine-tuning tradeoffs) was covered live and in Notion. Reinforce in a sentence or two.
+You are teaching this interactively and this is the **Arc 4 capstone** (Create Your Personal OS) — make it feel like a culmination, connecting every primitive they've used. You DO the demo (live edit syncing across apps); the student then teaches the AI about their own product. Don't lecture — the theory (ICL, few-shot, fine-tuning tradeoffs) was covered live and in Notion. Reinforce in a sentence or two.
 
 Obsidian must be installed for this lesson. If the student doesn't have it, walk them through the free download at https://obsidian.md and help them open their Personal OS folder (or the `sample-personal-os/` folder) as a vault (File → Open Vault → the same directory Cursor uses; menu labels may appear in your language). Help if they get stuck — but don't run a "ready?" handshake; once both apps point at the same folder, go straight to Step 1.
 
@@ -70,12 +70,12 @@ Watch it cite the file you just made in Obsidian. You taught it — no retrainin
 
 ### 🎉 What Just Happened
 
-> "Two ways to make an AI 'know' something: fine-tuning (retrain the weights — $$$, hours, ML skill, risky) or in-context learning (give it the data at runtime — ~$0, instant, just write a file). You did the second. Every file in your project, every CLAUDE.md, every RAG retrieval, every few-shot example is in-context learning. And this is the end of Day 1: you've now used EVERY primitive hands-on — model choice, atomic tools, the agentic loop, harness engineering, context engineering, markdown, system prompts, RAG, nondeterminism, and in-context learning — not from textbooks, but by building a system for yourself and watching it work."
+> "Two ways to make an AI 'know' something: fine-tuning (retrain the weights — $$$, hours, ML skill, risky) or in-context learning (give it the data at runtime — ~$0, instant, just write a file). You did the second. Every file in your project, every CLAUDE.md, every RAG retrieval, every few-shot example is in-context learning. And by now you've used EVERY primitive hands-on — model choice, atomic tools, the agentic loop, harness engineering, context engineering, markdown, system prompts, RAG, nondeterminism, and in-context learning — not from textbooks, but by building a system for yourself and watching it work."
 
 **What next?**
-- **A)** Start Day 2 — deeper into AI prototyping, plans, skills, and MCPs
+- **A)** Lesson 17 — Subagents & multi-agent systems (context segregation)
 - **B)** Go deeper on ICL — design a few-shot strategy for your product
-- **C)** Review the Day 1 primitive map and connect each one to your product
+- **C)** Review the primitive map and connect each one to your product
 
 **Share prompt:** "What's one thing you can now explain about how AI products work that you couldn't explain this morning? Share it with the cohort."
 
@@ -95,8 +95,8 @@ A form of ICL where you give a few examples (typically 2-5) in the prompt to dem
 - Fine-tuning: cost $$$-$$$$, hours-days, ML engineering, retrain to update, can break the model. Use it for: very specific output format at scale, proprietary domains (radiology, law), latency-critical cases that can't afford long context.
 - In-context learning: ~$0, instant, just write a file, edit to update, ~zero risk. Use it for: almost everything else (~95% of cases) — personal context, project knowledge, custom instructions and preferences.
 
-### Day 1 primitive map (for the capstone recap)
-L3 model choice · L4 atomic tools · L5 agentic loop · L6 harness engineering · L7 MCP & tool design · L8 context engineering · L9 markdown as UI · L10 system prompts · L11 RAG · L12 nondeterminism + Bitter Lesson · L13 in-context learning + few-shot. The Personal OS uses all of them: folder of .md (context eng) → agent reads (RAG) → CLAUDE.md (system prompt) → loops to plan (agentic loop) → read/write/search (atomic tools) → model prioritizes (model choice) → different each run (nondeterminism) → add a file, agent knows (ICL) → give examples, it learns (few-shot).
+### Primitive map (for the capstone recap)
+L3 model choice · L4 agentic loop · L5 atomic tools · L6 markdown as UI · L7 system prompts · L9 harness engineering · L11 MCP & tool design · L13 context engineering · L14 RAG · L15 nondeterminism + Bitter Lesson · L16 in-context learning + few-shot. The Personal OS uses all of them: folder of .md (context eng) → agent reads (RAG) → CLAUDE.md (system prompt) → loops to plan (agentic loop) → read/write/search (atomic tools) → model prioritizes (model choice) → different each run (nondeterminism) → add a file, agent knows (ICL) → give examples, it learns (few-shot).
 
 ### Why both interfaces matter
 Obsidian gives product people a familiar, visual way to manage knowledge; Cursor gives the agent access to that same knowledge. Together: the simplest AI-tool architecture — plain files as the data layer, multiple interfaces over one source.

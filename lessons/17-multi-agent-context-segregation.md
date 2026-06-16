@@ -67,8 +67,10 @@ WHY SUBAGENTS:
 > "Now you build your own specialists and feel the difference directly."
 
 **Important:** Create a subagent in your voice, then a second one with a different personality, and run the SAME task through both. (Tell them the agents-folder path for their tool: `.cursor/agents/` in Cursor, `.claude/agents/` in Claude Code — the examples below use the Cursor path; swap if they're in Claude Code.)
+
+First you need a couple of writing samples for it to learn from. If you don't have a `voice-samples/` folder yet, make one now: paste 2-3 emails or messages you've actually written into a file, or ask the agent to create a `voice-samples/` folder with a few example notes. Then:
 ```
-I want a subagent to help me write emails in my voice. Read Knowledge/voice-samples/
+I want a subagent to help me write emails in my voice. Read my voice-samples/
 for context. Create the agent in .cursor/agents/email-writer.md
 ```
 ```
@@ -79,7 +81,6 @@ an executive. Save to .cursor/agents/formal-writer.md
 Draft an email to my manager pushing a deadline back one week — first with
 email-writer, then with formal-writer. Show me both.
 ```
-(No voice samples yet? Point it at any folder, or we'll make samples together.)
 
 **Stretch:** Wire two subagents together — one writes a draft, another reviews it.
 

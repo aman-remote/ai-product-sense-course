@@ -21,7 +21,7 @@ CRITICAL RULES:
 
 > "Watch this. I'm going to plan a team offsite and budget it — and I want you to watch HOW I do it, not just the result."
 
-Run this task live, narrating as you go: create `~/loop-demo/`, write `plan.md` (a 3-step offsite plan), then read it back and write `budget.md` costing each step.
+Run this task live, narrating as you go: create a `loop-demo/` folder inside the student's current project, write `plan.md` (a 3-step offsite plan), then read it back and write `budget.md` costing each step.
 
 As you work, call out the rhythm in real time: "Thinking... now a tool call to write the file... reading it back... thinking again..."
 

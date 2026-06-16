@@ -23,7 +23,7 @@ CRITICAL RULES:
 
 > "Watch this. I'm going to run a slash command and show you it's not a feature — it's just a workflow you could've written yourself."
 
-Run `/memory` (or read the AGENTS.md / CLAUDE.md it points at) live and narrate: "See? It just read your memory file. `/compact` summarizes the conversation, `/clear` resets it. Each one is a named sequence of steps — a workflow with a keyboard shortcut."
+Run `/memory` in Claude Code (in Cursor, open your rules file or type `/` to see the menu) live and narrate: "See? It just read your memory file. `/compact` summarizes the conversation, `/clear` resets it. Each one is a named sequence of steps — a workflow with a keyboard shortcut."
 
 > "The insight: you can define your OWN workflows just by writing the steps in AGENTS.md. No code. The agent reads them and follows them."
 
@@ -56,19 +56,20 @@ Show this visual:
 
 > "Now you build both. You're going to teach your agent a new ability with plain English — that's the whole mechanism behind Anthropic's Agent Skills."
 
-**Important:** Create a skill by describing it:
+**Important:** Create a skill by describing it (it works whether or not you have a Tasks/ folder — if you don't, it'll fall back to asking you):
 ```
 Create a skill called "focus-plan" that helps me decide what to work on today.
-It should: 1) read my Tasks/ folder for P0 and P1 items, 2) check due dates,
-3) consider my available time (ask me if not provided), 4) return my top 3
-priorities with time estimates. Save it to .cursor/skills/focus-plan/SKILL.md
-with proper frontmatter.
+It should: 1) read my Tasks/ folder for P0 and P1 items IF it exists (otherwise
+ask me for my open items), 2) check due dates, 3) consider my available time
+(ask me if not provided), 4) return my top 3 priorities with time estimates.
+Save it to the right skills path for my tool (.cursor/skills/ in Cursor,
+.claude/skills/ in Claude Code) as focus-plan/SKILL.md with proper frontmatter.
 ```
-Then add an explicit slash command to your AGENTS.md:
+Then add an explicit slash command — `/standup` — by saving it to your tool's commands path (Cursor `.cursor/commands/standup.md`; Claude Code add it to CLAUDE.md or `.claude/commands/`):
 ```markdown
 ## /standup
 When I type "/standup", do this:
-1. Read Tasks/ for my active work
+1. Read my Tasks/ for active work (if I have none, ask me what I'm working on)
 2. Summarize what I did yesterday (recently updated)
 3. List today's focus (P0 and P1 tasks)
 4. Flag any blockers

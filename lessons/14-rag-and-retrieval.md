@@ -54,15 +54,15 @@ Two flavors: on-the-fly (agent reads files) vs indexed (@codebase, semantic)
 
 > "Now point it at YOUR project — ideally the one with Tasks/, AGENTS.md, and knowledge files. The more files, the more impressive."
 
-(No such multi-file project yet, or can't use work data? Point the agent at the `sample-personal-os/` folder at the repo root — it's richer than the demo folder and works perfectly here.)
+(No such multi-file project yet, or can't use work data? Just ask the agent to generate one: `Create a sample-project/ folder with an AGENTS.md, 3-4 Tasks/*.md files, a GOALS.md, and a Knowledge/ note, all about a fictional product` — then point the retrieval at that.)
 
-**Important:** Switch Cursor to **Ask** mode (read, don't write) and run:
+**Important:** Switch Cursor to **Ask** mode (the mode selector at the bottom of the chat box — read, don't write) and run:
 ```
 Pretend you're writing an onboarding doc for a new team member joining this project. Cover: what it is, what's being worked on, priorities, key decisions, and where to find things.
 ```
 Then a targeted one: `Find your highest-priority items (whatever you label them — P0, P1, urgent, etc.), summarize them, and flag any dependencies.` Watch which files it opens.
 
-> "**Stretch:** try `@codebase What themes and patterns run across all my tasks and notes?` — indexed retrieval, often catches files the on-the-fly read missed. **Super-stretch:** `Find contradictions across my docs` or `What's missing from this project?`"
+> "**Stretch:** try `@codebase What themes and patterns run across all my tasks and notes?` — indexed retrieval; on a big codebase it shines (it may take a minute to index, and on a tiny folder a plain read is just as good). **Super-stretch:** `Find contradictions across my docs` or `What's missing from this project?` — this is RAG synthesizing, not just summarizing."
 
 **STOP. Let them run it. React to the onboarding doc it produced.**
 

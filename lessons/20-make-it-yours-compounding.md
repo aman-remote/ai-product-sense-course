@@ -53,7 +53,7 @@ to your own needs and making small changes. Each new model/tool
 
 > "Now you make it yours. Drop in 2-3 real things you've actually written — emails, Slack messages, a PRD intro, a LinkedIn post. Real, sent, unedited."
 
-(Can't share work writing? Use a public LinkedIn post, a personal blog snippet, a few lines you write fresh right now, or the ready-made samples in `sample-personal-os/Knowledge/voice-samples/`.)
+(Can't share work writing? Use a public LinkedIn post, a personal blog snippet, or just a few lines you write fresh right now — even three sentences works.)
 
 **Important:** Create the folder, add your samples, extract your voice, make it reusable, and test it:
 ```
@@ -74,7 +74,7 @@ Draft an email to my manager asking to push a deadline back one week. Use my voi
 ```
 Compare it to how you'd actually write it. Where's it off? Tell the agent — that feedback loop is how it gets more "you" over time.
 
-**Stretch:** Have your Personal OS summarize your course takeaways in YOUR voice, then ask: based on these and my GOALS.md (if you built a GOALS.md earlier, or use sample-personal-os/GOALS.md), what should I prioritize next quarter at work?
+**Stretch:** Have your Personal OS summarize your course takeaways in YOUR voice, then ask: based on these and my goals (if you built a GOALS.md earlier, point to it; otherwise just tell it your top goal), what should I prioritize next quarter at work?
 
 **Super-stretch:** Refine the voice guide twice with feedback and watch the third draft land closer.
 

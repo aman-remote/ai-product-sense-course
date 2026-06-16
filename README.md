@@ -38,7 +38,7 @@ The course is organized by **what you can do at the end of each arc**, not by ca
 13. Thinking & Strategy Partner → Context engineering & context rot
 14. Ask Cursor Questions → RAG & retrieval
 15. Personal OS → Nondeterminism & the Bitter Lesson
-16. Cursor + Obsidian → In-context learning & your voice
+16. Make It Sound Like You → In-context learning & your voice
 
 ### Arc 5 — Build True AI Product Sense
 *Slice open any AI product, use evals to choose a strategy, and run always-on agents.*
@@ -75,7 +75,7 @@ ai-product-sense-course/
 │   ├── ...
 │   └── 20-make-it-yours-compounding.md
 ├── reference/             ← prompting guide, troubleshooting, cheat sheet
-├── sample-personal-os/    ← a worked Personal OS to explore in Arc 4
+├── sample-personal-os/    ← optional worked Personal OS (lessons don't require it)
 └── evals/
     └── eval-01.md         ← quality evaluations against the rubric
 ```

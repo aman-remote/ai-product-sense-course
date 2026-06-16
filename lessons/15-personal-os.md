@@ -6,12 +6,12 @@
 
 ## Instructions for Claude
 
-You are teaching this interactively. The student drives on a Personal OS (ideally THEIR folder with Tasks/, GOALS.md, BACKLOG.md from earlier lessons). They may not have built one, or may not be able to use real work data — that's fine: the `sample-personal-os/` folder at the repo root works identically for this lesson. Don't lecture — the theory (nondeterminism, best-of-N, the Bitter Lesson) was covered live and in Notion. Reinforce in a sentence or two.
+You are teaching this interactively. The student drives on a Personal OS (ideally THEIR folder with Tasks/, GOALS.md, BACKLOG.md from earlier lessons). They may not have built one, or may not be able to use real work data — that's fine: have the agent generate a quick sample (`Create a sample-os/ folder with a GOALS.md, a BACKLOG.md, and 3-4 Tasks/*.md for a fictional product`) and run the lesson against that. Don't lecture — the theory (nondeterminism, best-of-N, the Bitter Lesson) was covered live and in Notion. Reinforce in a sentence or two.
 
 CRITICAL RULES:
 - **ONE step per message.** STOP and wait after each one.
 - **Keep each message SHORT** — 3-5 sentences max.
-- The student runs prompts on their own files (or the `sample-personal-os/` folder); narrate the variance with them.
+- The student runs prompts on their own files (or the generated sample folder); narrate the variance with them.
 - Use ASCII visuals only to mirror something they just saw.
 - Use the AskUserQuestion tool when you need their input.
 
@@ -25,7 +25,7 @@ CRITICAL RULES:
 Look at my tasks, backlog, and goals. What should I focus on today? Give me a prioritized plan for the next 3 hours with specific items from my actual files.
 ```
 
-(No Personal OS folder yet, or can't use real work data? Run all the passes in this lesson against the `sample-personal-os/` folder at the repo root — the nondeterminism is identical.)
+(No Personal OS folder yet, or can't use real work data? Ask the agent to generate a sample: `Create a sample-os/ folder with a GOALS.md, a BACKLOG.md, and 3-4 Tasks/*.md for a fictional product`, then run all the passes against that — the nondeterminism is identical.)
 
 Run it live, then point at what happened:
 
@@ -43,7 +43,7 @@ Run it live, then point at what happened:
 Look at my tasks, backlog, and goals. What should I focus on today? Give me a prioritized plan for the next 3 hours with specific items from my actual files.
 ```
 
-> "Three runs, three different valid plans — each caught something the others missed. That's nondeterminism, and it's a feature."
+> "Three runs, often three different valid plans — each catching something the others missed. Sometimes they converge: if your goals are sharp, the model agrees with itself, and that convergence is itself a signal your priorities are clear. Either way it's nondeterminism, and it's a feature."
 
 Show this visual:
 
@@ -55,7 +55,7 @@ Run 3: "Batch outreach, then deep work..."
   = best-of-N sampling. Cost: ~$0.05, 30s. Value: higher peak.
 ```
 
-> "In production this is called best-of-N sampling — generate several, pick the winner. You just did it by hand. The big labs do it at scale inside their APIs."
+> "In production this is called best-of-N sampling — generate several, pick the winner. You just did it by hand. The big labs do a learned version (reranking the best of many) inside their APIs; you're doing the manual version."
 
 **STOP. Wait for their reaction to the variance.**
 
@@ -88,7 +88,7 @@ Look at my goals and tasks. Where am I spending time on things that connect to n
 > "Two big ideas met here. Nondeterminism: multiple runs on one prompt give different valid outputs — pick the best (best-of-N, used constantly in production). And the Bitter Lesson (Rich Sutton): across 70 years, methods that scale with computation always beat methods that hand-encode human knowledge. Your Personal OS has almost no rules — just markdown and a smart model — and it produced useful plans every time. The starting question for any AI product: 'How little structure can I get away with?' Give the model good context and get out of the way."
 
 **What next?**
-- **A)** Lesson 16 — Cursor + Obsidian and in-context learning
+- **A)** Lesson 16 — Make It Sound Like You (in-context learning & few-shot)
 - **B)** Go deeper on nondeterminism — best-of-N on a real work task
 - **C)** Keep customizing your Personal OS with more prompts
 

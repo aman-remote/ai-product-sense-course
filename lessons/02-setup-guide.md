@@ -29,23 +29,21 @@ Ask what they already have. Have them download Cursor from cursor.com (or open i
 
 ---
 
-### Step 2: Clone the Project
+### Step 2: Open a Working Folder (clone optional)
 
-> "Now the project we'll 'manage' all course: a personal-OS made of markdown files."
+> "Now you need a folder to work in. You have two options — both fine."
 
-Have them clone it — either way works:
-- **Cursor GUI:** File → New Window → **Clone from URL**, paste the URL, pick a folder, Open.
-- **Terminal:** `git clone https://github.com/amanaiproduct/personal-os.git && cd personal-os`
+The course works fully WITHOUT cloning anything: just open any folder (or make a fresh one — `course-os/`) so the agent has a home base. The optional repo is a head-start with example files you can poke at.
+- **Just open a folder (default):** File → Open Folder → pick or create an empty one (e.g. `course-os/`). Done.
+- **Optional — clone the starter repo for examples:** File → New Window → **Clone from URL**, paste below, Open. Or terminal: `git clone https://github.com/amanaiproduct/personal-os.git && cd personal-os`
 
 ```
 https://github.com/amanaiproduct/personal-os.git
 ```
 
-They should see `Tasks/`, `Knowledge/`, `README.md`, `setup.sh` in the file explorer.
+> "Opening Cursor *in this folder* just drew a boundary: the agent sees the files here and nothing outside (unless told). That's identical to how production AI scopes its RAG — whether the folder is empty or full."
 
-> "Opening Cursor *in this folder* just drew a boundary: the agent sees these files and nothing outside (unless told). That's identical to how production AI scopes its RAG."
-
-**STOP. Wait for confirmation (if Cursor offers to install git, say Yes).**
+**STOP. Wait for confirmation (if you cloned and Cursor offers to install git, say Yes).**
 
 ---
 
@@ -74,12 +72,12 @@ TOOLS → what it can do     VIEWER → how you see output
 
 **What next?**
 - **A)** Lesson 3 — your first hands-on with the agent (model choice in action)
-- **B)** Explore the personal-os repo structure with the agent
+- **B)** Ask the agent to give you a tour of whatever's in your folder
 - **C)** I'm stuck on setup — let's troubleshoot together
 
 **Share prompt:** "What model did you pick, and why? Did 'auto' tempt you?"
 
-**Stretch:** Open the same folder as a vault in Obsidian — same files, two views (agent + note viewer). And run `./setup.sh` to see what it scaffolds.
+**Stretch:** Open the same folder as a vault in Obsidian — same files, two views (agent + note viewer). If you cloned the starter repo, run `./setup.sh` to see what it scaffolds.
 
 ---
 
@@ -104,14 +102,15 @@ Environment as context: the setup choices (model, directory, tools, viewer) are 
 | Obsidian | Markdown viewer (makes files pretty) | Free |
 | Git | Version control (save checkpoints) | Free |
 
-### Personal-OS repo structure
+### Optional starter repo structure
+The course needs no repo — but if you cloned the optional `personal-os` starter, it looks like:
 ```
 personal-os/
 ├── Tasks/          → Kanban-style task management
 ├── Knowledge/      → Wiki/notes
 ├── README.md       → Agent instructions
-├── setup.sh        → Bootstrap script
-└── .cursorrules    → Cursor agent instructions
+├── AGENTS.md       → Agent rules (Cursor reads this; CLAUDE.md for Claude Code)
+└── setup.sh        → Bootstrap script
 ```
 
 ### Quick Cursor reference

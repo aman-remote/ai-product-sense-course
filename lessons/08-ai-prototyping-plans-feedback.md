@@ -55,16 +55,18 @@ Feedback loops make agents SELF-SUFFICIENT:
 
 > "Now you drive. Pick a simple utility you'd actually find useful or funny — a DJ looper, a meal planner, a rent-vs-buy calculator. It does NOT need to be well-specified. We're going to riff."
 
-**Important:** Put your agent in Plan mode (Shift+Tab in Claude Code; mode selector in Cursor) and describe it — voice/dictation encouraged:
+**Important:** Put your agent in Plan mode (Shift+Tab in Claude Code; mode selector at the bottom of the chat box in Cursor) and describe it — voice/dictation encouraged:
 ```
-Build [your thing] using wiredjs and the Gloria Hallelujah font.
-Ask me questions one at a time if you need to.
+Build [your thing] using wiredjs (a hand-drawn-sketch-style UI library) and the
+Gloria Hallelujah font. Ask me questions one at a time if you need to.
 ```
 Then close the loop yourself:
 ```
-Open the app you just built, take a screenshot or read the console, and tell me
-if it actually works. If anything is broken, fix it and check again.
+Run it and tell me if it works: read the terminal/console output, or open the
+HTML file in my browser and tell me what you see. If anything is broken, fix it
+and check again.
 ```
+(If your agent has a browser/screenshot tool it'll use it; if not, opening the file and reading the console is the same feedback loop — don't worry if it can't literally screenshot.)
 
 **Stretch:** Add a real test or wire in server logs, then watch the agent run longer unattended.
 

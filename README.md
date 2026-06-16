@@ -75,7 +75,7 @@ ai-product-sense-course/
 │   ├── ...
 │   └── 20-make-it-yours-compounding.md
 ├── reference/             ← prompting guide, troubleshooting, cheat sheet
-├── sample-personal-os/    ← a worked Personal OS to explore in Arc 4
+├── sample-personal-os/    ← optional worked Personal OS (lessons don't require it)
 └── evals/
     └── eval-01.md         ← quality evaluations against the rubric
 ```

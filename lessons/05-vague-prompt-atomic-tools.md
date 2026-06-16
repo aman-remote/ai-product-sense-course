@@ -21,7 +21,7 @@ CRITICAL RULES:
 
 > "Watch this. I'm going to plant two files, then give myself the vaguest instruction imaginable and let it run. Watch the sequence, not the result."
 
-Run it live: create `~/song-experiment/` with `song-lyrics.md` (a few original made-up song lines) and `song-workflow.md` (instructions: read the lyrics, rewrite as a pirate sea shanty (an old sailors' work song), save as `pirate-version.md`). Then act on the prompt **"Do this one"** — narrate each move: "Listing the directory… found a workflow file… reading it… reading the lyrics… now writing the shanty."
+Run it live: create a `song-experiment/` folder inside the student's current project with `song-lyrics.md` (a few original made-up song lines) and `song-workflow.md` (instructions: read the lyrics, rewrite as a pirate sea shanty (an old sailors' work song), save as `pirate-version.md`). Then act on the prompt **"Do this one"** — narrate each move: "Listing the directory… found a workflow file… reading it… reading the lyrics… now writing the shanty."
 
 > "Three words. And I just listed → read → read → wrote a finished task. I never held it all in my head — each step was one tiny action."
 
@@ -57,11 +57,11 @@ Show this visual:
 Explain how you just used tools to do that task — in atoms, no jargon, every term and command, step-by-step in order.
 ```
 
-**Important:** Then ask it to list its full toolkit: `What tools do you have access to? List every one with a one-line description.` Count them — you'll land around roughly 10-15.
+**Important:** Then ask it to list its full toolkit: `What tools do you have access to? List every one with a one-line description. If you can't see your exact tool list, describe the standard set you operate with.` You'll land around roughly 10-15 — and if it can't introspect, the standard set it describes makes the same point.
 
 **Stretch:** Plant your own trap (two files + a vague pointer) and fire your own 3-word prompt; watch the sequence.
 
-**Super-stretch:** Ask `Show me the exact definition of the edit_file tool` and read its parameters — see how shockingly simple it is.
+**Super-stretch:** Ask `Describe the edit_file (or apply_patch) tool you use — its name and parameters` and see how shockingly simple it is. (If it can't show the literal schema, the plain-English description still makes the point.)
 
 **STOP. Let them run it. React to what surprised them.**
 

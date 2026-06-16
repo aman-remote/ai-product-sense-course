@@ -66,7 +66,7 @@ Tell me about your rules files — CLAUDE.md, AGENTS.md, or .cursorrules, whiche
 
 **Stretch:** Cycle the agent's autonomy modes and watch behavior change with the *same* model and tools — `Shift+Tab` in Claude Code (Normal → Auto-Accept → Plan), or the mode selector in Cursor (Agent / Plan / Ask).
 
-**Super-stretch:** Edit your rules file (CLAUDE.md or AGENTS.md/.cursorrules) to add a behavior rule, then give the agent a task and watch the rule take effect.
+**Super-stretch:** Edit your rules file (CLAUDE.md or AGENTS.md/.cursorrules) to add a behavior rule, then give the agent a task and watch the rule take effect. (No rules file yet? Just ask the agent to create one first — `Create a CLAUDE.md (or AGENTS.md) with a rule that you always start replies with a one-line summary`.)
 
 **STOP. Let them run it. React to what they observed.**
 

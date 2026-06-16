@@ -21,18 +21,18 @@ CRITICAL RULES:
 
 > "MCP = Model Context Protocol — a standard way to give an agent new hands beyond local files. Let me show you the shape, then you wire up one you actually use."
 
-Ask which tool they use at work (Notion easiest; also Linear, Slack, Postgres). Briefly show what a connected agent gains (e.g. `notion-search`, `notion-fetch`, `notion-create-pages`). Then have THEM install it.
+Ask which tool they use at work (Notion easiest; also Linear, Slack, Postgres). Briefly show what a connected agent gains (e.g. `notion-search`, `notion-fetch`, `notion-create-pages`). Then have THEM install it. (No account on any of these? Use the filesystem MCP — `npx -y @modelcontextprotocol/server-filesystem ~/Documents` — to give the agent a new folder as "hands," same lesson, zero signup.)
 
 **Your turn — install it in whichever agent you're using:**
 - **Claude Code (terminal):**
 ```
 claude mcp add --transport http notion https://mcp.notion.com/mcp
 ```
-- **Cursor:** Settings → MCP → **Add new MCP server** (or add it to `.cursor/mcp.json`), name `notion`, URL `https://mcp.notion.com/mcp`.
+- **Cursor:** Settings → Tools & Integrations → **Add MCP server** (or add it to `.cursor/mcp.json`), name `notion`, URL `https://mcp.notion.com/mcp`.
 
-> "Follow the auth prompts — usually generate an API token in the tool's settings and paste it in. You just gave the agent new hands: same model, bigger toolkit."
+> "For hosted connectors like Notion, a browser window pops open — just click **Allow** to authorize (no API token to hunt for). You just gave the agent new hands: same model, bigger toolkit."
 
-**STOP. Help if auth fails. Wait until they confirm the new tools are listed.**
+**STOP. Help if auth fails (if no browser window opened, re-run the add; older self-hosted servers may instead ask for a pasted token). Wait until they confirm the new tools are listed.**
 
 ---
 

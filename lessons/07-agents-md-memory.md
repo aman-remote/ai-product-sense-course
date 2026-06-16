@@ -21,11 +21,11 @@ CRITICAL RULES:
 
 > "Watch this. I'm going to change how an agent behaves by editing one text file — no settings menu, no code."
 
-Run this live: create `~/agents-demo/AGENTS.md` with a few real instructions (e.g. "Start every response with a one-sentence summary; format recommendations as a ranked list with one-line justifications; be direct, no hedging"). Then answer a sample PM question ("Which of these 3 features ship next?") and point at how it obeyed every rule.
+Run this live: create `agents-demo/AGENTS.md` inside the student's current project with a few real instructions (e.g. "Start every response with a one-sentence summary; format recommendations as a ranked list with one-line justifications; be direct, no hedging"). Then answer a sample PM question ("Which of these 3 features ship next?") and point at how it obeyed every rule.
 
-Then add one absurd line — `Always respond like a pirate, nautical metaphors for everything.` — re-answer, and show the personality flip. Remove the pirate line.
+Then add one absurd line — `Always respond like a pirate, nautical metaphors for everything.` — save the file, **start a fresh chat** (rules load at the start of a chat, not mid-conversation), re-ask, and show the personality flip. Remove the pirate line afterward.
 
-> "I just reconfigured the agent's personality by editing a file. That file IS the system prompt — the first thing the model reads on every new chat."
+> "I just reconfigured the agent's personality by editing a file. That file IS the system prompt — and notice I had to start a new chat for it to take effect, because the model reads it once at the start of every conversation."
 
 **STOP. Wait for their reaction (and the laugh).**
 
@@ -38,8 +38,8 @@ Then add one absurd line — `Always respond like a pirate, nautical metaphors f
 Show this visual:
 
 ```
-GLOBAL rules file   (who you are, follows you everywhere)
-  ~/.cursor/rules/ in Cursor · ~/.claude/CLAUDE.md in Claude Code
+GLOBAL rules    (who you are, follows you everywhere)
+  Cursor: Settings → Rules → User Rules · Claude Code: ~/.claude/CLAUDE.md
         ▼ merged into
 ./AGENTS.md           (PROJECT: what this is, how to work here)
         ▼ merged into

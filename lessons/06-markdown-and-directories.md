@@ -21,7 +21,7 @@ CRITICAL RULES:
 
 > "Watch this. I'll take a messy brain-dump and turn it into a queryable system out of nothing but text files and folders."
 
-Run this live: create `~/md-demo/BACKLOG.md` with ~10 raw, unstructured items (mix priorities/categories — "fix mobile notif bug", "P0: board demo prep Thursday", "competitor analysis", "write May investor update", "hire senior designer", etc.). Then triage it: create a `Tasks/` dir, one `.md` per item with YAML frontmatter (title, priority P0-P3, category, status), clearing BACKLOG.md after.
+Run this live: create `md-demo/BACKLOG.md` inside the student's current project with ~10 raw, unstructured items (mix priorities/categories — "fix mobile notif bug", "P0: board demo prep Thursday", "competitor analysis", "write May investor update", "hire senior designer", etc.). Then triage it: create a `Tasks/` dir, one `.md` per item with YAML frontmatter (title, priority P0-P3, category, status), clearing BACKLOG.md after.
 
 Open one task file and point at the `---` block. Then query it live: "What are my P0 tasks and what should I focus on today?" Narrate: "I just read every file in Tasks/, filtered by the priority field, and summarized — that's a database query against a folder of markdown."
 
@@ -62,7 +62,7 @@ Open a task file, check the frontmatter, and see if you agree with the prioritie
 
 > "**Stretch:** `Review Tasks/ and reprioritize — the board meeting is Thursday. Update the frontmatter and tell me what changed and why.` **Super-stretch:** run `git diff` to see exactly what the agent changed, and `git checkout` to revert a bad triage."
 
-(Precondition for the git steps: if this folder isn't a git repo yet, run `git init` first.)
+(Precondition for the git steps: if this folder isn't a git repo yet, run `git init` and `git add -A && git commit -m "before triage"` first — otherwise `git checkout` has nothing to revert to and could discard your only copy.)
 
 **STOP. Let them run it. React to what their triage produced.**
 

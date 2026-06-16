@@ -21,7 +21,7 @@ CRITICAL RULES:
 
 > "Watch this. I'm going to write a short strategy doc, analyze it cold with sharp results — then deliberately flood my own context and re-run the exact same analysis."
 
-Run this live: write `~/context-demo/strategy.md` (a 6-8 line product strategy memo with a real tradeoff in it). Then analyze it: "What are the 3 most important decisions here, with the tradeoff and your pick for each?" Narrate how sharp and specific it is — grounded in the doc.
+Run this live: write `context-demo/strategy.md` inside the student's current project (a 6-8 line product strategy memo with a real tradeoff in it). Then analyze it: "What are the 3 most important decisions here, with the tradeoff and your pick for each?" Narrate how sharp and specific it is — grounded in the doc.
 
 Then say: "Now watch me fill the window." Generate 5-6 quick tangents in the same thread (draft something, revise it, compare options, ramble). Re-run the *exact same* analysis prompt. Point at the drop: vaguer, repetitive, more generic.
 
@@ -53,13 +53,13 @@ FULL:   [system][doc][q1][a1][q2][a2][draft][revision][q3]... → GENERIC
 
 > "Now you feel it on your own work. Grab a real doc — a spec, strategy memo, meeting notes, anything with substance — and drive this yourself."
 
-**Important:** Paste your doc into a fresh Cursor chat as `work-context.md`, then run:
+**Important:** Make a file in your project — in Cursor, click the new-file icon in the explorer (or `Cmd/Ctrl+N`), name it `work-context.md`, and paste in a real doc (a spec, strategy memo, meeting notes). No doc handy? Ask the agent to generate a sample one. Then run:
 ```
 @work-context.md Based on this, what are the 3 most important decisions to make? Give the key tradeoff and your recommendation for each.
 ```
-Note how sharp it is. Then ask 5+ deep follow-ups in the SAME chat, and re-run the exact prompt. Watch the quality fall.
+(The `@` pulls the file into context — type `@` and pick it from the list.) Note how sharp it is. Then ask 5+ deep follow-ups in the SAME chat, and re-run the exact prompt. Watch the quality fall.
 
-> "**Stretch:** open a fresh chat, paste the original prompt again — confirm quality snaps back. **Super-stretch:** find roughly how many turns it takes before YOUR doc starts degrading."
+> "**Stretch:** open a fresh chat, paste the original prompt again — confirm quality snaps back. **Super-stretch:** count how many deep turns it takes before YOUR doc starts degrading (Cursor doesn't show a token meter, so go by turns)."
 
 **STOP. Let them run it. React to the before/after they observed.**
 

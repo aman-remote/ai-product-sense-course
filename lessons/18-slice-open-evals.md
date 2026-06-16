@@ -56,27 +56,47 @@ Show this visual:
 
 > "Now you drive. Pick an AI product you use often and actually understand — Spotify's AI DJ, Cal's scheduling agent, LinkedIn's AI job search, a feature in your own product, anything you know well."
 
-**Your turn — paste into your agent:**
+**Your turn — paste into your agent (it'll save a file; if you don't have a knowledge/ folder it'll just make one):**
 ```
 I'm giving you the name of an AI product. Help me slice it open — figure out how
-the AI and non-AI components come together. Save the result to my knowledge as a file.
+the AI and non-AI components come together. Save the analysis as a file.
 
 - What parts would you give an LLM?
 - What parts would you give to regular, fast, deterministic code?
 - How would you manage the context window? What fills it fast? When would you reset
   vs. keep it?
 - What tools would it need? Would those tools make sense as MCP or not, and why?
-
-Then turn those instructions into slicing.md so I can reuse it — and apply it to Granola.
 ```
+**Important:** Then make it reusable, in a second message:
+```
+Now distill those questions into a reusable slicing.md template (just the framework,
+not this product's answers), then apply slicing.md to a different product: Granola.
+```
+You now have a `slicing.md` you can point at any product forever.
 
-**Important:** You now have a reusable `slicing.md` — a workflow you can point at any product forever.
-
-**Stretch:** "How would you Wizard-of-Oz this product by hand inside a coding agent? What's the dumbest, oldest, cheapest model you could get away with — and how would you test that quickly?" (This is an eval in disguise.)
+**Stretch:** "How would you Wizard-of-Oz this product by hand — fake it with no real AI? What's the dumbest, oldest, cheapest model you could get away with?"
 
 **Super-stretch:** "How would you scale that down to a one-word prompt that works with any model?"
 
 **STOP. Let them run it. React to what surprised them about the split.**
+
+---
+
+### Step 4: Your Turn — Prove It With a Tiny Eval
+
+> "You sliced it. Now the half nobody does: how would you *prove* the LLM part actually works? Not a benchmark — your own test cases."
+
+**Your turn — paste into your agent:**
+```
+For the product I just sliced, write 3 concrete eval cases for its main LLM step:
+each with an input, and what a GOOD output must include vs. a FAIL. Then run all 3
+against a cheap/old model and a strong model, and show me a pass/fail table.
+```
+Watch which cases the cheap model fails. That gap — not a leaderboard — is what tells you which model you actually need.
+
+> "That's an eval: repeatable tests on your own cases and your own quality bar. 'Evals, not benchmarks.' It's how every serious AI product decides what's good enough to ship."
+
+**STOP. React to which cases failed and what that implies.**
 
 ---
 

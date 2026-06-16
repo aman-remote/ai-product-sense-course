@@ -41,7 +41,7 @@ Notion source: "Oura — AI Product Sense" (page `82f908c9-2c01-830a-a35e-0168f4
 | 13 | Thinking & Strategy Partner | Context engineering & rot | 736908c9 | ✅ |
 | 14 | Ask Cursor Questions | RAG & retrieval | 506908c9 | ✅ |
 | 15 | Personal OS | Nondeterminism & the Bitter Lesson | e79908c9 (+ 8be908c9) | ✅ |
-| 16 | Cursor + Obsidian | In-context learning & your voice | be9908c9 (+ 9ee908c9) | ✅ |
+| 16 | Make It Sound Like You | In-context learning & your voice | be9908c9 (+ 9ee908c9) | ✅ |
 
 ## Arc 5 — Build True AI Product Sense
 *Slice open any AI product, use evals to choose a strategy, and run always-on agents.*

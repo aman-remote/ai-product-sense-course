@@ -65,7 +65,7 @@ anything yet. Any maintenance tips or software you recognize as a likely culprit
 
 **Stretch:** Have it install something via the terminal — `Help me install Claude Code` (or any CLI tool). Watch it pull up the terminal, run the install, and read the output. Even if you already have it, watching it navigate the install is the point.
 
-**Super-stretch:** Ask it to use its **browser tool** on a docs page, then look at how it converted the page to YAML (an accessibility tree) before reading it. Ask: "Why YAML and not raw HTML?" (Answer: it's a fraction of the tokens and far easier for the model to scan.)
+**Super-stretch:** If your agent has a **browser tool**, ask it to open a docs page, then look at how it converted the page to YAML (an accessibility tree) before reading it. Ask: "Why YAML and not raw HTML?" (Answer: it's a fraction of the tokens and far easier for the model to scan.)
 
 **STOP. Let them run it. React to which command surprised them.**
 

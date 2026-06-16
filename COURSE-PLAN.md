@@ -32,7 +32,7 @@ Notion source: "Oura — AI Product Sense" (page `82f908c9-2c01-830a-a35e-0168f4
 | 9 | How Coding Agents Work | Harness engineering | d42908c9 | ✅ |
 | 10 | Skills & Workflows | Progressive disclosure | 153908c9 | ✅ |
 | 11 | MCP: Connect to SaaS | Tool declarations & remote MCP | f8e908c9 (+ 595908c9) | ✅ |
-| 12 | Command Line: The Ultimate Tool | CLI vs MCP, terminal as swiss-army | eb9908c9 | 🔲 NEW (stub) |
+| 12 | Command Line: The Ultimate Tool | CLI vs MCP, terminal as swiss-army | eb9908c9 | ✅ |
 
 ## Arc 4 — Create Your Personal OS
 *Vague instructions in, real output out — because the harness and memory fill the gaps.*
@@ -48,7 +48,7 @@ Notion source: "Oura — AI Product Sense" (page `82f908c9-2c01-830a-a35e-0168f4
 | # | Title | Primitive | Notion Source | Status |
 |---|-------|-----------|---------------|--------|
 | 17 | Subagents & Multi-Agent Systems | Context segregation | 7c1908c9 | ✅ |
-| 18 | Slice Open Any Product + Evals | Evals & product strategy | 51d908c9 (+ 5f6908c9) | 🔲 NEW (stub) |
+| 18 | Slice Open Any Product + Evals | Evals & product strategy | 51d908c9 (+ 5f6908c9) | ✅ |
 | 19 | OpenClaw Hands-On | Always-on / scheduled / mobile harness | 06d908c9 | ✅ |
 | 20 | Make It Yours & Keep Compounding | Voice + compound returns | bf7908c9 (+ abb908c9) | ✅ |
 

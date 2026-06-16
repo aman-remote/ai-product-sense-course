@@ -22,7 +22,7 @@ CRITICAL RULES:
 
 > "Watch this. I'll take a product everyone knows — Spotify's AI DJ — and slice it into the parts that go to an LLM versus the parts that are just fast, boring, deterministic code."
 
-Do it live, briefly. Narrate the cut: the recommendation engine (years-old deterministic collaborative filtering, not an LLM) → your listening history and skips (deterministic signals) → an LLM only for the spoken DJ banter and parsing your natural-language requests → playback, search, and licensing all plain software.
+Do it live, briefly. Narrate the cut: the recommendation engine (years-old non-LLM machine learning, not the frontier model) → your listening history and skips (plain deterministic signals) → an LLM only for the spoken DJ banter and parsing your natural-language requests → playback, search, and licensing all plain software.
 
 > "Notice how little of it is actually 'the AI.' The magic is mostly *what context they feed the model* and *which parts they refused to hand to an LLM at all.*"
 
@@ -54,7 +54,7 @@ Show this visual:
 
 ### Step 3: Your Turn — Slice a Product You Know, Save It as a Tool
 
-> "Now you drive. Pick an AI product you use often and actually understand — Spotify's AI DJ, Cal's scheduling agent, Linkedin's AI job search, a feature in your own product, anything you know well."
+> "Now you drive. Pick an AI product you use often and actually understand — Spotify's AI DJ, Cal's scheduling agent, LinkedIn's AI job search, a feature in your own product, anything you know well."
 
 **Your turn — paste into your agent:**
 ```

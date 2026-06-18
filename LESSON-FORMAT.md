@@ -22,7 +22,7 @@ Adopted from the reference course exiao/claude-code-course (REWRITE-GUIDE.md + i
  elsewhere so reinforce briefly not lecture.]
 
 CRITICAL RULES:
-- ONE step per message. STOP and wait after each.
+- ONE step per message. Pause and wait for the student after each. Mark each pause with a 🎬 director's note (see below) — it is an instruction to Claude, never spoken aloud.
 - Keep each message SHORT (3-5 sentences).
 - Build/demo live in the student's session; narrate then point at what happened.
 - Use ASCII visuals only to mirror what they just saw (not as theory slides).
@@ -32,17 +32,17 @@ CRITICAL RULES:
 
 ### Step 1: Watch Me [do the thing]
 [Claude runs the demo live and narrates the rhythm/result. "Watch this."]
-**STOP. Wait for their reaction.**
+> 🎬 **Director's note (never say aloud):** Wait for their reaction.
 
 ### Step 2: Name It (briefly)
 [One sentence naming the primitive + ONE small ASCII visual if it helps.]
-**STOP. Wait for their response.**
+> 🎬 **Director's note (never say aloud):** Wait for their response.
 
 ### Step 3: Your Turn
 [Student drives on THEIR product/data. Give an Important task; optionally a
  Stretch / Super-stretch for fast finishers. This is the only step with a
  student-run prompt.]
-**STOP. Let them run it, react to what they observed.**
+> 🎬 **Director's note (never say aloud):** Let them run it, react to what they observed.
 
 ---
 

@@ -11,7 +11,7 @@ You are teaching this interactively. You demo what a slash command really is liv
 **Tool note:** skills are native in BOTH tools — a `SKILL.md` file the agent loads when relevant, invokable from the slash menu. Cursor (2.4+) and Claude Code both support them. Detect the tool and use its path: Cursor `.cursor/skills/` (rules in `.cursor/rules/`, commands in `.cursor/commands/`); Claude Code `.claude/skills/`. Don't send a Cursor user to Claude Code — they have everything they need.
 
 CRITICAL RULES:
-- **ONE step per message.** STOP and wait after each one.
+- **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - Demo live in the student's session, then hand them the keys to build their own.
 - Use ASCII visuals only to mirror something they just saw.
@@ -27,8 +27,7 @@ Run `/memory` in Claude Code (in Cursor, open your rules file or type `/` to see
 
 > "The insight: you can define your OWN workflows just by writing the steps in AGENTS.md. No code. The agent reads them and follows them."
 
-**STOP. Wait for their reaction.**
-
+> 🎬 **Director's note (never say aloud):** Wait for their reaction.
 ---
 
 ### Step 2: Name It (briefly)
@@ -48,8 +47,7 @@ Show this visual:
 
 > "Both are just markdown. ⚠️ Heads up: model-invoked skill calling is still improving — if the agent doesn't auto-use a skill when you expect, just invoke it manually."
 
-**STOP. Wait for their response.**
-
+> 🎬 **Director's note (never say aloud):** Wait for their response.
 ---
 
 ### Step 3: Your Turn
@@ -80,8 +78,7 @@ Run `/standup`, then chain them: `/standup then triage my backlog`.
 
 **Super-stretch:** Build a skill for a task you genuinely do every week at work.
 
-**STOP. Let them build and run it. React to what they made.**
-
+> 🎬 **Director's note (never say aloud):** Let them build and run it. React to what they made.
 ---
 
 ### 🎉 What Just Happened

@@ -81,6 +81,8 @@ Run `/standup`, then chain them: `/standup then triage my backlog`.
 > 🎬 **Director's note (never say aloud):** Let them build and run it. React to what they made.
 ---
 
+> **🪙 Real-world (Oura PMs):** For a production set of skills, see `product-os` ([the `.cursor/skills/` folder](https://github.com/lfurman-oura/product-os/tree/main/.cursor/skills)) — nine real ones (product-value-thesis, feature-pitch, jtbd-writing, doc-coauthoring, weekly-update, and more), each indexed by product-process phase in `PRODUCT-PROCESS.md` (phase → skill → key question). A real example of the build-your-own skill you just made, at team scale.
+
 ### 🎉 What Just Happened
 
 > "A slash command is a workflow with a shortcut; a skill is a folder with a SKILL.md the agent loads when relevant — and you can write both in plain English. The design discipline is progressive disclosure: start with loose plain requests, and only codify a workflow the third time you catch yourself typing the same instructions. And the bridge to your Personal OS: a workflow is stateless steps, but workflow + memory + judgment = an agent. That's what you've been building."

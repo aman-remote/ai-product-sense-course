@@ -79,6 +79,8 @@ Be specific, with examples from what you just did.
 > 🎬 **Director's note (never say aloud):** Let them run it. Let the critique land — react to it.
 ---
 
+> **🪙 Real-world (Oura PMs):** For a real, non-toy MCP, see `core/mcp/server.py` in `product-os` ([core/mcp/server.py](https://github.com/lfurman-oura/product-os/blob/main/core/mcp/server.py)) — a ~1000-line task MCP server (create/update/query tasks, evals) that an Oura PM's Personal OS actually runs against, alongside the company Glean/Atlassian/Linear MCPs. A working answer to "what does a real MCP look like beyond an API wrapper."
+
 ### 🎉 What Just Happened
 
 > "You installed a real connector, watched the agent cross your own tools in one loop, then ran a product review of an interface built for AI — a discipline almost nobody does well yet. The big idea: most connectors today are lazy API wrappers (47 tools, model picks wrong half the time); thoughtful ones expose 4-8 meaningful actions. The context window is a public good — every tool definition and every fat result steals tokens the agent needs to think. Good design = fewer tools, clearer descriptions, summarized outputs."

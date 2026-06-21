@@ -80,6 +80,8 @@ Look at my goals and tasks. Where am I spending time on things that connect to n
 > 🎬 **Director's note (never say aloud):** Let them run it. React to what their OS produced.
 ---
 
+> **🪙 Real-world (Oura PMs):** The sample OS you just drove is a toy. The real thing is `product-os` ([github.com/lfurman-oura/product-os](https://github.com/lfurman-oura/product-os)) — a production Personal OS for Oura PMs with layered AGENTS.md, nine `.cursor/skills/`, daily/weekly rituals (morning-standup, weekly-review, backlog-processing), a `golden/` quality bar, and a bundled task MCP. Clone it, run `setup.sh`, and do your real standup against it: `What should I work on today?` It is the graduation target for everything in Arc 4. (Oura-internal: keeps live Confluence/OPF gates, Glean/Atlassian/Linear MCP, and member-PII guardrails — so it is for Oura PMs, not the generic fixture.)
+
 ### 🎉 What Just Happened
 
 > "Two big ideas met here. Nondeterminism: multiple runs on one prompt give different valid outputs — pick the best (best-of-N, used constantly in production). And the Bitter Lesson (Rich Sutton): across 70 years, methods that scale with computation always beat methods that hand-encode human knowledge. Your Personal OS has almost no rules — just markdown and a smart model — and it produced useful plans every time. The starting question for any AI product: 'How little structure can I get away with?' Give the model good context and get out of the way."

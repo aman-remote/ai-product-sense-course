@@ -67,7 +67,7 @@ FULL:   [system][doc][q1][a1][q2][a2][draft][revision][q3]... → GENERIC
 > "The context window is the model's whole working memory for one request, and it only grows. Rules of thumb: brainstorming — fill it up; coding — stay under ~50% and start fresh chats often; critical accuracy — keep it under ~25%, one doc one question. Fresh chats are free, and your AGENTS.md preserves context across them. Context engineering — deciding *what* the model sees and *when* — is arguably the most important AI product skill right now."
 
 **What next?**
-- **A)** Lesson 14 — RAG & retrieval (asking the agent about your files)
+- **A)** Lesson 13 — Agentic Search and Memory (Arc 4 begins)
 - **B)** Practice: run the same task at three different context budgets and compare
 - **C)** Map your own daily tasks to a context budget (brainstorm / build / critical)
 

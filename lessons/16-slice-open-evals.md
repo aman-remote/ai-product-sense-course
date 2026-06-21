@@ -101,7 +101,7 @@ Watch which cases the cheap model fails. That gap — not a leaderboard — is w
 > "You just used every primitive from this course as a *diagnostic lens*: model choice, atomic tools, context engineering, RAG, MCP, system prompts. And you hit the real strategy question — if everyone calls the same Claude/GPT API, what's the innovation? The model is becoming a commodity. Your moat is everything around it: the data you can reach, the skills you've built, the UX, the reliability you engineered, and how deeply you know your industry. 'Your moat is not the model. Your moat is everything you build around it.' The way you *prove* any of it works isn't a leaderboard benchmark — it's evals: your own repeatable tests on your own cases. Slice, build, then prove with evals."
 
 **What next?**
-- **A)** Lesson 19 — OpenClaw hands-on (the ultimate slicing capstone)
+- **A)** Lesson 17 — Run a team of agents: subagents & context segregation
 - **B)** Run `slicing.md` on three more products back to back
 - **C)** Slice your OWN product and list its real moat from the shortlist below
 

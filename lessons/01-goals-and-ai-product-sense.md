@@ -67,7 +67,7 @@ Show this visual:
 > "You just prototyped an AI product in chat — lazier than vibe coding, and it revealed the same constraints a coded version would hit. The system prompt was the spec, the conversation was the UI, and the model did the rest. Every time you use Cursor or Claude Code for your real work now, you're touching the exact ingredients of production AI."
 
 **What next?**
-- **A)** Lesson 2 — get set up to build for real
+- **A)** Lesson 2 — get fluent in Cursor (model choice & abstraction)
 - **B)** Keep iterating on the prototype we just built
 - **C)** Tell me about your product — I'll map which primitives matter most to you
 

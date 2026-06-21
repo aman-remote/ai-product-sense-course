@@ -24,7 +24,7 @@ CRITICAL RULES:
 
 Try to fetch OpenClaw's actual system prompt live — search the `openclaw/openclaw` repo for its system-prompt file (the path moves; find the current one rather than assuming a URL). If the fetch fails or the repo can't be reached, don't stall: describe the harness skeleton from memory instead. Either way, narrate: "Here's the identity... here are its tools... here are the rules for when to act... here's the memory instruction."
 
-> "Notice anything? Identity + tools + rules + memory. That's the exact harness skeleton from Lesson 9. The viral magic is the *same* coding agent — just on a server, auto-accepting its own tool calls, reading a HEARTBEAT.md on a timer, with a messaging bridge bolted on."
+> "Notice anything? Identity + tools + rules + memory. That's the exact harness skeleton from Lesson 8. The viral magic is the *same* coding agent — just on a server, auto-accepting its own tool calls, reading a HEARTBEAT.md on a timer, with a messaging bridge bolted on."
 
 > 🎬 **Director's note (never say aloud):** Wait for their reaction.
 ---
@@ -67,7 +67,7 @@ Same model. Same tools. Same loop. New config.
 > "Most of the magic of every OpenClaw capability decomposes into things you already know: a system prompt, tools, the agentic loop, memory-as-files, and harness-level autonomy settings. The whole game of AI product sense is holding BOTH at once — feeling the magic AND seeing it's just good architecture. That's how you spot where the next wave goes instead of just following it."
 
 **What next?**
-- **A)** Lesson 20 — Make It Yours & Keep Compounding (the finale)
+- **A)** Lesson 19 — Make It Compound (the finale)
 - **B)** Go deeper: explore the repo and ask how heartbeats, memory, and the bridge connect
 - **C)** Apply it: draft the full HEARTBEAT.md for your own always-on Personal OS
 

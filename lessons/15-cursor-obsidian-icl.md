@@ -85,7 +85,7 @@ matching my pattern exactly.
 ```
 Watch it generalize from examples alone — no retraining.
 
-**Stretch — save your voice:** Drop a `voice-samples.md` into your Personal OS folder with a handful of things you've actually written. Then ask the agent to draft something new "in my voice, using voice-samples.md." Now it's persistent ICL — every future session can sound like you.
+**Stretch — save your voice:** Drop a `voice-samples.md` into your Personal OS folder with a handful of things you've actually written (no folder of your own, or can't use work writing? use the ready samples in repo-root `sample-personal-os/Knowledge/voice-samples/`). Then ask the agent to draft something new "in my voice, using voice-samples.md." Now it's persistent ICL — every future session can sound like you.
 
 **Super-stretch — Obsidian (optional):** Open your Personal OS folder as an Obsidian vault (https://obsidian.md), edit a file in Cursor, and watch it appear in Obsidian instantly — two interfaces, one folder of plain files, no sync service. A nice way to see the "files as the data layer" idea, but the ICL lesson above is the real point.
 
@@ -97,7 +97,7 @@ Watch it generalize from examples alone — no retraining.
 > "You changed the model's output dramatically without touching the model — just by adding examples to the context. That's in-context learning, and few-shot prompting is its sharpest form: 2-5 examples beat paragraphs of instructions. It's genuinely surprising it works at all — the model is doing something it was never explicitly trained to do. This is why fine-tuning peaked years ago for most use cases, and why you don't have to spell everything out in AGENTS.md: give it examples and it figures out the pattern. And by now you've touched EVERY primitive hands-on — model choice, atomic tools, the agentic loop, harness engineering, context engineering, markdown, system prompts, RAG, nondeterminism, and now in-context learning — not from a textbook, but by building a system for yourself and watching it work."
 
 **What next?**
-- **A)** Lesson 17 — Subagents & multi-agent systems (context segregation)
+- **A)** Lesson 16 — Slice Open Any Product: Evals & product strategy
 - **B)** Build a richer `voice-samples.md` and make every draft sound like you
 - **C)** Review the primitive map and connect each one to your product
 

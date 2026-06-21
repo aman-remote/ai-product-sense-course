@@ -55,7 +55,7 @@ WHY SUBAGENTS:
   4. Shareable              — commit to the repo, whole team gets it
 ```
 
-> "A bloated context window degrades quality — remember context rot from Lesson 13. Subagents give each task a clean room."
+> "A bloated context window degrades quality — remember context rot from Lesson 12. Subagents give each task a clean room."
 
 > 🎬 **Director's note (never say aloud):** Wait for their response.
 ---
@@ -66,7 +66,7 @@ WHY SUBAGENTS:
 
 **Important:** Create a subagent in your voice, then a second one with a different personality, and run the SAME task through both. (Tell them the agents-folder path for their tool: `.cursor/agents/` in Cursor, `.claude/agents/` in Claude Code — the examples below use the Cursor path; swap if they're in Claude Code.)
 
-First you need a couple of writing samples for it to learn from. If you don't have a `voice-samples/` folder yet, make one now: paste 2-3 emails or messages you've actually written into a file, or ask the agent to create a `voice-samples/` folder with a few example notes. Then:
+First you need a couple of writing samples for it to learn from. If you don't have a `voice-samples/` folder yet, either paste 2-3 emails or messages you've actually written into a file, or (can't use work writing?) point it at the ready samples in repo-root `sample-personal-os/Knowledge/voice-samples/`. Then:
 ```
 I want a subagent to help me write emails in my voice. Read my voice-samples/
 for context. Create the agent in .cursor/agents/email-writer.md
@@ -92,7 +92,7 @@ email-writer, then with formal-writer. Show me both.
 > "Two clearly different drafts from one request — same model, different clean rooms, different instructions. That's context segregation: 'correlated vs uncorrelated context window' is just fancy for 'same chat thread vs fresh chat thread.' Decision rule going forward: explicit trigger → slash command; agent-recognized → skill; specialized delegated work → subagent. 'Agent teams' and 'swarms' are just your Personal OS with more named specialists reading and writing the same folders."
 
 **What next?**
-- **A)** Lesson 18 — Slice Open Any Product + Evals (product strategy)
+- **A)** Lesson 18 — OpenClaw, taken apart (the always-on agent)
 - **B)** Go deeper: wire two subagents together (one drafts, one reviews)
 - **C)** Apply it: design the subagent team you'd want for your real job
 

@@ -37,7 +37,7 @@ claude mcp add --transport http notion https://mcp.notion.com/mcp
 
 ### Step 2: Name It (briefly)
 
-> "Now the agent can reach across the network — but it's the same agentic loop from Lesson 4, just with tools that hit an API instead of local files."
+> "Now the agent can reach across the network — but it's the same agentic loop from Lesson 3, just with tools that hit an API instead of local files."
 
 Show this visual:
 
@@ -89,7 +89,7 @@ GOOD: search_workspace, get_context, take_action, summarize_project (4-8)
 ```
 
 **What next?**
-- **A)** Lesson 12 — the command line as the ultimate tool
+- **A)** Lesson 11 — using command line tools (CLI vs MCP)
 - **B)** Design an MCP tool set for your own product
 - **C)** Install another MCP and compare its tool-design quality
 

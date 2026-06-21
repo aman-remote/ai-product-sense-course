@@ -73,7 +73,7 @@ anything yet. Any maintenance tips or software you recognize as a likely culprit
 > "Your agent fixed a real-world problem by typing terminal commands — the same move whether it's checking disk space, running git, querying a database with SQL, or installing software. AI is fluent in code, so the command line is its highest-leverage tool: one general-purpose tool that reaches everything on your machine, versus an MCP that reaches one app. That's why Codex is basically 'a model plus a shell,' why Anthropic (who invented MCP) is now pushing agents to write code instead of calling narrow tools, and why Claude-in-Excel can beat Microsoft's own Excel AI running the *same model* — the difference is the tools, not the brain."
 
 **What next?**
-- **A)** Lesson 13 — context engineering & context rot (Arc 4 begins)
+- **A)** Lesson 12 — context engineering & context rot
 - **B)** Give your agent a real (reversible) cleanup task and watch it work the terminal
 - **C)** Compare: ask the same question with an MCP vs. with the terminal — which had more reach?
 

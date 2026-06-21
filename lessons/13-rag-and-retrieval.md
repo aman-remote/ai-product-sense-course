@@ -1,6 +1,6 @@
 # 13. Agentic Search and Memory → How Agents Find & Remember Context
 
-> **Magic Moment:** You clone a repo you've never seen, ask the agent to explain it, and watch it `grep` its own way to the answer — then you ask "how did you find that file?" and realize it's searching exactly like you would. Then you give it a `MEMORY.md` and watch it remember what mattered across sessions, curating its own memory while you sleep.
+> **Magic Moment:** You clone a repo you've never seen, ask the agent to explain it, and watch it `grep` its own way to the answer — then you ask "how did you find that file?" and realize it's searching the way you would — grep, read, follow the trail. Then you give it a `MEMORY.md` it curates itself: it writes down what mattered at the end of a session and a nightly job tidies it up, so next time it starts from what it already learned.
 
 ---
 
@@ -113,6 +113,8 @@ Show this visual:
 
 > "Your turn. Point the agent at a repo you've never read — one of yours, or clone Excalidraw / PostHog / Zen Browser. Don't tag anything."
 
+(Can't clone, or not comfortable in the terminal? Point it at the repo-root `sample-personal-os/` folder instead and ask the same questions — the search behavior is identical.)
+
 **Important:** run the search question and then ask it how it searched:
 ```
 Explain how this codebase works, chronologically, from each user flow. Don't make me tag files — find what you need.
@@ -130,7 +132,7 @@ Then: `How did you find that file?` — watch it narrate grep vs. semantic.
 
 ### 🎉 What Just Happened
 
-> "Two skills, one lesson. First, agentic SEARCH: the agent finds its own context by reasoning about what to look for, running keyword (grep) and semantic search in a loop until it's sure — no pre-tagging, works on any codebase immediately. Second, MEMORY: a `MEMORY.md` the agent curates itself, captured on session end, loaded on start, and consolidated by a nightly 'dream state' cron. Search answers 'where is it right now'; memory answers 'what did we already learn.' Together they're how an agent stops starting from zero every time — the same architecture behind Claude Code's on-the-fly tool search, ChatGPT's memory, and every agent that gets better the longer you use it."
+> "Two skills, one lesson. First, agentic SEARCH: the agent finds its own context by reasoning about what to look for, running keyword (grep) and semantic search in a loop until it's sure — no pre-tagging, works on any codebase immediately. Second, MEMORY: a `MEMORY.md` the agent curates itself, captured on session end, loaded on start, and consolidated by a nightly 'dream state' cron. Search answers 'where is it right now'; memory answers 'what did we already learn.' Together they're how an agent stops starting from zero every time. The shapes differ — Claude Code searches for its own tools on the fly, ChatGPT keeps a curated memory (notably without RAG), others index and retrieve — but the idea is shared: find what you need now, and keep what's worth keeping."
 
 **What next?**
 - **A)** Lesson 14 — Build Your Personal OS (where MEMORY.md lives)

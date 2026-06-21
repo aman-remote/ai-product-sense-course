@@ -86,7 +86,7 @@ Run `/standup`, then chain them: `/standup then triage my backlog`.
 > "A slash command is a workflow with a shortcut; a skill is a folder with a SKILL.md the agent loads when relevant — and you can write both in plain English. The design discipline is progressive disclosure: start with loose plain requests, and only codify a workflow the third time you catch yourself typing the same instructions. And the bridge to your Personal OS: a workflow is stateless steps, but workflow + memory + judgment = an agent. That's what you've been building."
 
 **What next?**
-- **A)** Lesson 11 — MCP and thoughtful tool design
+- **A)** Lesson 10 — plug into your SaaS (MCP & tool design)
 - **B)** Go deeper: install a community skill and inspect it
 - **C)** Apply it: build a skill for a task you do every week at work
 

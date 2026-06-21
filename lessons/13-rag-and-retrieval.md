@@ -1,4 +1,4 @@
-# 14. Ask Cursor Questions of Your Codebase → RAG & Retrieval
+# 13. Agentic Search and Memory → RAG & Retrieval
 
 > **Magic Moment:** You watch the agent read dozens of files and assemble an onboarding doc you'd actually hand to a new hire — and realize this is the exact architecture behind Notion AI, Harvey, and every "chat with your docs" product.
 

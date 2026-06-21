@@ -1,4 +1,4 @@
-# 16. Make It Sound Like You → Fine-Tuning vs In-Context Learning
+# 15. Make It Sound Like You → In-Context Learning vs Fine-Tuning
 
 > **Magic Moment:** You ask AI to help you say "no" and it sounds nothing like you — then you paste in five examples of how *you* actually decline, and the next draft is unmistakably yours. You just "taught" the model with no retraining. That's in-context learning, and it's why you almost never need fine-tuning.
 

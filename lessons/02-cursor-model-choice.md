@@ -1,4 +1,4 @@
-# 3. Get Comfortable with Cursor → Model Choice & Abstraction
+# 2. Get Fluent in Cursor → Model Choice & Abstraction
 
 > **Magic Moment:** You watch the same prompt produce two different parodies under two different models — and "model choice" stops being a technical detail and becomes a product decision you've been making all along.
 

@@ -1,4 +1,4 @@
-# 12. Use Cursor to Optimize My Computer → Command Line: The Ultimate Tool
+# 11. Using Command Line Tools → CLI vs MCP, the Ultimate Tool
 
 > **Magic Moment:** You ask the agent to clean up your slow computer, watch it reach for the terminal instead of some fancy app, and realize the command line is the single most powerful "tool" an agent has — more reach than any MCP.
 

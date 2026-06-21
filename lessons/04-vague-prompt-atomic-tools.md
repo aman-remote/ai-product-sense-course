@@ -1,4 +1,4 @@
-# 5. An Intentionally Vague Prompt → Atomic Tools
+# 4. How Agents Use Context & Tools → Atomic Tools
 
 > **Magic Moment:** You watch a 3-word prompt turn into a finished multi-step task — and then make the agent reveal that its whole toolkit is roughly 10-15 dead-simple tools that compose like LEGO.
 

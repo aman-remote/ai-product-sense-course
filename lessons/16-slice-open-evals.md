@@ -1,4 +1,4 @@
-# 18. Slice Open Any AI Product → Evals & Product Strategy
+# 16. Slice Open Any Product: Evals → Evals & Product Strategy
 
 > **Magic Moment:** You take a product you use every day, slice it into its LLM parts vs. its plain-software parts, and realize you now know exactly how you'd build it — and the only real question left is what makes it defensible.
 

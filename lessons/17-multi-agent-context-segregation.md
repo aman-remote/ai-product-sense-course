@@ -1,4 +1,4 @@
-# 17. Subagents & Multi-Agent Systems → Context Segregation
+# 17. Run a Team of Agents: Subagents → Context Segregation
 
 > **Magic Moment:** You create a subagent that writes in your voice, and discover that "multi-agent system" — the most overhyped phrase in AI — boils down to "separate chat threads that share a filesystem." The magic word is just folders and fresh context windows.
 

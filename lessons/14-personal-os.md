@@ -1,4 +1,4 @@
-# 15. Personal OS: With Code & Without → Nondeterminism & The Bitter Lesson
+# 14. Build Your Personal OS → Nondeterminism & the Bitter Lesson
 
 > **Magic Moment:** You run the same prompt on your Personal OS three times, get three different valid plans, and realize the best of them beats anything you could have engineered with rules. Nondeterminism as a feature, not a bug.
 

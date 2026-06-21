@@ -1,4 +1,4 @@
-# 2. Setup Guide → Environment as Context
+# Setup Guide → Environment as Context
 
 > **Magic Moment:** You get your environment running — and realize the choices you just made (which model, which folder, which tools) ARE your first act of context engineering, the same decisions every AI product makes.
 

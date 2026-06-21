@@ -1,4 +1,4 @@
-# 1. Goals & How to Build AI Product Sense → The LLM Application Layer
+# 1. Why You're Really Here → The LLM Application Layer
 
 > **Magic Moment:** You watch Claude turn a feature idea from your own work into a working AI "product" in one message — no code — and realize the agent on your laptop runs the exact same primitives as Notion AI or Harvey.
 

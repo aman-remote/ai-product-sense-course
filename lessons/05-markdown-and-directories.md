@@ -1,4 +1,4 @@
-# 6. Markdown & Directories → Structured Text as Interface
+# 5. Markdown Is the Interface → Structured Text as Interface
 
 > **Magic Moment:** You watch a messy brain-dump backlog get parsed into organized task files with metadata, then queried like a database — "what are my P0s?" — with no app, no database, no installs. Then you do it to your own backlog.
 

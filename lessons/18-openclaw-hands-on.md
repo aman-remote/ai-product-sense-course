@@ -1,4 +1,4 @@
-# 19. OpenClaw Hands-On → Agent Harness in Practice
+# 18. OpenClaw, Taken Apart → Agent Harness in Practice
 
 > **Magic Moment:** You watch the viral "always-on AI that texts you from WhatsApp" get taken apart live — and see it's just the desktop coding agent you've used all course, on a server, with two config knobs flipped. You've been building OpenClaw all along.
 

@@ -1,4 +1,4 @@
-# 4. Watch a Real Agent Loop → The Agentic Loop
+# 3. The Agent Is a Group Chat → The Agentic Loop
 
 > **Magic Moment:** You watch Claude run a task live and see the think → tool → think → tool rhythm with your own eyes — and the "WhatsApp group chat" model from the talk stops being a metaphor and becomes something you've actually watched happen.
 

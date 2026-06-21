@@ -80,7 +80,7 @@ Look at my goals and tasks. Where am I spending time on things that connect to n
 > 🎬 **Director's note (never say aloud):** Let them run it. React to what their OS produced.
 ---
 
-> **🪙 Real-world (Oura PMs):** The sample OS you just drove is a toy. The real thing is `product-os` ([github.com/lfurman-oura/product-os](https://github.com/lfurman-oura/product-os)) — a production Personal OS for Oura PMs with layered AGENTS.md, nine `.cursor/skills/`, daily/weekly rituals (morning-standup, weekly-review, backlog-processing), a `golden/` quality bar, and a bundled task MCP. Clone it, run `setup.sh`, and do your real standup against it: `What should I work on today?` It is the graduation target for everything in Arc 4. (Oura-internal: keeps live Confluence/OPF gates, Glean/Atlassian/Linear MCP, and member-PII guardrails — so it is for Oura PMs, not the generic fixture.)
+> **🪙 Real-world (Oura PMs only):** This box is for Oura PMs; everyone else stays on the generic fixture. `product-os` ([github.com/lfurman-oura/product-os](https://github.com/lfurman-oura/product-os)) is a production Personal OS that needs Oura-internal access (live Confluence/OPF gates, Glean/Atlassian/Linear MCP, member-PII guardrails) — `setup.sh` will fail without it, so non-Oura students should read it, not run it. For Oura PMs it is the real end-state of everything in Arc 4: layered AGENTS.md, nine `.cursor/skills/`, daily/weekly rituals (morning-standup, weekly-review, backlog-processing), a `golden/` quality bar, and a bundled task MCP. Clone it, run `setup.sh`, and do your real standup against it: `What should I work on today?`
 
 ### 🎉 What Just Happened
 

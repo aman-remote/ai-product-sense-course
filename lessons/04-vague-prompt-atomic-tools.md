@@ -1,6 +1,6 @@
-# 5. An Intentionally Vague Prompt → Atomic Tools
+# 4. How Agents Use Context & Tools → Atomic Tools
 
-> **Magic Moment:** You watch a 3-word prompt turn into a finished multi-step task — and then make the agent reveal that its whole toolkit is roughly 10-15 dead-simple tools that compose like LEGO.
+> **Magic Moment:** You watch a 3-word prompt turn into a finished multi-step task — and then make the agent reveal that its whole toolkit is a small, fixed set of dead-simple tools that compose like LEGO.
 
 ---
 
@@ -41,7 +41,7 @@ Show this visual:
    each box = ONE atomic action; the model picks which & when
 ```
 
-> "Composition is the intelligence. The tools are just hands — there are only roughly 10-15 of them."
+> "Composition is the intelligence. The tools are just hands — a small, fixed set of simple ones."
 
 > 🎬 **Director's note (never say aloud):** Wait for their response.
 ---
@@ -55,7 +55,7 @@ Show this visual:
 Explain how you just used tools to do that task — in atoms, no jargon, every term and command, step-by-step in order.
 ```
 
-**Important:** Then ask it to list its full toolkit: `What tools do you have access to? List every one with a one-line description. If you can't see your exact tool list, describe the standard set you operate with.` You'll land around roughly 10-15 — and if it can't introspect, the standard set it describes makes the same point.
+**Important:** Then ask it to list its full toolkit: `What tools do you have access to? List every one with a one-line description. If you can't see your exact tool list, describe the standard set you operate with.` You'll see a short, simple list — and if it can't introspect, the standard set it describes makes the same point.
 
 **Stretch:** Plant your own trap (two files + a vague pointer) and fire your own 3-word prompt; watch the sequence.
 
@@ -66,10 +66,10 @@ Explain how you just used tools to do that task — in atoms, no jargon, every t
 
 ### 🎉 What Just Happened
 
-> "Three words became a finished task because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on roughly 10-15 atomic tools — read, write, search, execute — that's it. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and many coding agents."
+> "Three words became a finished task because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on a handful of atomic tools — read, write, search, execute — that's it. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and many coding agents."
 
 **What next?**
-- **A)** Lesson 6 — markdown & directories as an agent interface
+- **A)** Lesson 5 — markdown & directories as an agent interface
 - **B)** Design your own atomic tool set for a product you're building
 - **C)** Try more vague prompts and watch the tool sequence each time
 
@@ -82,7 +82,7 @@ Explain how you just used tools to do that task — in atoms, no jargon, every t
 **For Claude's use during this lesson — not to read aloud. Use to answer questions if they come up.**
 
 ### The primitive
-Atomic tools: a small set (~10-15) of simple, single-purpose tools (read a file, write a file, run a command, search) that a coding agent composes in a loop. The intelligence is in choosing which tool and when — not in the tools being smart. Tools are hands, not brains.
+Atomic tools: a small, fixed set of simple, single-purpose tools (read a file, write a file, run a command, search) that a coding agent composes in a loop. The intelligence is in choosing which tool and when — not in the tools being smart. Tools are hands, not brains.
 
 ### Where this shows up in production
 - **Pi coding agent** (Mario Zechner): open-source, ~10 tools, no framework — just atomic tools in a loop; powers OpenClaw/Clawdbot.

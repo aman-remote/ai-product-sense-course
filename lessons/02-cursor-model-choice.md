@@ -1,4 +1,4 @@
-# 3. Get Comfortable with Cursor → Model Choice & Abstraction
+# 2. Get Fluent in Cursor → Model Choice & Abstraction
 
 > **Magic Moment:** You watch the same prompt produce two different parodies under two different models — and "model choice" stops being a technical detail and becomes a product decision you've been making all along.
 
@@ -69,7 +69,7 @@ Read lyrics.txt. Write a parody in parody-v2.txt — a PM letting go of cut scop
 > "Same prompt, same context, different model, different output — that's model choice as a product decision, and you just made it with your own eyes. Many AI products wrap the model in a harness so the brain can swap without breaking the interface: products like Harvey reportedly route easy tasks to cheap models and hard ones to Opus; many production apps swap the underlying model without changing their UI. You build around the harness, not the model."
 
 **What next?**
-- **A)** Lesson 4 — WhatsApp group chat = the agentic loop
+- **A)** Lesson 3 — the agent is a group chat (the agentic loop)
 - **B)** Run more model comparisons on a real prompt from your work
 - **C)** Go deeper into Cursor's agent mode — have it build or refactor something
 

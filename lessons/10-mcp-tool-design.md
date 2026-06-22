@@ -1,4 +1,4 @@
-# 11. MCP: Connect to SaaS & Thoughtful Tool Design → MCP & Tool Design
+# 10. Plug Into Your SaaS → MCP & Tool Design
 
 > **Magic Moment:** You install a real MCP connector, watch the agent answer a strategic question across your own tools, then have it critique its own tools as a product designer — and realize "tool design for agents" is a brand-new product discipline.
 
@@ -37,7 +37,7 @@ claude mcp add --transport http notion https://mcp.notion.com/mcp
 
 ### Step 2: Name It (briefly)
 
-> "Now the agent can reach across the network — but it's the same agentic loop from Lesson 4, just with tools that hit an API instead of local files."
+> "Now the agent can reach across the network — but it's the same agentic loop from Lesson 3, just with tools that hit an API instead of local files."
 
 Show this visual:
 
@@ -79,6 +79,8 @@ Be specific, with examples from what you just did.
 > 🎬 **Director's note (never say aloud):** Let them run it. Let the critique land — react to it.
 ---
 
+> **🪙 Real-world (Oura PMs):** For a real, non-toy MCP, see `core/mcp/server.py` in `product-os` ([core/mcp/server.py](https://github.com/lfurman-oura/product-os/blob/main/core/mcp/server.py)) — a ~1000-line task MCP server (create/update/query tasks, evals) that an Oura PM's Personal OS actually runs against, alongside the company Glean/Atlassian/Linear MCPs. A working answer to "what does a real MCP look like beyond an API wrapper."
+
 ### 🎉 What Just Happened
 
 > "You installed a real connector, watched the agent cross your own tools in one loop, then ran a product review of an interface built for AI — a discipline almost nobody does well yet. The big idea: most connectors today are lazy API wrappers (47 tools, model picks wrong half the time); thoughtful ones expose 4-8 meaningful actions. The context window is a public good — every tool definition and every fat result steals tokens the agent needs to think. Good design = fewer tools, clearer descriptions, summarized outputs."
@@ -89,7 +91,7 @@ GOOD: search_workspace, get_context, take_action, summarize_project (4-8)
 ```
 
 **What next?**
-- **A)** Lesson 12 — the command line as the ultimate tool
+- **A)** Lesson 11 — using command line tools (CLI vs MCP)
 - **B)** Design an MCP tool set for your own product
 - **C)** Install another MCP and compare its tool-design quality
 

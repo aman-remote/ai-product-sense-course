@@ -1,4 +1,4 @@
-# 8. AI Prototyping → Plans & Feedback Loops
+# 7. Plan First, Build Second → Plans & Feedback Loops
 
 > **Magic Moment:** You watch an agent interview you in Plan mode and write a spec to a text file *before* touching any code — and realize "Plan mode" isn't magic. It's a thin productization of a habit every great team already has: put the plan in writing so it survives context switches.
 
@@ -75,10 +75,10 @@ and check again.
 
 ### 🎉 What Just Happened
 
-> "Long-horizon agents work because of two things: plans written to files that survive compaction and new sessions, and feedback loops that let an agent see its own output and self-correct. This isn't a coding trick — Anthropic's Agent SDK uses the same pattern (an initializer agent sets up the environment, a coding agent makes incremental progress leaving clean artifacts each session). 90% planning, 10% coding — alignment and memory were always the bottleneck, not typing code."
+> "Long-horizon agents work because of two things: plans written to files that survive compaction and new sessions, and feedback loops that let an agent see its own output and self-correct. This isn't a coding trick — Anthropic's Agent SDK uses the same pattern (an initializer agent sets up the environment, a coding agent makes incremental progress leaving clean artifacts each session). Most of the work is planning and alignment, not typing code — that's where agents win or lose."
 
 **What next?**
-- **A)** Lesson 9 — how coding agents work (harness engineering)
+- **A)** Lesson 8 — setup your agent harness (harness engineering)
 - **B)** Go deeper: add more feedback loops (tests, logs) and watch it run longer unattended
 - **C)** Apply it: map the plan + feedback loop for an AI feature you're building at work
 
@@ -100,7 +100,7 @@ Long-horizon agents work because of two things. (1) **Plans as durable artifacts
 
 ### Misconceptions (correct only if raised)
 - "Plan mode is a special AI capability" — It's a text file plus a habit. Mario Zechner's Pi agent has no built-in plan mode; he just tells it to plan and write it to a file.
-- "Coding is the bottleneck" — Planning and alignment are. 90% planning, 10% coding.
+- "Coding is the bottleneck" — Planning and alignment are; the typing was never the slow part.
 - "Better models fix unreliable agents" — Often it's the plumbing: give the agent eyes before reaching for a bigger model.
 
 ### Resources (offer only if they want more)

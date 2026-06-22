@@ -1,4 +1,4 @@
-# 4. Watch a Real Agent Loop → The Agentic Loop
+# 3. The Agent Is a Group Chat → The Agentic Loop
 
 > **Magic Moment:** You watch Claude run a task live and see the think → tool → think → tool rhythm with your own eyes — and the "WhatsApp group chat" model from the talk stops being a metaphor and becomes something you've actually watched happen.
 
@@ -66,7 +66,7 @@ Add a risks.md reviewing the plan and budget, then update budget.md with a 15% c
 > "Every agent runs this same loop: read the whole conversation, decide to think or act, append the result, repeat. The model is stateless — it re-reads from the top each turn, which is why writing things to files (like that plan) matters so much. There's no magic here, just this loop running fast — and once you've seen it, you'll spot it everywhere."
 
 **What next?**
-- **A)** Lesson 5 — an intentionally vague prompt & atomic tools
+- **A)** Lesson 4 — how agents use context & tools (atomic tools)
 - **B)** Push it: give me a task that loops 10+ times and count the cycles
 - **C)** Map this loop to a product you use daily
 

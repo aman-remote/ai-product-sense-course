@@ -1,4 +1,4 @@
-# 15. Personal OS: With Code & Without → Nondeterminism & The Bitter Lesson
+# 14. Build Your Personal OS → Nondeterminism & the Bitter Lesson
 
 > **Magic Moment:** You run the same prompt on your Personal OS three times, get three different valid plans, and realize the best of them beats anything you could have engineered with rules. Nondeterminism as a feature, not a bug.
 
@@ -6,7 +6,7 @@
 
 ## Instructions for Claude
 
-You are teaching this interactively. The student drives on a Personal OS (ideally THEIR folder with Tasks/, GOALS.md, BACKLOG.md from earlier lessons). They may not have built one, or may not be able to use real work data — that's fine: have the agent generate a quick sample (`Create a sample-os/ folder with a GOALS.md, a BACKLOG.md, and 3-4 Tasks/*.md for a fictional product`) and run the lesson against that. Don't lecture — the theory (nondeterminism, best-of-N, the Bitter Lesson) was covered live and in Notion. Reinforce in a sentence or two.
+You are teaching this interactively. The student drives on a Personal OS (ideally THEIR folder with Tasks/, GOALS.md, BACKLOG.md from earlier lessons). They may not have built one, or may not be able to use real work data — that's fine: point them at the repo-root `sample-personal-os/` fixture (GOALS.md, BACKLOG.md, AGENTS.md, Tasks/, Knowledge/voice-samples/) and run the lesson against that. Don't lecture — the theory (nondeterminism, best-of-N, the Bitter Lesson) was covered live and in Notion. Reinforce in a sentence or two.
 
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
@@ -25,7 +25,7 @@ CRITICAL RULES:
 Look at my tasks, backlog, and goals. What should I focus on today? Give me a prioritized plan for the next 3 hours with specific items from my actual files.
 ```
 
-(No Personal OS folder yet, or can't use real work data? Ask the agent to generate a sample: `Create a sample-os/ folder with a GOALS.md, a BACKLOG.md, and 3-4 Tasks/*.md for a fictional product`, then run all the passes against that — the nondeterminism is identical.)
+(No Personal OS folder yet, or can't use real work data? Point your agent at the repo-root `sample-personal-os/` fixture and run all the passes against that — the nondeterminism is identical.)
 
 Run it live, then point at what happened:
 
@@ -73,19 +73,21 @@ Look at my goals and tasks. Where am I spending time on things that connect to n
 
 **Then customize — pick your path:**
 - **No-code (Stretch):** `Look at my Personal OS structure and suggest 3 new markdown files that would make you more useful to me, based on what I'm working on. Create them with real starter content.`
-- **Code (Super-stretch):** `Reorganize my Personal OS: add work/ and personal/ folders, move tasks into the right one, add custom categories per folder, and a CRM/ folder for follow-ups. Do it now — restructure the actual files.`
+- **Code (Super-stretch):** first make it reversible — `git init && git add -A && git commit -m "before restructure"` (or copy the folder), then: `Reorganize my Personal OS: add work/ and personal/ folders, move tasks into the right one, add custom categories per folder, and a CRM/ folder for follow-ups. Show me the plan first, then restructure the actual files.` (Running against real files? Commit or copy first so a wrong move is one `git checkout` away from undo. Or run it on `sample-personal-os/`.)
 
 > "Every one of these touches the full stack: reading files (RAG), reasoning (agentic loop), your directory as context (context engineering), different each run (nondeterminism)."
 
 > 🎬 **Director's note (never say aloud):** Let them run it. React to what their OS produced.
 ---
 
+> **🪙 Real-world (Oura PMs only):** This box is for Oura PMs; everyone else stays on the generic fixture. `product-os` ([github.com/lfurman-oura/product-os](https://github.com/lfurman-oura/product-os)) is a production Personal OS that needs Oura-internal access (live Confluence/OPF gates, Glean/Atlassian/Linear MCP, member-PII guardrails) — `setup.sh` will fail without it, so non-Oura students should read it, not run it. For Oura PMs it is the real end-state of everything in Arc 4: layered AGENTS.md, nine `.cursor/skills/`, daily/weekly rituals (morning-standup, weekly-review, backlog-processing), a `golden/` quality bar, and a bundled task MCP. Clone it, run `setup.sh`, and do your real standup against it: `What should I work on today?`
+
 ### 🎉 What Just Happened
 
 > "Two big ideas met here. Nondeterminism: multiple runs on one prompt give different valid outputs — pick the best (best-of-N, used constantly in production). And the Bitter Lesson (Rich Sutton): across 70 years, methods that scale with computation always beat methods that hand-encode human knowledge. Your Personal OS has almost no rules — just markdown and a smart model — and it produced useful plans every time. The starting question for any AI product: 'How little structure can I get away with?' Give the model good context and get out of the way."
 
 **What next?**
-- **A)** Lesson 16 — Make It Sound Like You (in-context learning & few-shot)
+- **A)** Lesson 15 — Make It Sound Like You (in-context learning & few-shot)
 - **B)** Go deeper on nondeterminism — best-of-N on a real work task
 - **C)** Keep customizing your Personal OS with more prompts
 

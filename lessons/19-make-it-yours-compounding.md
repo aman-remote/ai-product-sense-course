@@ -1,4 +1,4 @@
-# 20. Make It Yours & Keep Compounding → Voice + Compound Returns
+# 19. Make It Compound → Voice + Compound Returns
 
 > **Magic Moment:** You feed the agent three things you actually wrote, and its next draft sounds like *you* instead of generic AI — and you realize the whole course was never about the eight hours of building. It was about starting a system that compounds every week from here.
 
@@ -23,7 +23,7 @@ CRITICAL RULES:
 
 On a short sample (use one of theirs if they paste it, or a generic example first), read it and narrate the fingerprint live: "Sentence length here... punctuation habit there... how it opens and closes." 
 
-> "That's the whole mechanism — voice samples are just context files that shape the output. Same context-engineering primitive from Lesson 13, pointed at a person. Now let's point it at YOU."
+> "That's the whole mechanism — voice samples are just context files that shape the output. Same context-engineering primitive from Lesson 12, pointed at a person. Now let's point it at YOU."
 
 > 🎬 **Director's note (never say aloud):** Wait for their reaction.
 ---
@@ -51,7 +51,7 @@ to your own needs and making small changes. Each new model/tool
 
 > "Now you make it yours. Drop in 2-3 real things you've actually written — emails, Slack messages, a PRD intro, a LinkedIn post. Real, sent, unedited."
 
-(Can't share work writing? Use a public LinkedIn post, a personal blog snippet, or just a few lines you write fresh right now — even three sentences works.)
+(Can't share work writing? Use a public LinkedIn post, a personal blog snippet, a few lines you write fresh right now — even three sentences works — or the ready samples in repo-root `sample-personal-os/Knowledge/voice-samples/`.)
 
 **Important:** Create the folder, add your samples, extract your voice, make it reusable, and test it:
 ```
@@ -81,7 +81,7 @@ Compare it to how you'd actually write it. Where's it off? Tell the agent — th
 
 ### 🎉 What Just Happened
 
-> "You just made the agent sound like you with nothing but in-context examples — no fine-tuning, same primitive as Lesson 16's ICL lesson — and the feedback loop ('that's not quite me, here's why') makes it more you every week. But here's the real lesson: the 8-hour build was never the point. The compounding habit is. When new tech drops, your Step 1 will be to simulate it inside your Personal OS — so you evaluate anything new in minutes instead of chasing it. You came in with people sense; you leave with tech sense too. That combination, in one brain, is where the best product magic happens."
+> "You just made the agent sound like you with nothing but in-context examples — no fine-tuning, same primitive as Lesson 15's ICL lesson — and the feedback loop ('that's not quite me, here's why') makes it more you every week. But here's the real lesson: the 8-hour build was never the point. The compounding habit is. When new tech drops, your Step 1 will be to simulate it inside your Personal OS — so you evaluate anything new in minutes instead of chasing it. You came in with people sense; you leave with tech sense too. That combination, in one brain, is where the best product magic happens."
 
 **What next?**
 - **A)** Revisit any lesson — say a number and we'll go deeper
@@ -105,7 +105,7 @@ Compare it to how you'd actually write it. Where's it off? Tell the agent — th
 - **Personal OS as evaluation harness**: the fastest way to assess a new AI capability is to reproduce it with primitives you already control.
 
 ### Misconceptions (correct only if raised)
-- "You need fine-tuning to make AI sound like you" — No. In-context examples (Lesson 16's ICL lesson) handle voice without retraining.
+- "You need fine-tuning to make AI sound like you" — No. In-context examples (Lesson 15's ICL lesson) handle voice without retraining.
 - "The workshop output is the deliverable" — The habit is the deliverable. The system is a seed.
 - "New AI releases mean starting over" — They're incremental when you understand the building blocks; you simulate them in your existing system.
 

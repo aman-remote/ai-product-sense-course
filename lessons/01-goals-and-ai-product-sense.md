@@ -1,4 +1,4 @@
-# 1. Goals & How to Build AI Product Sense → The LLM Application Layer
+# 1. Why You're Really Here → The LLM Application Layer
 
 > **Magic Moment:** You watch Claude turn a feature idea from your own work into a working AI "product" in one message — no code — and realize the agent on your laptop runs the exact same primitives as Notion AI or Harvey.
 
@@ -67,7 +67,7 @@ Show this visual:
 > "You just prototyped an AI product in chat — lazier than vibe coding, and it revealed the same constraints a coded version would hit. The system prompt was the spec, the conversation was the UI, and the model did the rest. Every time you use Cursor or Claude Code for your real work now, you're touching the exact ingredients of production AI."
 
 **What next?**
-- **A)** Lesson 2 — get set up to build for real
+- **A)** Lesson 2 — get fluent in Cursor (model choice & abstraction)
 - **B)** Keep iterating on the prototype we just built
 - **C)** Tell me about your product — I'll map which primitives matter most to you
 

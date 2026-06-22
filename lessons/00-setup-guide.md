@@ -1,4 +1,4 @@
-# 2. Setup Guide → Environment as Context
+# Setup Guide → Environment as Context
 
 > **Magic Moment:** You get your environment running — and realize the choices you just made (which model, which folder, which tools) ARE your first act of context engineering, the same decisions every AI product makes.
 
@@ -68,7 +68,7 @@ TOOLS → what it can do     VIEWER → how you see output
 ```
 
 **What next?**
-- **A)** Lesson 3 — your first hands-on with the agent (model choice in action)
+- **A)** Lesson 1 — why you’re really here: build your first AI feature, no code
 - **B)** Ask the agent to give you a tour of whatever's in your folder
 - **C)** I'm stuck on setup — let's troubleshoot together
 

@@ -1,6 +1,6 @@
 # 4. How Agents Use Context & Tools → Atomic Tools
 
-> **Magic Moment:** You watch a 3-word prompt unfold into a visible sequence of tool calls (list → read → read → write), then make the agent reveal the exact toolkit Cursor gave it — a small, fixed set of dead-simple tools that compose like LEGO.
+> **Magic Moment:** You watch a 5-word prompt ("what should I work on") unfold into a visible sequence of tool calls (list → read → read → answer), then make the agent reveal the exact toolkit Cursor gave it — a small, fixed set of dead-simple tools that compose like LEGO.
 
 ---
 
@@ -28,7 +28,7 @@ Open with a short orientation, three quick beats, then wait:
 >
 > **What we're covering:** how agents turn a vague instruction into finished work using a tiny set of simple tools (read, write, list, run).
 >
-> **The magic moment coming up:** I'll give a 3-word prompt and you'll watch it spell out exactly which tools it fires, in order — then we'll have the agent list the full toolkit Cursor actually gave it.
+> **The magic moment coming up:** I'll type one plain question — "what should I work on" — and you'll watch it spell out exactly which tools it fires, in order, to answer it — then we'll have the agent list the full toolkit Cursor actually gave it.
 >
 > Ready? I'll start us off."
 
@@ -36,15 +36,21 @@ Open with a short orientation, three quick beats, then wait:
 
 ---
 
-### Step 1: Watch 3 Words Trigger a Whole Task
+### Step 1: Watch a Vague Question Trigger a Whole Sequence
 
 > "Quick orientation before I run anything: the `product-os` repo you have open IS a work operating system in plain files. `Tasks/` holds one markdown file per to-do (each with a `status` and `priority` field at the top), `GOALS.md` is your objectives, and `Knowledge/` is your notes. That's the whole 'system' — just folders of text the agent can read and edit. Now watch."
 
-> "I'm going to point at that repo and give myself the vaguest instruction imaginable — and let it run against your real `Tasks/` system. Watch the sequence, not the result."
+> "I'm going to point at that repo and ask it the vaguest question a busy PM actually types — and let it run against your real `Tasks/` system. Watch the sequence, not the result."
 
-Run it live in the cloned product-os repo: copy `examples/example_files/example_task.md` into `Tasks/` as a working task file (it has YAML frontmatter — `status: n`, `priority: P0`, the "Incorporate URS design feedback" body). Show them the file you just planted so the prompt has something concrete to point at. Then act on the prompt **"Process this one"** — and before narrating, say what "this one" resolves to ("'this one' = that task I just dropped in `Tasks/`"). Narrate each atomic move: "Listing `Tasks/`… found the task file… reading it… reading the linked `GOALS.md` for context… now appending a Progress Log entry and flipping `status` from `n` (new) to `s` (started)." (This mirrors exactly what the bundled task MCP in `core/mcp/server.py` does — `list_tasks` → read → `update_task_status`.)
+Run it live in the cloned product-os repo: make sure a couple of task files exist in `Tasks/` (the repo ships some; if it's empty, copy `examples/example_files/example_task.md` in and tweak the priority on one so there's something to rank). Then **show the literal prompt you're about to send, on its own line, in a code block, before you run it** — so they see how plain and short it is:
 
-> "Three words. And I just listed → read → read → wrote against your real task system. I never held it all in my head — each step was one tiny action."
+```
+what should I work on
+```
+
+You named no file, no priority, no path. Run it and narrate each atomic move: "Listing `Tasks/`… reading each task's frontmatter… reading `GOALS.md` to see what matters most right now… now ranking them and answering: your P0, the URS feedback, is what to do first." (This mirrors exactly what the bundled task MCP in `core/mcp/server.py` does — `list_tasks` → read → reason.)
+
+> "That whole sequence came from five plain words: **`what should I work on`**. I never named a file — it listed → read → read → reasoned and came back with an answer. Each step was one tiny action."
 
 > 🎬 **Director's note (never say aloud):** Wait for their reaction. Ask what they noticed about the sequence. (No product-os / no Oura access? The repo's own committed `examples/example_files/example_task.md` and `Tasks/` work for this, or fall back to `sample-personal-os/`.)
 ---
@@ -56,9 +62,9 @@ Run it live in the cloned product-os repo: copy `examples/example_files/example_
 Show this visual:
 
 ```
-"Process this one"
+"what should I work on"
    │
- THINK → list_tasks → THINK → read_file → read_file → update_task_status → DONE
+ THINK → list_tasks → THINK → read_file → read_file → answer → DONE
    each box = ONE atomic action; the model picks which & when
 ```
 
@@ -71,7 +77,7 @@ Show this visual:
 
 > "Now you drive. In your own Cursor agent, make it narrate its own internals after running against your product-os files."
 
-> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which probe they want to run first — offer the product-os-anchored options as the choices: (a) have it re-narrate in atoms the `Tasks/` job it just did, (b) list its full toolkit (native tools + the task MCP tools from `core/mcp/server.py`: `list_tasks`, `create_task`, `update_task_status`…), (c) plant their own trap in `Tasks/` and fire a 3-word prompt, (d) show the literal `edit_file`/`apply_patch` schema. Then have them paste the matching prompt below. (No product-os / no Oura access? The repo's own committed `examples/example_files/example_task.md` and `Tasks/` work for this, or fall back to `sample-personal-os/`.)
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which probe they want to run first — offer the product-os-anchored options as the choices: (a) have it re-narrate in atoms the `Tasks/` job it just did, (b) list its full toolkit (native tools + the task MCP tools from `core/mcp/server.py`: `list_tasks`, `create_task`, `update_task_status`…), (c) plant their own tasks in `Tasks/` and fire their own vague question, (d) show the literal `edit_file`/`apply_patch` schema. Then have them paste the matching prompt below. (No product-os / no Oura access? The repo's own committed `examples/example_files/example_task.md` and `Tasks/` work for this, or fall back to `sample-personal-os/`.)
 
 **Your turn — paste into your agent:**
 ```
@@ -80,7 +86,7 @@ Explain how you just used tools to do that task — in atoms, no jargon, every t
 
 **Important:** Then ask it to list its full toolkit: `What tools do you have access to? List every one with a one-line description — include both your native file tools and any task MCP tools from this repo's core/mcp/server.py. If you can't see your exact tool list, describe the standard set you operate with.` You'll see a short, simple list — and if it can't introspect, the standard set it describes makes the same point.
 
-**Stretch:** Plant your own trap in `Tasks/` (copy `examples/example_files/example_task.md` and tweak it) plus a vague pointer, then fire your own 3-word prompt; watch the sequence.
+**Stretch:** Add a couple of your own tasks to `Tasks/` (copy `examples/example_files/example_task.md` and tweak the priorities), then ask your own vague question ("what's most urgent?", "what should I do first?"); watch the sequence.
 
 **Super-stretch:** Ask `Describe the edit_file (or apply_patch) tool you use — its name and parameters` and see how shockingly simple it is. (If it can't show the literal schema, the plain-English description still makes the point.)
 
@@ -89,7 +95,7 @@ Explain how you just used tools to do that task — in atoms, no jargon, every t
 
 ### 🎉 What Just Happened
 
-> "Three words became a finished task because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on a handful of atomic tools — read, write, search, execute — that's it. Even product-os's bundled task MCP (`core/mcp/server.py`) is just a few more atoms: `list_tasks`, `create_task`, `update_task_status`. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and many coding agents."
+> "Five plain words became a ranked answer because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on a handful of atomic tools — read, write, search, execute — that's it. Even product-os's bundled task MCP (`core/mcp/server.py`) is just a few more atoms: `list_tasks`, `create_task`, `update_task_status`. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and many coding agents."
 
 **What next?**
 > 🎬 **Director's note (never say aloud):** Deliver these as an AskUserQuestion choice — keep the A/B/C text as the option set so they just pick.

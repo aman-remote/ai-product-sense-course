@@ -180,7 +180,13 @@ If the AI does the wrong thing, you didn't give it the right context. Fix the ha
 - "Context engineering is just prompt engineering" — Prompts are one part; context = files, tool results, history, rules, injected docs.
 
 ### Resources (offer only if they want more)
-- Claude Code Unpacked (Thorsten Ball): https://registerspill.thorstenball.com/p/claude-code-unpacked
-- Mario Zechner Pi agent (minimal harness): https://mariozechner.at/posts/2025-11-30-pi-coding-agent/
-- PromptLayer — behind the scenes of the master agent loop: https://blog.promptlayer.com/how-openai-codex-works-behind-the-scenes/
+- Claude Code Unpacked — the leaked-prompt visualizer: https://ccunpacked.dev/
+- Claude Code Unpacked essay (Thorsten Ball): https://registerspill.thorstenball.com/p/claude-code-unpacked
+- Mario Zechner Pi agent (minimal harness, core of Clawdbot): https://mariozechner.at/posts/2025-11-30-pi-coding-agent/
+- PromptLayer — behind the scenes of the master agent loop: https://blog.promptlayer.com/claude-code-behind-the-scenes-of-the-master-agent-loop/
+- PromptLayer follow-up — how Codex compares to Claude Code: https://blog.promptlayer.com/how-openai-codex-works-behind-the-scenes-and-how-it-compares-to-claude-code/
+- Jared's talk on the Claude Code agent loop: https://www.youtube.com/watch?v=RFKCzGlAU6Q
+- The fuzzy art of trial-and-error in tuning Claude Code: https://x.com/trq212/status/2027463795355095314
+- Anthropic — the "think" tool: https://www.anthropic.com/engineering/claude-think-tool
+- What is plan mode? (Armin Ronacher): https://lucumr.pocoo.org/2025/12/17/what-is-plan-mode/
 - Boris Cherny & Cat Wu (Anthropic) — Claude Code, Latent Space interview: https://www.latent.space/p/claude-code

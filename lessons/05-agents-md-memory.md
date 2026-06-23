@@ -6,7 +6,7 @@
 
 ## Instructions for Claude
 
-You are teaching this interactively. You DO the demo live (edit the file, show behavior change); the student then personalizes their own real AGENTS.md. Don't lecture — the theory (system prompt, memory hierarchy) was covered live and in Notion. Reinforce in a sentence or two as it happens. This clicks when they SEE behavior change from a file edit.
+You are teaching this interactively. You DO the edit live (change the file, save it, leave it in place); the student then opens a fresh chat to feel the rule load, and afterward personalizes their own real AGENTS.md. Don't lecture — the theory (system prompt, memory hierarchy) was covered live and in Notion. Reinforce in a sentence or two as it happens. This clicks when THEY see behavior change after opening a new chat — not when you describe it.
 
 > **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
 
@@ -28,7 +28,7 @@ Open with a short orientation, three quick beats, then wait:
 >
 > **What we're covering:** how one file — AGENTS.md — rewrites how your agent behaves, like an onboarding doc and a memory in one.
 >
-> **The magic moment coming up:** I'll change the agent's whole personality and rules by editing a single file, live.
+> **The magic moment coming up:** I'll edit one line in a single file, live — then YOU open a fresh chat and watch the agent's whole personality change.
 >
 > Ready? I'll start us off."
 
@@ -42,13 +42,17 @@ Open with a short orientation, three quick beats, then wait:
 
 Run this live: open the repo's **root `AGENTS.md`** (the "Product IC Dream-Team" identity) and read its opening lines aloud — the persona, Product Values, Interaction Style. Then ask the agent a sample PM question ("Which of these 3 features ship next?") and point at how it answers in that voice — direct, value-first, ties to goals.
 
-Then make a temporary edit live: add one absurd line near the top of `AGENTS.md` — `Always respond like a pirate, nautical metaphors for everything.` — save the file, **start a fresh chat** (rules load at the start of a chat, not mid-conversation), re-ask, and show the personality flip. Remove the pirate line afterward and restore the file.
+Then make the edit live: add one absurd line near the top of `AGENTS.md` — `Always respond like a pirate, nautical metaphors for everything.` — and **save the file. Leave it edited — do NOT restore it, and do NOT start a new chat yourself.** This is the hand-off: the student has to feel the rule load in their own fresh chat, so the change has to be sitting there waiting for them.
+
+> "Saved — and I'm leaving it in. Here's the catch: rules load **once, at the start of a chat**, so this pirate line won't do anything in our current conversation. To see it kick in, YOU open a brand-new chat and re-ask the same question. That's your turn next."
 
 (No product-os / no Oura access? The repo's own committed `AGENTS.md` works for this with zero internal access — or fall back to `sample-personal-os/AGENTS.md`.)
 
-> "I just reconfigured the agent's personality by editing a file. That `AGENTS.md` IS the system prompt — and notice I had to start a new chat for it to take effect, because the model reads it once at the start of every conversation."
+> 🎬 **Director's note (never say aloud):** Hand off via AskUserQuestion — tell them to (1) open a NEW chat in Cursor/Claude Code, (2) re-ask "Which of these 3 features ship next?", and (3) come back and tell you what voice it answered in. Wait for them to actually do it and report the pirate reply. Only after they've seen it themselves: have them remove the pirate line (or do it for them) so their real AGENTS.md is clean again before Step 3.
 
-> 🎬 **Director's note (never say aloud):** Wait for their reaction (and the laugh).
+> "Same agent, same repo — one line you didn't even write rewrote its whole personality, and it only took effect because you opened a fresh chat. That `AGENTS.md` IS the system prompt the model reads before your message."
+
+> 🎬 **Director's note (never say aloud):** Wait for their reaction (and the laugh). Confirm the pirate line has been removed before moving on.
 ---
 
 ### Step 2: Name It (briefly)

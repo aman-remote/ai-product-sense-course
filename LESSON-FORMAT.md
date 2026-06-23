@@ -6,7 +6,7 @@ Adopted from the reference course exiao/claude-code-course (REWRITE-GUIDE.md + i
 - **Claude DOES, not TELLS.** Instead of "Paste this into Claude Code:" + "What you should see:", Claude runs the thing live in the student's session and narrates. Reserve "your turn" prompts for the hands-on step where the student drives.
 - **Theory was covered live + in Notion. Do NOT re-lecture it.** Reinforce in 1-2 sentences as it happens. Park the full explanation in Reference Material for Claude to use only if asked.
 - **Three beats in one file:** brief theory (Claude says it in a sentence or two) → watch-me (Claude demos live) → your turn (student drives on their own product/data).
-- **No setup check.** The student already pasted this file into their agent; don't ask if they're ready or have it open. Open cold on the first real step.
+- **Open with Step 0 (orientation), don't cold-open.** Every lesson starts with a short orientation BEFORE any demo: three beats — "Lesson N of 20: Title (Day)", "What we're covering" (one plain sentence), "The magic moment coming up" (one plain sentence) — then wait for a go-ahead. The student pasted the file but has no idea what's about to happen; orient them first. The Magic Moment line at the top is for Claude's framing; Step 0 is where you say it to the student in your own words.
 
 ## Required structure
 ```markdown
@@ -31,6 +31,11 @@ CRITICAL RULES:
 > **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
 
 ---
+
+### Step 0: Orient (say this FIRST, before any demo)
+[Three beats, then wait: "Lesson N of 20: Title (Day)." · "What we're covering:" one
+ plain sentence. · "The magic moment coming up:" one plain sentence. Then a go-ahead pause.]
+> 🎬 **Director's note (never say aloud):** Wait for a go-ahead before Step 1.
 
 ### Step 1: Watch Me [do the thing]
 [Claude runs the demo live and narrates the rhythm/result. "Watch this."]

@@ -1,6 +1,6 @@
 # 4. How Agents Use Context & Tools → Atomic Tools
 
-> **Magic Moment:** You watch a 3-word prompt turn into a finished multi-step task — and then make the agent reveal that its whole toolkit is a small, fixed set of dead-simple tools that compose like LEGO.
+> **Magic Moment:** You watch a 3-word prompt unfold into a visible sequence of tool calls (list → read → read → write), then make the agent reveal the exact toolkit Cursor gave it — a small, fixed set of dead-simple tools that compose like LEGO.
 
 ---
 
@@ -28,7 +28,7 @@ Open with a short orientation, three quick beats, then wait:
 >
 > **What we're covering:** how agents turn a vague instruction into finished work using a tiny set of simple tools (read, write, list, run).
 >
-> **The magic moment coming up:** I'll give a 3-word prompt and you'll watch it trigger a whole multi-step task.
+> **The magic moment coming up:** I'll give a 3-word prompt and you'll watch it spell out exactly which tools it fires, in order — then we'll have the agent list the full toolkit Cursor actually gave it.
 >
 > Ready? I'll start us off."
 

@@ -42,9 +42,15 @@ Open with a short orientation, three quick beats, then wait:
 
 > "I'm going to point at that repo and give myself the vaguest instruction imaginable — and let it run against your real `Tasks/` system. Watch the sequence, not the result."
 
-Run it live in the cloned product-os repo: copy `examples/example_files/example_task.md` into `Tasks/` as a working task file (it has YAML frontmatter — `status: n`, `priority: P0`, the "Incorporate URS design feedback" body). Show them the file you just planted so the prompt has something concrete to point at. Then act on the prompt **"Process this one"** — and before narrating, say what "this one" resolves to ("'this one' = that task I just dropped in `Tasks/`"). Narrate each atomic move: "Listing `Tasks/`… found the task file… reading it… reading the linked `GOALS.md` for context… now appending a Progress Log entry and flipping `status` from `n` (new) to `s` (started)." (This mirrors exactly what the bundled task MCP in `core/mcp/server.py` does — `list_tasks` → read → `update_task_status`.)
+Run it live in the cloned product-os repo: copy `examples/example_files/example_task.md` into `Tasks/` as a working task file (it has YAML frontmatter — `status: n`, `priority: P0`, the "Incorporate URS design feedback" body). Show them the file you just planted so the prompt has something concrete to point at. Then **show the literal prompt you're about to send, on its own line, in a code block, before you run it** — so they see exactly how few words it is:
 
-> "Three words. And I just listed → read → read → wrote against your real task system. I never held it all in my head — each step was one tiny action."
+```
+Process this one
+```
+
+Say what "this one" resolves to ("'this one' = that task I just dropped in `Tasks/`"), then run it and narrate each atomic move: "Listing `Tasks/`… found the task file… reading it… reading the linked `GOALS.md` for context… now appending a Progress Log entry and flipping `status` from `n` (new) to `s` (started)." (This mirrors exactly what the bundled task MCP in `core/mcp/server.py` does — `list_tasks` → read → `update_task_status`.)
+
+> "That whole sequence came from three words: **`Process this one`**. I just listed → read → read → wrote against your real task system. I never held it all in my head — each step was one tiny action."
 
 > 🎬 **Director's note (never say aloud):** Wait for their reaction. Ask what they noticed about the sequence. (No product-os / no Oura access? The repo's own committed `examples/example_files/example_task.md` and `Tasks/` work for this, or fall back to `sample-personal-os/`.)
 ---

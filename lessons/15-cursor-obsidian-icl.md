@@ -6,15 +6,17 @@
 
 ## Instructions for Claude
 
-You are teaching this interactively and this is the **Arc 4 capstone** (Create Your Personal OS) — make it feel like a culmination, connecting every primitive they've used. The core demo is few-shot learning on a real, relatable task: helping the student say "no" in their own voice. You DO the zero-shot version first (deliberately generic), then they add examples and watch it transform. Don't lecture — the theory (ICL, few-shot, fine-tuning tradeoffs) was covered live and in Notion. Reinforce in a sentence or two.
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
+
+You are teaching this interactively and this is the **Arc 4 capstone** (Create Your Personal OS) — make it feel like a culmination, connecting every primitive they've used. The core demo is few-shot learning on a real, relatable task: helping the student say "no" in their own voice. The repo gives you a real voice/quality bar to anchor on: the `weekly-update` skill (`.cursor/skills/weekly-update/SKILL.md`) is an exec-voice exemplar, and `Knowledge/golden/` is the repo's "how good should this read" bar. You DO the zero-shot version first (deliberately generic), then they add examples and watch it transform. Don't lecture — the theory (ICL, few-shot, fine-tuning tradeoffs) was covered live and in Notion. Reinforce in a sentence or two.
 
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - Demo live, then hand the keys over for the few-shot turn — that hands-on moment IS the lesson.
-- Tool-neutral: "your agent." Most students are in **Cursor**.
+- Tool-neutral: "your agent." Most students are in **Cursor** with `product-os` cloned.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
@@ -78,16 +80,18 @@ Show this visual:
 
 > "Now you drive. Make it learn a pattern from YOUR examples."
 
-**Important:** Pick something with a voice or format only you have — how you write task descriptions, how you open a tricky email, your standup style. Give your agent 2-3 real examples, then ask it to produce a new one in that pattern:
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which voice/format they want to teach it — offer concrete product-os-anchored options as the choices (e.g. *Your weekly-update voice* (drives the `weekly-update` skill) · *How you write task descriptions* (the `Tasks/` frontmatter style) · *Match a `Knowledge/golden/` exemplar's depth* · *Your own pick*). Then hand them the matching prompt block.
+
+**Important:** Pick something with a voice or format only you have — how you write task descriptions, how you open a tricky email, your standup or weekly-update style. Give your agent 2-3 real examples, then ask it to produce a new one in that pattern:
 ```
 Here are 3 examples of how I write [X]: [paste]. Now write a new one for [situation],
 matching my pattern exactly.
 ```
 Watch it generalize from examples alone — no retraining.
 
-**Stretch — save your voice:** Drop a `voice-samples.md` into your Personal OS folder with a handful of things you've actually written (no folder of your own, or can't use work writing? use the ready samples in repo-root `sample-personal-os/Knowledge/voice-samples/`). Then ask the agent to draft something new "in my voice, using voice-samples.md." Now it's persistent ICL — every future session can sound like you.
+**Stretch — anchor on the repo's quality bar:** The `product-os` repo already ships a voice/quality bar. Run the `weekly-update` skill (`.cursor/skills/weekly-update/SKILL.md`) on your week and ask the agent to match the exec-memo voice it describes, or point it at a `Knowledge/golden/` exemplar (the repo's "how good should this read" bar — see `Knowledge/golden/README.md`) and ask it to draft to that depth. (Golden starts empty by design — no current exemplar yet, or no Oura access? Use the committed `examples/example_files/example_knowledge.md` as the pattern, or drop a `voice-samples.md` of your own writing, or fall back to `sample-personal-os/Knowledge/voice-samples/`.) Now it's persistent ICL — every future session can sound like you.
 
-**Super-stretch — Obsidian (optional):** Open your Personal OS folder as an Obsidian vault (https://obsidian.md), edit a file in Cursor, and watch it appear in Obsidian instantly — two interfaces, one folder of plain files, no sync service. A nice way to see the "files as the data layer" idea, but the ICL lesson above is the real point.
+**Super-stretch — Obsidian (optional):** Open your `product-os` folder as an Obsidian vault (https://obsidian.md), edit a file in Cursor, and watch it appear in Obsidian instantly — two interfaces, one folder of plain files, no sync service. A nice way to see the "files as the data layer" idea, but the ICL lesson above is the real point.
 
 > 🎬 **Director's note (never say aloud):** Let them run it. React to how well it matched their pattern.
 ---
@@ -96,9 +100,11 @@ Watch it generalize from examples alone — no retraining.
 
 > "You changed the model's output dramatically without touching the model — just by adding examples to the context. That's in-context learning, and few-shot prompting is its sharpest form: 2-5 examples beat paragraphs of instructions. It's genuinely surprising it works at all — the model is doing something it was never explicitly trained to do. This is why fine-tuning peaked years ago for most use cases, and why you don't have to spell everything out in AGENTS.md: give it examples and it figures out the pattern. And by now you've touched EVERY primitive hands-on — model choice, atomic tools, the agentic loop, harness engineering, context engineering, markdown, system prompts, RAG, nondeterminism, and now in-context learning — not from a textbook, but by building a system for yourself and watching it work."
 
+> 🎬 **Director's note (never say aloud):** Ask "What next?" via AskUserQuestion with these three options (A/B/C), then follow their pick.
+
 **What next?**
 - **A)** Lesson 16 — Self-Improving, Self-Learning Agents (search & memory that compound)
-- **B)** Build a richer `voice-samples.md` and make every draft sound like you
+- **B)** Anchor your voice on the repo — build it into the `weekly-update` skill or a `Knowledge/golden/` exemplar so every draft sounds like you
 - **C)** Review the primitive map and connect each one to your product
 
 **Share prompt:** "Bring back: the generic 'no' vs. your few-shot 'no' — paste both and show the cohort the difference five examples made."

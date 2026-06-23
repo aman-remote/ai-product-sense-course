@@ -8,12 +8,14 @@
 
 You are teaching this interactively. You DO the demo live in the student's session; then they drive on a swap of their own. Don't lecture — the framing (Cursor = ChatGPT + files + tool calling; model abstraction) was covered live and in Notion. Reinforce in a sentence or two as it happens.
 
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
+
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - Build/demo live: narrate what you're about to do, do it, then point at what just happened.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
@@ -48,14 +50,16 @@ Your prompt ─► [ Cursor harness ] ─► Model API
 
 ### Step 3: Your Turn — The Model Swap
 
-> "Now you drive and feel the difference yourself. In Cursor's chat panel, click the model selector at the bottom, turn OFF Auto, and pick a strong model. Then run this:"
+> "Now you drive and feel the difference yourself. In Cursor's chat panel, click the model selector at the bottom, turn OFF Auto, and pick a strong model. Then run the same prompt against a real file in your product-os repo and compare brains."
+
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which product-os file they want to run the swap on — offer the committed files as the choices, e.g. (a) `examples/example_files/example_task.md` (summarize/rewrite it), (b) `Knowledge/reference/Product-Value-Creation-Framework.md` (summarize for a teammate), (c) `BACKLOG.md` (triage the top item), (d) their own file. Then have them run the prompt below on the file they picked. (No product-os / no Oura access? The repo's own committed `examples/example_files/` and `Knowledge/reference/` work for this, or fall back to `sample-personal-os/`.)
 
 **Your turn — paste into the Cursor chat (agent mode):**
 ```
-Read lyrics.txt. Write a parody in parody-v2.txt — a PM letting go of cut scope — but make it funnier and more specific to product work.
+Read [the file you chose]. Summarize it for a busy teammate in 5 bullets, and save the summary as summary-v2.md.
 ```
 
-**Important:** Now swap to a *different* model (Claude→GPT, or GPT→Gemini) and run the exact same prompt into `parody-v3.txt`. Compare the two side by side.
+**Important:** Now swap to a *different* model (Claude→GPT, or GPT→Gemini) and run the exact same prompt into `summary-v3.md`. Compare the two side by side.
 
 **Stretch:** Flip the chat from Agent to Ask mode and ask "What's going on in this repo?" — watch it read your files without writing.
 
@@ -69,6 +73,7 @@ Read lyrics.txt. Write a parody in parody-v2.txt — a PM letting go of cut scop
 > "Same prompt, same context, different model, different output — that's model choice as a product decision, and you just made it with your own eyes. Many AI products wrap the model in a harness so the brain can swap without breaking the interface: products like Harvey reportedly route easy tasks to cheap models and hard ones to Opus; many production apps swap the underlying model without changing their UI. You build around the harness, not the model."
 
 **What next?**
+> 🎬 **Director's note (never say aloud):** Deliver these as an AskUserQuestion choice — keep the A/B/C text as the option set so they just pick.
 - **A)** Lesson 3 — The Agent Is a Group Chat (the agentic loop)
 - **B)** Run more model comparisons on a real prompt from your work
 - **C)** Go deeper into Cursor's agent mode — have it build or refactor something

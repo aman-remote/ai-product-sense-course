@@ -6,6 +6,8 @@
 
 ## Instructions for Claude
 
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
+
 You are teaching this interactively. You DO the demo live — run a real terminal command in the student's session, narrate what it reaches for, then the student turns the same lens on their own machine and makes the agent confess what it did. Don't lecture — the theory (CLI vs MCP, terminal as the swiss-army tool) was covered live and in Notion. Reinforce in a sentence or two as it happens.
 
 CRITICAL RULES:
@@ -14,17 +16,19 @@ CRITICAL RULES:
 - Build/demo live: run the command yourself first, narrate the tool calls, then hand the keys over.
 - Tool-neutral: say "your agent" / "the terminal in your agent." Most students are in **Cursor**, not Claude Code.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
 ### Step 1: Watch Me Reach for the Terminal
 
-> "Watch this. I'm going to look at what's taking up space and slowing things down — and notice I don't open a 'cleanup app.' I reach for the terminal."
+> "Watch this. I'm going to inspect your machine AND your `product-os` repo — and notice I never open a 'cleanup app' or a special tool. I reach for the terminal."
 
-Run something safe and read-only live (pick what fits their OS): `df -h` (disk space), `du -sh ~/* | sort -h | tail` (biggest folders), `ps aux | sort -nrk 3 | head` (CPU hogs). Narrate: "Asking the disk how full it is… now ranking the heaviest folders… now the processes eating CPU." Keep it strictly read-only — no deleting.
+Run something safe and read-only live. For the machine (pick what fits their OS): `df -h` (disk space), `du -sh ~/* | sort -h | tail` (biggest folders), `ps aux | sort -nrk 3 | head` (CPU hogs). Then turn the same lens on the repo: `wc -l core/mcp/server.py` (how big the bundled MCP is), `cat setup.sh | head -40` (read the setup script's agent instructions), `ls -R .cursor/skills/` (the nine skills). Narrate: "Asking the disk how full it is… now reading the repo's own setup script and counting the MCP server's lines." Keep it strictly read-only — no deleting, no running `setup.sh`.
 
-> "I just inspected your whole machine with three plain-text commands. No app, no MCP, no API. The terminal IS the tool."
+> "I just inspected your whole machine AND your product-os repo with plain-text commands. No app, no MCP, no API. The terminal IS the tool."
+
+> (No product-os / no Oura access? The repo's `setup.sh`, `core/`, and `.cursor/skills/` are COMMITTED — no internal access needed. Or just inspect any folder, or fall back to `sample-personal-os/`.)
 
 > 🎬 **Director's note (never say aloud):** Wait for their reaction.
 ---
@@ -50,20 +54,27 @@ Show this visual:
 
 ### Step 3: Your Turn — Make the Agent Use (and Confess) the Terminal
 
-> "Now you drive. Ask your own agent to look at your machine, then make it explain every command in plain atoms."
+> "Now you drive. Point your agent at your machine or your `product-os` repo, then make it explain every command in plain atoms."
 
-**Your turn — paste into your agent:**
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion what they want the agent to inspect — offer choices: **A)** their machine (disk/CPU cleanup, read-only), **B)** their `product-os` repo (`setup.sh`, `core/` scripts, what `requirements.txt` pulls in), **C)** both. Don't make them type it free-form.
+
+**Your turn — paste into your agent (pick what you chose):**
 ```
+# A) Machine:
 My computer seems slower than it used to be. Look for opportunities to optimize
-and clean up cruft that might be slowing things down — read-only, don't delete
-anything yet. Any maintenance tips or software you recognize as a likely culprit?
+and clean up cruft — read-only, don't delete anything yet. Any maintenance tips?
+# B) product-os repo:
+Walk my product-os repo from the terminal only (no opening files in the editor):
+how big is core/mcp/server.py, what does setup.sh do, what does
+core/requirements.txt install, and how many skills are in .cursor/skills/?
+Read-only — don't run setup.sh.
 ```
 
 **Important:** Then flip to ask mode and paste: `What tools did you use? Use the raw tool names, explain in atoms, no abstractions, in the order you called them. For any terminal command, explain what each term means for a non-technical terminal beginner.`
 
-**Stretch:** Have it install something via the terminal — `Help me install Claude Code` (or any CLI tool). Watch it pull up the terminal, run the install, and read the output. Even if you already have it, watching it navigate the install is the point.
+**Stretch:** Have it install the bundled task MCP's dependencies via the terminal — `Read core/requirements.txt and install those packages with pip, then tell me what each one is for.` Watch it pull up the terminal, run the install, and read the output.
 
-**Super-stretch:** If your agent has a **browser tool**, ask it to open a docs page, then look at how it converted the page to YAML (an accessibility tree) before reading it. Ask: "Why YAML and not raw HTML?" (Answer: it's a fraction of the tokens and far easier for the model to scan.)
+**Super-stretch:** If your agent has a **browser tool**, ask it to open the `product-os` README on GitHub, then look at how it converted the page to YAML (an accessibility tree) before reading it. Ask: "Why YAML and not raw HTML?" (Answer: it's a fraction of the tokens and far easier for the model to scan.)
 
 > 🎬 **Director's note (never say aloud):** Let them run it. React to which command surprised them.
 ---
@@ -73,6 +84,7 @@ anything yet. Any maintenance tips or software you recognize as a likely culprit
 > "Your agent fixed a real-world problem by typing terminal commands — the same move whether it's checking disk space, running git, querying a database with SQL, or installing software. AI is fluent in code, so the command line is its highest-leverage tool: one general-purpose tool that reaches everything on your machine, versus an MCP that reaches one app. That's why Codex is basically 'a model plus a shell,' why Anthropic (who invented MCP) is now pushing agents to write code instead of calling narrow tools, and why Claude-in-Excel can beat Microsoft's own Excel AI running the *same model* — the difference is the tools, not the brain."
 
 **What next?**
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which way they want to go — offer A/B/C as the options, let them pick.
 - **A)** Lesson 14 — Build Your Personal OS (nondeterminism & the bitter lesson)
 - **B)** Give your agent a real (reversible) cleanup task and watch it work the terminal
 - **C)** Compare: ask the same question with an MCP vs. with the terminal — which had more reach?

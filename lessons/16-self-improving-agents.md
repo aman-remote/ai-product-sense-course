@@ -6,27 +6,32 @@
 
 ## Instructions for Claude
 
-You are teaching this interactively. The throughline is a SELF-IMPROVING agent: one that keeps what it learns (memory) and finds what it's missing (search), so it compounds over time instead of starting from zero. You DO the search demo live on a real codebase; the student then drives on a repo of their own. Don't lecture — the theory (search vs. memory, lexical vs. semantic, the dream-state loop) was covered live and in Notion. Reinforce in a sentence or two. Let them FEEL the agent finding and remembering before you name it.
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
+
+You are teaching this interactively. The throughline is a SELF-IMPROVING agent: one that keeps what it learns (memory) and finds what it's missing (search), so it compounds over time instead of starting from zero. The `product-os` repo gives you the real worked example: its `Knowledge/golden/` promotion flow (shipped artifact → sanitized exemplar → quality bar) is memory that compounds, and `core/evals/` is how the repo reflects on past sessions to improve `AGENTS.md`. You DO the search demo live on the cloned repo; the student then drives. Don't lecture — the theory (search vs. memory, lexical vs. semantic, the dream-state loop) was covered live and in Notion. Reinforce in a sentence or two. Let them FEEL the agent finding and remembering before you name it.
 
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - Build/demo live in the student's session. Narrate what you're about to do, do it, then point at what just happened.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 - This lesson has TWO halves: how agents FIND context (search) and how they REMEMBER it (memory). Teach search first, then memory.
 
 ---
 
 ### Step 1: Watch Me Find My Own Context
 
-> "Watch this. I'm going to point at a codebase I've never seen and figure out how it works — by searching, not by you tagging anything."
+> "Watch this. I'm going to point at your cloned `product-os` repo and figure out how it works — by searching, not by you tagging anything."
 
-Clone a real repo into a sample folder and run the search live (suggest Excalidraw, PostHog, or Zen Browser, or use a folder the student already has). Don't tag any file. Run a question like:
+Run the search live on the cloned `product-os` repo (it's a real, layered codebase: nested `AGENTS.md` sub-prompts, nine `.cursor/skills/`, `core/mcp/server.py`, `examples/workflows/`). Don't tag any file. Run a question like:
 ```
-I'm pretty non-technical. Can you explain to me slowly how this works? Chronologically, how does the lifecycle of someone using this work, from each user flow?
+I'm new to this repo. Explain how it works — how does a request like "what should I work on today?" actually flow through AGENTS.md, PRODUCT-PROCESS.md, the skills, and the task MCP?
 ```
-Narrate as you go: `grep -r` for obvious patterns, find hits, read the most promising files, follow imports. Then say the key line:
+
+(No product-os / no Oura access? Any repo works for this — point it at a codebase you already have, clone Excalidraw / PostHog / Zen Browser, or fall back to `sample-personal-os/`. The search behavior is identical.)
+
+Narrate as you go: `grep -r` for obvious patterns, find hits, read the most promising files, follow the links between `AGENTS.md` → `PRODUCT-PROCESS.md` → `.cursor/skills/`. Then say the key line:
 
 > "I didn't have this in memory and you didn't tag anything — I *found* it. grep for keywords, read what looked right, followed the references until I had the answer."
 
@@ -106,24 +111,28 @@ Show this visual:
 
 > "Because it's a plain markdown file, you can open it and fix what it remembers. It compounds on its own through the reflect step and the nightly dream state. The catch: it can't get too big — it has to fit in context every time — and a lazy summary remembers the wrong things."
 
+> "Your `product-os` repo already ships two production versions of this loop: `Knowledge/golden/` is curated memory — a shipped A+ artifact gets sanitized and *promoted* into the quality bar (see `Knowledge/golden/README.md`), so every future draft starts smarter. And `core/evals/` is the reflect step at the team level — it captures past sessions, scores them, and the suggestions feed back into `AGENTS.md`. Same idea as MEMORY.md, just hardened."
+
 > 🎬 **Director's note (never say aloud):** Wait for their reaction.
 ---
 
 ### Step 5: Your Turn
 
-> "Your turn. Point the agent at a repo you've never read — one of yours, or clone Excalidraw / PostHog / Zen Browser. Don't tag anything."
+> "Your turn. Point the agent at your cloned `product-os` repo — a real layered codebase you may not have read end to end. Don't tag anything."
 
-(Can't clone, or not comfortable in the terminal? Point it at the repo-root `sample-personal-os/` folder instead and ask the same questions — the search behavior is identical.)
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion what they want to run — offer the product-os-anchored options as the choices (e.g. *Search: how does the repo work?* · *Search a `.cursor/skills/` or `core/mcp/server.py`* · *Promote a golden exemplar (memory)* · *Run `core/evals/` on a past session*). Then give them the matching prompt block.
 
-**Important:** run the search question and then ask it how it searched:
+(No product-os / no Oura access? Point it at a repo you already have, clone Excalidraw / PostHog / Zen Browser, or fall back to `sample-personal-os/` — the search behavior is identical.)
+
+**Important — search:** run the search question on the repo and then ask it how it searched:
 ```
-Explain how this codebase works, chronologically, from each user flow. Don't make me tag files — find what you need.
+Explain how this repo works, end to end — how a "what should I work on today?" request flows through AGENTS.md, PRODUCT-PROCESS.md, the skills, and the task MCP. Don't make me tag files — find what you need.
 ```
 Then: `How did you find that file?` — watch it narrate grep vs. semantic.
 
-> "**Stretch — analytics events:** on a codebase you know, ask it to find the analytics events around a feature (they're easy-to-find strings with few-shot examples), then pull them into Mixpanel/Amplitude or an MCP."
+> "**Stretch — memory / golden promotion:** ask the agent to walk the `Knowledge/golden/` promotion flow on a real artifact: `Using Knowledge/golden/README.md, take this shipped doc, sanitize it, add the required frontmatter, and promote it into Knowledge/golden/ as a quality-bar exemplar.` (No real shipped doc? Use `examples/example_files/example_knowledge.md`.)"
 
-> "**Stretch — git log:** ask it to analyze the *git log*, not the code — `What does the git history tell you about how this feature evolved?` The log is an archive for troubleshooting, incidents, and docs."
+> "**Stretch — evals as the reflect step:** explore `core/evals/` — `Read core/evals/README.md and the example eval, then tell me how this repo turns a past session into an improvement to AGENTS.md.`"
 
 > "**Super-stretch — install a real memory system:** ask your agent to install the memory-setup skill and give yourself the full capture/load/dream-state loop: `Install the memory system from https://github.com/exiao/meta-skills/blob/main/memory-setup/SKILL.md`"
 
@@ -134,9 +143,11 @@ Then: `How did you find that file?` — watch it narrate grep vs. semantic.
 
 > "This is what 'self-improving' actually means in practice — two mechanisms that make the agent better over time without you re-teaching it. First, MEMORY: a `MEMORY.md` the agent curates itself, captured on session end, loaded on start, and consolidated by a nightly 'dream state' cron — so each session compounds on the last. Second, agentic SEARCH: the agent finds its own context by reasoning about what to look for, running keyword (grep) and semantic search in a loop until it's sure — no pre-tagging, works on any codebase immediately. Memory answers 'what did we already learn'; search answers 'where is it right now.' Together they're how an agent stops starting from zero every time and starts learning on its own. The shapes differ — Claude Code searches for its own tools on the fly, ChatGPT keeps a curated memory (notably without RAG), others index and retrieve — but the idea is shared: keep what's worth keeping, and find what you're missing."
 
+> 🎬 **Director's note (never say aloud):** Ask "What next?" via AskUserQuestion with these three options (A/B/C), then follow their pick.
+
 **What next?**
 - **A)** Lesson 17 — OpenClaw, Taken Apart (the always-on agent)
-- **B)** Install the full memory system (memory-setup skill) and inspect the file layout
+- **B)** Walk the `Knowledge/golden/` promotion flow + `core/evals/` reflect step end to end on the repo
 - **C)** Run the search on a bigger repo and compare grep vs. @codebase semantic
 
 **Share prompt:** "Bring back: the answer your agent reached on a repo you'd never read, plus one fact you'd want it to keep in MEMORY.md forever."

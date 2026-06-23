@@ -8,13 +8,15 @@
 
 You are teaching this interactively. You DO a slice-open demo on a well-known product first, then the student slices a product THEY know and saves it as a reusable file. Don't lecture — by now they've seen every primitive; this lesson is about *applying* them as a diagnostic lens, plus the strategy question of moats. Reinforce in a sentence or two, don't re-teach the primitives.
 
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
+
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - Demo the slice live on a product everyone knows, then hand the keys over.
 - Tool-neutral: "your agent." Most students are in **Cursor**.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
@@ -52,12 +54,14 @@ Show this visual:
 
 ### Step 3: Your Turn — Slice a Product You Know, Save It as a Tool
 
-> "Now you drive. Pick an AI product you use often and actually understand — Spotify's AI DJ, Cal's scheduling agent, LinkedIn's AI job search, a feature in your own product, anything you know well."
+> "Now you drive. Pick an AI product you use often and actually understand — Spotify's AI DJ, Cal's scheduling agent, LinkedIn's AI job search, a feature in your own Oura product, even *this* product-os agent itself — anything you know well."
 
-**Your turn — paste into your agent (it'll save a file; if you don't have a knowledge/ folder it'll just make one):**
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which product they want to slice — offer 3-4 concrete options as the choices: (a) a consumer AI product they use daily, (b) a feature in their own Oura product, (c) the product-os agent itself (the dream-team in `AGENTS.md`), (d) Granola. Don't make them type a free-form name.
+
+**Your turn — paste into your agent (it saves the analysis into the repo's `Knowledge/active/`; if that folder is missing it'll create it):**
 ```
 I'm giving you the name of an AI product. Help me slice it open — figure out how
-the AI and non-AI components come together. Save the analysis as a file.
+the AI and non-AI components come together. Save the analysis to Knowledge/active/.
 
 - What parts would you give an LLM?
 - What parts would you give to regular, fast, deterministic code?
@@ -65,12 +69,15 @@ the AI and non-AI components come together. Save the analysis as a file.
   vs. keep it?
 - What tools would it need? Would those tools make sense as MCP or not, and why?
 ```
+(No product-os / no Oura access? The repo's own committed `examples/example_files/` and `Knowledge/reference/` work for this, or fall back to `sample-personal-os/`.)
+
 **Important:** Then make it reusable, in a second message:
 ```
-Now distill those questions into a reusable slicing.md template (just the framework,
-not this product's answers), then apply slicing.md to a different product: Granola.
+Now distill those questions into a reusable Knowledge/reference/slicing.md template
+(just the framework, not this product's answers), then apply it to a different
+product: Granola.
 ```
-You now have a `slicing.md` you can point at any product forever.
+You now have a `Knowledge/reference/slicing.md` you can point at any product forever.
 
 **Stretch:** "How would you Wizard-of-Oz this product by hand — fake it with no real AI? What's the dumbest, oldest, cheapest model you could get away with?"
 
@@ -81,17 +88,19 @@ You now have a `slicing.md` you can point at any product forever.
 
 ### Step 4: Your Turn — Prove It With a Tiny Eval
 
-> "You sliced it. Now the half nobody does: how would you *prove* the LLM part actually works? Not a benchmark — your own test cases."
+> "You sliced it. Now the half nobody does: how would you *prove* the LLM part actually works? Not a benchmark — your own test cases. This repo already has an eval harness: `core/evals/` (see its README and the `2025-12-24_65a7fa18.md` sample), and a quality bar in `Knowledge/golden/`. We'll think in exactly that frame."
 
 **Your turn — paste into your agent:**
 ```
 For the product I just sliced, write 3 concrete eval cases for its main LLM step:
-each with an input, and what a GOOD output must include vs. a FAIL. Then run all 3
-against a cheap/old model and a strong model, and show me a pass/fail table.
+each with an input, and what a GOOD output must include vs. a FAIL — use the
+quality-bar idea from Knowledge/golden/README.md as the "GOOD" definition. Then run
+all 3 against a cheap/old model and a strong model, and show me a pass/fail table
+(same judgement values core/evals uses: success / partial / failure).
 ```
 Watch which cases the cheap model fails. That gap — not a leaderboard — is what tells you which model you actually need.
 
-> "That's an eval: repeatable tests on your own cases and your own quality bar. 'Evals, not benchmarks.' It's how every serious AI product decides what's good enough to ship."
+> "That's an eval: repeatable tests on your own cases and your own quality bar — exactly what `core/evals/` captures from real sessions and what `Knowledge/golden/` defines as 'how good this should read.' 'Evals, not benchmarks.' It's how every serious AI product decides what's good enough to ship."
 
 > 🎬 **Director's note (never say aloud):** React to which cases failed and what that implies.
 ---
@@ -101,9 +110,10 @@ Watch which cases the cheap model fails. That gap — not a leaderboard — is w
 > "You just used every primitive from this course as a *diagnostic lens*: model choice, atomic tools, context engineering, RAG, MCP, system prompts. And you hit the real strategy question — if everyone calls the same Claude/GPT API, what's the innovation? The model is becoming a commodity. Your moat is everything around it: the data you can reach, the skills you've built, the UX, the reliability you engineered, and how deeply you know your industry. 'Your moat is not the model. Your moat is everything you build around it.' The way you *prove* any of it works isn't a leaderboard benchmark — it's evals: your own repeatable tests on your own cases. Slice, build, then prove with evals."
 
 **What next?**
+> 🎬 **Director's note (never say aloud):** Deliver this as an AskUserQuestion — keep the A/B/C text below as the option set so they just pick.
 - **A)** Lesson 19 — Run a Team of Agents: Subagents (context segregation)
-- **B)** Run `slicing.md` on three more products back to back
-- **C)** Slice your OWN product and list its real moat from the shortlist below
+- **B)** Run `Knowledge/reference/slicing.md` on three more products back to back
+- **C)** Slice your OWN Oura product and list its real moat from the shortlist below
 
 **Share prompt:** "Bring back: the one AI product you sliced, and the single part you were surprised they DIDN'T hand to an LLM."
 

@@ -8,12 +8,14 @@
 
 You are teaching this interactively. You DO the work; the student watches, then tries it on their own product idea. Don't lecture — the framing (product sense = people intuition + tech intuition, "one layer down", the delightful fluke) was covered live and in Notion. Reinforce it in a sentence or two as it happens, never a wall of text.
 
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
+
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - Build/demo live in the student's session. Narrate what you're about to do, do it, then point at what just happened.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
@@ -53,7 +55,9 @@ Show this visual:
 
 > "Now you drive. Think of an AI feature you wish existed in a product you actually use — something small and real. Tell me the idea, then I'll turn it into a working prototype and you poke at it."
 
-**Important:** Get them to name a feature from their real work, then prototype it live (system prompt + a sample run) and let them stress-test it.
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which idea they want to prototype — offer 2-4 concrete starting points as the choices, e.g. (a) a feature from a product they use daily, (b) a "weekly update drafter" patterned on product-os's `weekly-update` skill, (c) a "readiness-drop explainer" like the backlog idea in product-os's `BACKLOG.md` / `examples/example_files/BACKLOG_example.md`, (d) their own. Then prototype the one they pick live. (No product-os / no Oura access? The repo's own committed `examples/example_files/` and `Knowledge/reference/` work for this, or fall back to `sample-personal-os/`.)
+
+**Important:** Get them to pick a feature, then prototype it live (system prompt + a sample run) and let them stress-test it.
 
 **Stretch:** Have them tweak the system prompt themselves and watch the behavior change — their first knob-turn.
 
@@ -67,6 +71,7 @@ Show this visual:
 > "You just prototyped an AI product in chat — lazier than vibe coding, and it revealed the same constraints a coded version would hit. The system prompt was the spec, the conversation was the UI, and the model did the rest. Every time you use Cursor or Claude Code for your real work now, you're touching the exact ingredients of production AI."
 
 **What next?**
+> 🎬 **Director's note (never say aloud):** Deliver these as an AskUserQuestion choice — keep the A/B/C text as the option set so they just pick.
 - **A)** Lesson 2 — Get Fluent in Cursor (model choice & abstraction)
 - **B)** Keep iterating on the prototype we just built
 - **C)** Tell me about your product — I'll map which primitives matter most to you

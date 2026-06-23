@@ -8,12 +8,14 @@
 
 You are teaching this interactively. You DO the work; the student watches, then feels context rot on their own document. Don't lecture — the theory (context window as a growing list, signal-to-noise) was covered live and in Notion. Reinforce it in a sentence or two as it happens. This lesson only clicks when they EXPERIENCE quality degradation firsthand.
 
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
+
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - Build/demo live in the student's session. Narrate what you're about to do, do it, then point at what just happened.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
@@ -21,11 +23,13 @@ CRITICAL RULES:
 
 > "Watch this. I'm going to write a short strategy doc, analyze it cold with sharp results — then deliberately flood my own context and re-run the exact same analysis."
 
-Run this live: write `context-demo/strategy.md` inside the student's current project (a 6-8 line product strategy memo with a real tradeoff in it). Then analyze it: "What are the 3 most important decisions here, with the tradeoff and your pick for each?" Narrate how sharp and specific it is — grounded in the doc.
+Run this live: open a real committed doc with a genuine tradeoff in it — **`examples/example_files/example_knowledge.md`** (the travel-readiness Context-phase note: Retention vs Growth, evidence gaps, right-to-win). Analyze it cold: "What are the 3 most important decisions here, with the tradeoff and your pick for each?" Narrate how sharp and specific it is — grounded in the doc.
 
 Then say: "Now watch me fill the window." Generate 5-6 quick tangents in the same thread (draft something, revise it, compare options, ramble). Re-run the *exact same* analysis prompt. Point at the drop: vaguer, repetitive, more generic.
 
-> "Same prompt. Same doc. Worse output. That's context rot — the window filled with conversation history and the signal drowned."
+(No product-os / no Oura access? The repo's own committed `examples/example_files/example_knowledge.md` and `Resources/context-pack-template.md` work for this with zero internal access — or fall back to any doc in `sample-personal-os/`.)
+
+> "Same prompt. Same doc. Worse output. That's context rot — the window filled with conversation history and the signal drowned. The fix is a tight **context pack** (`Resources/context-pack-template.md`) — the smallest high-signal set, not the whole thread."
 
 > 🎬 **Director's note (never say aloud):** Wait for their reaction.
 ---
@@ -51,13 +55,15 @@ FULL:   [system][doc][q1][a1][q2][a2][draft][revision][q3]... → GENERIC
 
 > "Now you feel it on your own work. Grab a real doc — a spec, strategy memo, meeting notes, anything with substance — and drive this yourself."
 
-**Important:** Make a file in your project — in Cursor, click the new-file icon in the explorer (or `Cmd/Ctrl+N`), name it `work-context.md`, and paste in a real doc (a spec, strategy memo, meeting notes). No doc handy? Ask the agent to generate a sample one. Then run:
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which doc they want to stress-test — offer the product-os options as the choices: (a) their own real doc pasted into `Knowledge/active/`, (b) the committed `examples/example_files/example_knowledge.md`, (c) build a tight context pack first with the `context-pack` skill (`Resources/context-pack-template.md`) and analyze that. Then give them the prompt below.
+
+**Important:** In your cloned `product-os`, drop a real doc into `Knowledge/active/work-context.md` (a spec, strategy memo, meeting notes) — or use `examples/example_files/example_knowledge.md`. Then run:
 ```
-@work-context.md Based on this, what are the 3 most important decisions to make? Give the key tradeoff and your recommendation for each.
+@Knowledge/active/work-context.md Based on this, what are the 3 most important decisions to make? Give the key tradeoff and your recommendation for each.
 ```
 (The `@` pulls the file into context — type `@` and pick it from the list.) Note how sharp it is. Then ask 5+ deep follow-ups in the SAME chat, and re-run the exact prompt. Watch the quality fall.
 
-> "**Stretch:** open a fresh chat, paste the original prompt again — confirm quality snaps back. **Super-stretch:** count how many deep turns it takes before YOUR doc starts degrading (Cursor doesn't show a token meter, so go by turns)."
+> "**Stretch:** open a fresh chat, run the `context-pack` skill on the same doc to assemble only the high-signal set, then re-run — confirm quality snaps back. **Super-stretch:** count how many deep turns it takes before YOUR doc starts degrading (Cursor doesn't show a token meter, so go by turns)."
 
 > 🎬 **Director's note (never say aloud):** Let them run it. React to the before/after they observed.
 ---
@@ -67,9 +73,10 @@ FULL:   [system][doc][q1][a1][q2][a2][draft][revision][q3]... → GENERIC
 > "The context window is the model's whole working memory for one request, and it only grows. Rules of thumb: brainstorming — fill it up; coding — stay under ~50% and start fresh chats often; critical accuracy — keep it under ~25%, one doc one question. Fresh chats are free, and your AGENTS.md preserves context across them. Context engineering — deciding *what* the model sees and *when* — is arguably the most important AI product skill right now."
 
 **What next?**
+> 🎬 **Director's note (never say aloud):** Deliver these as an AskUserQuestion choice — keep the A/B/C text as the option set.
 - **A)** Lesson 9 — Create Your Company Shared Context (connect Google Drive)
 - **B)** Practice: run the same task at three different context budgets and compare
-- **C)** Map your own daily tasks to a context budget (brainstorm / build / critical)
+- **C)** Build a reusable context pack with the `context-pack` skill (`Resources/context-pack-template.md`) for an artifact you owe
 
 **Share prompt:** "Bring back: a before/after. What did the agent produce with fresh context vs. a full window — how different was the quality?"
 

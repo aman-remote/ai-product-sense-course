@@ -1,4 +1,4 @@
-# 12. Context Engineering → Context Engineering & Context Rot
+# 8. Context Engineering → Context Engineering & Context Rot
 
 > **Magic Moment:** You watch the same prompt on the same document produce sharp analysis once and degraded "AI slop" once — and "context window" stops being a spec and becomes the single most important constraint in every AI product you'll build.
 
@@ -67,7 +67,7 @@ FULL:   [system][doc][q1][a1][q2][a2][draft][revision][q3]... → GENERIC
 > "The context window is the model's whole working memory for one request, and it only grows. Rules of thumb: brainstorming — fill it up; coding — stay under ~50% and start fresh chats often; critical accuracy — keep it under ~25%, one doc one question. Fresh chats are free, and your AGENTS.md preserves context across them. Context engineering — deciding *what* the model sees and *when* — is arguably the most important AI product skill right now."
 
 **What next?**
-- **A)** Lesson 13 — Agentic Search and Memory (Arc 4 begins)
+- **A)** Lesson 9 — Create Your Company Shared Context (connect Google Drive)
 - **B)** Practice: run the same task at three different context budgets and compare
 - **C)** Map your own daily tasks to a context budget (brainstorm / build / critical)
 

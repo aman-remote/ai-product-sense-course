@@ -120,22 +120,22 @@ When a student asks you to teach a lesson:
 
 > Hey! 👋 Welcome to AI Product Sense. I'm going to teach you interactively — we'll build AI intuition together by using the same primitives that power every production AI product.
 >
-> There are 19 lessons (plus an unnumbered Setup) across 5 arcs. Each arc is named for what you'll be able to **do** by the end of it, and every lesson pairs a hands-on use case with a deep AI engineering concept.
+> There are 20 lessons (plus an unnumbered Setup) across 5 day-arcs. Each lesson pairs a hands-on use case with a deep AI engineering concept.
 >
-> **Arc 1 — First Contact** (Lessons 1-4)
+> **Day 1, Part 1 — Understand How Agents Think & Behave** (Lessons 1-3)
 > Use LLMs and Cursor for the first time, and get a true mental model of how AI works.
 >
-> **Arc 2 — Get AI to Do Work for Me** (Lessons 5-8)
-> Bring your own context and a plan, then watch the agent do real work.
+> **Day 1, Part 2 — Get Agents to Do Real, Personalized Work** (Lessons 4-9)
+> Bring your own context, memory, harness, and shared sources, then watch the agent do real work.
 >
-> **Arc 3 — Environments for Long-Running Tasks** (Lessons 9-12)
-> Equip an agent so it can run on its own — skills, MCP, and the command line.
+> **Day 2 — Build Agent Loops; Skills, Connectors & Workflows** (Lessons 10-13)
+> Equip an agent so it can run on its own — plans, skills, MCP, and the command line.
 >
-> **Arc 4 — Create Your Personal OS** (Lessons 13-15)
-> Vague instructions in, real output out — because the harness and memory fill the gaps.
+> **Day 3, Part 1 — Build Your Personal OS Agent** (Lessons 14-17)
+> Your voice, self-improving memory and search, and an always-on harness fill the gaps.
 >
-> **Arc 5 — Build True AI Product Sense** (Lessons 16-19)
-> Slice open any AI product, use evals to choose a strategy, and run always-on agents.
+> **Day 3, Part 2 — Build True AI Product Sense** (Lessons 18-20)
+> Slice open any AI product, use evals to choose a strategy, run a team of agents, and make it compound.
 >
 > Just say a number, topic, or "start from the beginning."
 

@@ -1,4 +1,4 @@
-# 11. Using Command Line Tools → CLI vs MCP, the Ultimate Tool
+# 13. Using Command Line Tools → CLI vs MCP, the Ultimate Tool
 
 > **Magic Moment:** You ask the agent to clean up your slow computer, watch it reach for the terminal instead of some fancy app, and realize the command line is the single most powerful "tool" an agent has — more reach than any MCP.
 
@@ -73,7 +73,7 @@ anything yet. Any maintenance tips or software you recognize as a likely culprit
 > "Your agent fixed a real-world problem by typing terminal commands — the same move whether it's checking disk space, running git, querying a database with SQL, or installing software. AI is fluent in code, so the command line is its highest-leverage tool: one general-purpose tool that reaches everything on your machine, versus an MCP that reaches one app. That's why Codex is basically 'a model plus a shell,' why Anthropic (who invented MCP) is now pushing agents to write code instead of calling narrow tools, and why Claude-in-Excel can beat Microsoft's own Excel AI running the *same model* — the difference is the tools, not the brain."
 
 **What next?**
-- **A)** Lesson 12 — context engineering & context rot
+- **A)** Lesson 14 — Build Your Personal OS (nondeterminism & the bitter lesson)
 - **B)** Give your agent a real (reversible) cleanup task and watch it work the terminal
 - **C)** Compare: ask the same question with an MCP vs. with the terminal — which had more reach?
 

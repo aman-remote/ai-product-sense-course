@@ -1,4 +1,4 @@
-# 19. Make It Compound → Voice + Compound Returns
+# 20. Make It Compound → Voice + Compound Returns
 
 > **Magic Moment:** You feed the agent three things you actually wrote, and its next draft sounds like *you* instead of generic AI — and you realize the whole course was never about the eight hours of building. It was about starting a system that compounds every week from here.
 
@@ -23,7 +23,7 @@ CRITICAL RULES:
 
 On a short sample (use one of theirs if they paste it, or a generic example first), read it and narrate the fingerprint live: "Sentence length here... punctuation habit there... how it opens and closes." 
 
-> "That's the whole mechanism — voice samples are just context files that shape the output. Same context-engineering primitive from Lesson 12, pointed at a person. Now let's point it at YOU."
+> "That's the whole mechanism — voice samples are just context files that shape the output. Same context-engineering primitive from Lesson 8, pointed at a person. Now let's point it at YOU."
 
 > 🎬 **Director's note (never say aloud):** Wait for their reaction.
 ---

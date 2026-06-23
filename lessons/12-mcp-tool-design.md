@@ -1,4 +1,4 @@
-# 10. Plug Into Your SaaS → MCP & Tool Design
+# 12. Plug Into Your SaaS → MCP & Tool Design
 
 > **Magic Moment:** You install a real MCP connector, watch the agent answer a strategic question across your own tools, then have it critique its own tools as a product designer — and realize "tool design for agents" is a brand-new product discipline.
 
@@ -91,7 +91,7 @@ GOOD: search_workspace, get_context, take_action, summarize_project (4-8)
 ```
 
 **What next?**
-- **A)** Lesson 11 — using command line tools (CLI vs MCP)
+- **A)** Lesson 13 — Using Command Line Tools (CLI vs MCP)
 - **B)** Design an MCP tool set for your own product
 - **C)** Install another MCP and compare its tool-design quality
 

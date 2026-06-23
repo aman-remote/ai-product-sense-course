@@ -1,4 +1,4 @@
-# 17. Run a Team of Agents: Subagents → Context Segregation
+# 19. Run a Team of Agents: Subagents → Context Segregation
 
 > **Magic Moment:** You create a subagent that writes in your voice, and discover that "multi-agent system" — the most overhyped phrase in AI — boils down to "separate chat threads that share a filesystem." The magic word is just folders and fresh context windows.
 
@@ -55,7 +55,7 @@ WHY SUBAGENTS:
   4. Shareable              — commit to the repo, whole team gets it
 ```
 
-> "A bloated context window degrades quality — remember context rot from Lesson 12. Subagents give each task a clean room."
+> "A bloated context window degrades quality — remember context rot from Lesson 8. Subagents give each task a clean room."
 
 > 🎬 **Director's note (never say aloud):** Wait for their response.
 ---
@@ -92,7 +92,7 @@ email-writer, then with formal-writer. Show me both.
 > "Two clearly different drafts from one request — same model, different clean rooms, different instructions. That's context segregation: 'correlated vs uncorrelated context window' is just fancy for 'same chat thread vs fresh chat thread.' Decision rule going forward: explicit trigger → slash command; agent-recognized → skill; specialized delegated work → subagent. 'Agent teams' and 'swarms' are just your Personal OS with more named specialists reading and writing the same folders."
 
 **What next?**
-- **A)** Lesson 18 — OpenClaw, taken apart (the always-on agent)
+- **A)** Lesson 20 — Make It Compound (voice + compound returns)
 - **B)** Go deeper: wire two subagents together (one drafts, one reviews)
 - **C)** Apply it: design the subagent team you'd want for your real job
 

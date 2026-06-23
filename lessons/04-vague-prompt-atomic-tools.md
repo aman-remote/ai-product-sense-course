@@ -69,7 +69,7 @@ Explain how you just used tools to do that task — in atoms, no jargon, every t
 > "Three words became a finished task because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on a handful of atomic tools — read, write, search, execute — that's it. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and many coding agents."
 
 **What next?**
-- **A)** Lesson 5 — markdown & directories as an agent interface
+- **A)** Lesson 5 — Onboard Your AI Agent with AGENTS.md (system prompts & persistent memory)
 - **B)** Design your own atomic tool set for a product you're building
 - **C)** Try more vague prompts and watch the tool sequence each time
 

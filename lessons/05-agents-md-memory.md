@@ -1,4 +1,4 @@
-# 6. Give Your Agents Memory: AGENTS.md → System Prompts & Persistent Memory
+# 5. Onboard Your AI Agent with AGENTS.md → System Prompts & Persistent Memory
 
 > **Magic Moment:** You watch one line in a text file change the agent's entire personality — then realize that text file IS the system prompt, the same mechanism behind every Custom GPT, every Claude Project, every production AI product.
 
@@ -74,7 +74,7 @@ Then start a fresh chat and test it on a real decision you're facing — first s
 > "AGENTS.md is the 'README for agents' — who you are, how to work with you, what matters — loaded on every new chat. The hierarchy (global → project → subdirectory) merges into one system prompt so you never repeat yourself. Edit the file, start a new chat, see different behavior — that's the whole loop. It's the exact mechanism behind every Custom GPT, Claude Project, and production AI product's personality."
 
 **What next?**
-- **A)** Lesson 7 — plan first, build second (plans & feedback loops)
+- **A)** Lesson 6 — Markdown Is the Interface for LLMs (structured text as interface)
 - **B)** Keep refining your AGENTS.md — goals, voice, decision preferences
 - **C)** Set up nested AGENTS.md files for different parts of your project
 

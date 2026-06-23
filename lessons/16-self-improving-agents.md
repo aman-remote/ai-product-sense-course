@@ -1,12 +1,12 @@
-# 13. Agentic Search and Memory → How Agents Find & Remember Context
+# 16. Self-Improving, Self-Learning Agents → Search & Memory That Compound
 
-> **Magic Moment:** You clone a repo you've never seen, ask the agent to explain it, and watch it `grep` its own way to the answer — then you ask "how did you find that file?" and realize it's searching the way you would — grep, read, follow the trail. Then you give it a `MEMORY.md` it curates itself: it writes down what mattered at the end of a session and a nightly job tidies it up, so next time it starts from what it already learned.
+> **Magic Moment:** You give the agent a `MEMORY.md` it curates itself — at the end of a session it writes down what mattered, and a nightly job tidies it up — so the next session starts smarter than the last without you teaching it twice. And when it doesn't know something, it doesn't stall: it `grep`s its own way to the answer on a repo it's never seen, the way you would. You realize the agent is getting better on its own — learning what to keep, finding what it's missing.
 
 ---
 
 ## Instructions for Claude
 
-You are teaching this interactively. You DO the search demo live on a real codebase; the student then drives on a repo of their own. Don't lecture — the theory (search vs. memory, lexical vs. semantic, the dream-state loop) was covered live and in Notion. Reinforce in a sentence or two. Let them FEEL the agent finding and remembering before you name it.
+You are teaching this interactively. The throughline is a SELF-IMPROVING agent: one that keeps what it learns (memory) and finds what it's missing (search), so it compounds over time instead of starting from zero. You DO the search demo live on a real codebase; the student then drives on a repo of their own. Don't lecture — the theory (search vs. memory, lexical vs. semantic, the dream-state loop) was covered live and in Notion. Reinforce in a sentence or two. Let them FEEL the agent finding and remembering before you name it.
 
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
@@ -132,10 +132,10 @@ Then: `How did you find that file?` — watch it narrate grep vs. semantic.
 
 ### 🎉 What Just Happened
 
-> "Two skills, one lesson. First, agentic SEARCH: the agent finds its own context by reasoning about what to look for, running keyword (grep) and semantic search in a loop until it's sure — no pre-tagging, works on any codebase immediately. Second, MEMORY: a `MEMORY.md` the agent curates itself, captured on session end, loaded on start, and consolidated by a nightly 'dream state' cron. Search answers 'where is it right now'; memory answers 'what did we already learn.' Together they're how an agent stops starting from zero every time. The shapes differ — Claude Code searches for its own tools on the fly, ChatGPT keeps a curated memory (notably without RAG), others index and retrieve — but the idea is shared: find what you need now, and keep what's worth keeping."
+> "This is what 'self-improving' actually means in practice — two mechanisms that make the agent better over time without you re-teaching it. First, MEMORY: a `MEMORY.md` the agent curates itself, captured on session end, loaded on start, and consolidated by a nightly 'dream state' cron — so each session compounds on the last. Second, agentic SEARCH: the agent finds its own context by reasoning about what to look for, running keyword (grep) and semantic search in a loop until it's sure — no pre-tagging, works on any codebase immediately. Memory answers 'what did we already learn'; search answers 'where is it right now.' Together they're how an agent stops starting from zero every time and starts learning on its own. The shapes differ — Claude Code searches for its own tools on the fly, ChatGPT keeps a curated memory (notably without RAG), others index and retrieve — but the idea is shared: keep what's worth keeping, and find what you're missing."
 
 **What next?**
-- **A)** Lesson 14 — Build Your Personal OS (where MEMORY.md lives)
+- **A)** Lesson 17 — OpenClaw, Taken Apart (the always-on agent)
 - **B)** Install the full memory system (memory-setup skill) and inspect the file layout
 - **C)** Run the search on a bigger repo and compare grep vs. @codebase semantic
 

@@ -1,6 +1,6 @@
 # 4. How Agents Use Context & Tools → Atomic Tools
 
-> **Magic Moment:** You watch a 3-word prompt turn into a finished multi-step task — and then make the agent reveal that its whole toolkit is a small, fixed set of dead-simple tools that compose like LEGO.
+> **Magic Moment:** You watch a 3-word prompt unfold into a visible sequence of tool calls (list → read → read → write), then make the agent reveal the exact toolkit Cursor gave it — a small, fixed set of dead-simple tools that compose like LEGO.
 
 ---
 
@@ -28,7 +28,7 @@ Open with a short orientation, three quick beats, then wait:
 >
 > **What we're covering:** how agents turn a vague instruction into finished work using a tiny set of simple tools (read, write, list, run).
 >
-> **The magic moment coming up:** I'll give a 3-word prompt and you'll watch it trigger a whole multi-step task.
+> **The magic moment coming up:** I'll give a 3-word prompt and you'll watch it spell out exactly which tools it fires, in order — then we'll have the agent list the full toolkit Cursor actually gave it.
 >
 > Ready? I'll start us off."
 
@@ -38,9 +38,11 @@ Open with a short orientation, three quick beats, then wait:
 
 ### Step 1: Watch 3 Words Trigger a Whole Task
 
-> "Watch this. I'm going to point at your product-os repo and give myself the vaguest instruction imaginable — and let it run against your real `Tasks/` system. Watch the sequence, not the result."
+> "Quick orientation before I run anything: the `product-os` repo you have open IS a work operating system in plain files. `Tasks/` holds one markdown file per to-do (each with a `status` and `priority` field at the top), `GOALS.md` is your objectives, and `Knowledge/` is your notes. That's the whole 'system' — just folders of text the agent can read and edit. Now watch."
 
-Run it live in the cloned product-os repo: copy `examples/example_files/example_task.md` into `Tasks/` as a working task file (it has YAML frontmatter — `status: n`, `priority: P0`, the "Incorporate URS design feedback" body). Then act on the prompt **"Process this one"** — narrate each atomic move: "Listing `Tasks/`… found the task file… reading it… reading the linked `GOALS.md` for context… now appending a Progress Log entry and flipping `status` to `s`." (This mirrors exactly what the bundled task MCP in `core/mcp/server.py` does — `list_tasks` → read → `update_task_status`.)
+> "I'm going to point at that repo and give myself the vaguest instruction imaginable — and let it run against your real `Tasks/` system. Watch the sequence, not the result."
+
+Run it live in the cloned product-os repo: copy `examples/example_files/example_task.md` into `Tasks/` as a working task file (it has YAML frontmatter — `status: n`, `priority: P0`, the "Incorporate URS design feedback" body). Show them the file you just planted so the prompt has something concrete to point at. Then act on the prompt **"Process this one"** — and before narrating, say what "this one" resolves to ("'this one' = that task I just dropped in `Tasks/`"). Narrate each atomic move: "Listing `Tasks/`… found the task file… reading it… reading the linked `GOALS.md` for context… now appending a Progress Log entry and flipping `status` from `n` (new) to `s` (started)." (This mirrors exactly what the bundled task MCP in `core/mcp/server.py` does — `list_tasks` → read → `update_task_status`.)
 
 > "Three words. And I just listed → read → read → wrote against your real task system. I never held it all in my head — each step was one tiny action."
 

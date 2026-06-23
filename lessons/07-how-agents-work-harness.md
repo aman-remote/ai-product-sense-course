@@ -28,7 +28,7 @@ Open with a short orientation, three quick beats, then wait:
 >
 > **What we're covering:** what an agent's 'harness' is — the identity, tools, rules, and memory wrapped around the raw model.
 >
-> **The magic moment coming up:** I'll have the agent describe its own harness, then we'll see your product-os repo IS one.
+> **The magic moment coming up:** I'll have the agent describe its own harness and diagram it, then we'll see your product-os repo IS one.
 >
 > Ready? I'll start us off."
 
@@ -43,6 +43,25 @@ Open with a short orientation, three quick beats, then wait:
 Live, narrate your own internals honestly: your system prompt — and point at how product-os IS the harness around you: the root `AGENTS.md` identity, the nested `Tasks/AGENTS.md` and `Knowledge/AGENTS.md` sub-prompts that activate by location, and `PRODUCT-PROCESS.md` acting as a router (phase → skill → key question) into `.cursor/skills/`. Then your tools (Read, Write, Edit, Bash, Search, AskUser, + the bundled task MCP in `core/mcp/server.py`), your rules, your retry/error handling, and the fact that the model itself is one swappable component.
 
 (No product-os / no Oura access? The repo's own committed `AGENTS.md`, nested `Tasks/AGENTS.md`/`Knowledge/AGENTS.md`, `PRODUCT-PROCESS.md`, and `.cursor/skills/` work for this with zero internal access — or fall back to `sample-personal-os/`.)
+
+After you've narrated it, mirror it back with this ASCII map of product-os as a harness:
+
+```
+        YOUR product-os REPO = THE HARNESS
+ ┌─────────────────────────────────────────────────┐
+ │  AGENTS.md ............ identity / system prompt  │
+ │  Tasks/AGENTS.md ...... sub-prompt (by location) │
+ │  Knowledge/AGENTS.md .. sub-prompt (by location) │
+ │  PRODUCT-PROCESS.md ... router: phase→skill→Q     │
+ │  .cursor/skills/ ...... skills it can load        │
+ │  core/mcp/server.py ... tools (list/create task)  │
+ │  + native tools: Read · Write · Edit · Bash       │
+ │  + rules · retry / error handling · UI            │
+ │  ┌─────────────────────────────────────────────┐ │
+ │  │  THE MODEL  (Opus / GPT — one swappable part)│ │
+ │  └─────────────────────────────────────────────┘ │
+ └─────────────────────────────────────────────────┘
+```
 
 > "Everything I just listed except 'the model' is the **harness** — prompt, nested sub-prompts, the process router, tools, rules, UI, the whole wrapper. product-os literally IS a harness, assembled in markdown. That's what makes me an agent instead of a chatbot. The harness IS the product."
 
@@ -68,6 +87,18 @@ Show this visual:
 ```
 
 > "LangGraph/CrewAI are *frameworks* to build a harness; Cursor/Claude Code ARE the harness, assembled. Think lumber vs. house: a framework is the lumber, a harness is the finished house you live in."
+
+Show this visual:
+
+```
+  FRAMEWORK (lumber)            HARNESS (the finished house)
+  LangGraph · CrewAI            Cursor · Claude Code · product-os
+  ┌───────────────┐             ┌───────────────────────────┐
+  │ ▭ ▭ raw parts │   build →   │  🏠 prompt + tools + rules │
+  │ ▭ ▭ you wire  │             │     + UI, ready to live in │
+  └───────────────┘             └───────────────────────────┘
+  you still build the product   you just move in & use it
+```
 
 > 🎬 **Director's note (never say aloud):** Wait for their response.
 ---
@@ -95,6 +126,18 @@ Tell me about your rules files in this repo — the root AGENTS.md and the neste
 ### 🎉 What Just Happened
 
 > "You took the agent apart: the model is one swappable component, and everything else — system prompt, tools, rules, retry logic, UI, model picker — is the harness, which is the product. Two truths fall out: when AI fails, the fix is almost always better *context*, not a smarter model; and 'memory' is just files (the conversation is short-term, disk is long-term — there's no magic memory module). Even autonomy is a harness setting, not a model feature."
+
+Show this visual:
+
+```
+   MEMORY = FILES (no magic module)
+   ┌── short-term ──────────────┐   ┌── long-term ───────────────┐
+   │ the chat / context window  │   │ files on disk              │
+   │ gone when you close it     │   │ AGENTS.md · Tasks/ · notes │
+   │                            │   │ re-read on every startup   │
+   └────────────────────────────┘   └────────────────────────────┘
+   want it remembered? → write it to a file
+```
 
 **What next?**
 > 🎬 **Director's note (never say aloud):** Deliver these as an AskUserQuestion choice — keep the A/B/C text as the option set.

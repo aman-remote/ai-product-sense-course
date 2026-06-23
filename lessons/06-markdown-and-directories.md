@@ -1,6 +1,6 @@
 # 6. Markdown Is the Interface for LLMs → Structured Text as Interface
 
-> **Magic Moment:** You watch a messy brain-dump backlog get parsed into organized task files with metadata, then queried like a database — "what are my P0s?" — with no app, no database, no installs. Then you do it to your own backlog.
+> **Magic Moment:** You watch a messy Oura PM brain-dump (readiness, sleep staging, Ring hardware review, membership churn) get parsed into organized task files with metadata, then queried like a database — "what are my P0s?" — with no app, no database, no installs. Then you do it to your own backlog.
 
 ---
 
@@ -28,7 +28,7 @@ Open with a short orientation, three quick beats, then wait:
 >
 > **What we're covering:** why plain markdown files and folders are the real interface between you and an agent.
 >
-> **The magic moment coming up:** I'll point the agent at a messy backlog and watch it triage it into clean, structured tasks.
+> **The magic moment coming up:** I'll point the agent at a messy Oura backlog and watch it triage it into clean, structured tasks.
 >
 > Ready? I'll start us off."
 
@@ -38,15 +38,28 @@ Open with a short orientation, three quick beats, then wait:
 
 ### Step 1: Watch Me Triage a Backlog
 
-> "Watch this. I'll take a messy brain-dump and turn it into a queryable system out of nothing but text files and folders."
+> "Watch this. I'll take a messy Oura PM brain-dump and turn it into a queryable system out of nothing but text files and folders."
 
-Run this live: open the repo's **`examples/example_files/BACKLOG_example.md`** — a real PM brain-dump (travel-readiness thesis, PFR deck Thursday, URS feedback, Amplitude question, etc.). Then triage it: create one `.md` per item under `Tasks/` with YAML frontmatter (title, category, priority P0-P3, status) — matching the shape in **`examples/example_files/example_task.md`** and the spec in **`Tasks/AGENTS.md`**.
+Run this live: open the repo's **`examples/example_files/BACKLOG_example.md`** if it exists, otherwise paste this Oura-specific brain-dump into a scratch `BACKLOG.md` and triage that. Either way the items should be Oura product work — for the demo, use these:
+
+```
+- readiness score feels off after travel — investigate timezone handling in the algo
+- sleep staging accuracy complaints in the app reviews, pull the latest batch
+- PFR deck for the Ring 4 hardware review — due Thursday, still rough
+- HRV trend card: PM spec for the new Vitals tab
+- membership churn spiking in month 2 — why are people canceling after the trial?
+- Cycle Insights: respond to the clinical team's feedback on the prediction copy
+- question for the data science team about the new temperature-deviation model
+- partnership intro from a sleep-clinic chain — follow up
+```
+
+Then triage it: create one `.md` per item under a scratch `Tasks/` with YAML frontmatter (title, category, priority P0-P3, status) — matching the shape in **`examples/example_files/example_task.md`** and the spec in **`Tasks/AGENTS.md`**.
 
 Open `examples/example_files/example_task.md` and point at the `---` block. Then query it live: "What are my P0 tasks and what should I focus on today?" Narrate: "I just read every file in Tasks/, filtered by the priority field, and summarized — that's a database query against a folder of markdown."
 
-(No product-os / no Oura access? The repo's own committed `examples/example_files/` work for this with zero internal access — or fall back to `sample-personal-os/BACKLOG.md`.)
+(No product-os / no Oura access? The Oura brain-dump above works standalone with zero internal access — or fall back to `sample-personal-os/BACKLOG.md`.)
 
-> 🎬 **Director's note (never say aloud):** Triage into a scratch/throwaway `Tasks/` location (or note you'd revert) so you don't clobber the repo's real `Tasks/`. Wait for their reaction.
+> 🎬 **Director's note (never say aloud):** Triage into a scratch/throwaway `Tasks/` location (or note you'd revert) so you don't clobber the repo's real `Tasks/`. Keep every generated task Oura-specific (Ring, readiness, sleep, HRV, membership, Cycle Insights) — never generic SaaS examples. Wait for their reaction.
 ---
 
 ### Step 2: Name It (briefly)
@@ -81,7 +94,7 @@ Triage my BACKLOG.md. Create one file per item under Tasks/, each with YAML fron
 ```
 Open a task file, check the frontmatter against `examples/example_files/example_task.md`, and see if you agree with the priorities.
 
-> "**Stretch:** `Review Tasks/ and reprioritize — the PFR deck is Thursday. Update the frontmatter and tell me what changed and why.` **Super-stretch:** run `git diff` to see exactly what the agent changed, and `git checkout` to revert a bad triage."
+> "**Stretch:** `Review Tasks/ and reprioritize — the Ring 4 hardware review deck is Thursday. Update the frontmatter and tell me what changed and why.` **Super-stretch:** run `git diff` to see exactly what the agent changed, and `git checkout` to revert a bad triage."
 
 (Precondition for the git steps: product-os is already a git repo, so commit first — `git add -A && git commit -m "before triage"` — so `git checkout` has a clean state to revert to.)
 

@@ -1,4 +1,4 @@
-# 17. Run a Team of Agents: Subagents → Context Segregation
+# 19. Run a Team of Agents: Subagents → Context Segregation
 
 > **Magic Moment:** You create a subagent that writes in your voice, and discover that "multi-agent system" — the most overhyped phrase in AI — boils down to "separate chat threads that share a filesystem." The magic word is just folders and fresh context windows.
 
@@ -8,6 +8,8 @@
 
 You are teaching this interactively. You deflate the buzzword live, then the student CREATES their own subagents and feels context segregation firsthand — that's the point of this lesson. Don't lecture — the core idea ("multi-agent" = shared filesystem across chat threads; context segregation fights context rot) was covered live and in Notion. Reinforce in a sentence.
 
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
+
 **Tool note:** subagents are native in BOTH tools and use the same format (a markdown file with YAML frontmatter). Cursor stores them in `.cursor/agents/` (it also reads `.claude/agents/` for compatibility); Claude Code uses `.claude/agents/`, invoked via `/agents`. Detect which tool the student is in and write the path that matches — don't send a Cursor user to Claude Code, they don't need to switch.
 
 CRITICAL RULES:
@@ -15,7 +17,7 @@ CRITICAL RULES:
 - **Keep each message SHORT** — 3-5 sentences max.
 - Demo live, then hand the student the keys to build their own subagents.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
@@ -55,36 +57,41 @@ WHY SUBAGENTS:
   4. Shareable              — commit to the repo, whole team gets it
 ```
 
-> "A bloated context window degrades quality — remember context rot from Lesson 12. Subagents give each task a clean room."
+> "A bloated context window degrades quality — remember context rot from Lesson 8. Subagents give each task a clean room."
 
 > 🎬 **Director's note (never say aloud):** Wait for their response.
 ---
 
 ### Step 3: Your Turn
 
-> "Now you build your own specialists and feel the difference directly."
+> "Now you build your own specialists and feel the difference directly. Your `product-os` already declares a *team* — the root `AGENTS.md` is a 'product super-IC dream-team': PM, Designer, Data Scientist, Engineer, Researcher, Product Marketer, all in one identity. You'll split one of those roles into its own subagent and watch context segregation do the work."
 
-**Important:** Create a subagent in your voice, then a second one with a different personality, and run the SAME task through both. (Tell them the agents-folder path for their tool: `.cursor/agents/` in Cursor, `.claude/agents/` in Claude Code — the examples below use the Cursor path; swap if they're in Claude Code.)
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which pair of specialists they want to spin up and contrast — offer the product-os dream-team roles as the choices, e.g. (a) Researcher vs Product Marketer, (b) Data Scientist vs Designer, (c) a voice email-writer vs a formal executive-writer, (d) sparring-partner reviewer vs feature-pitch drafter (both real `.cursor/skills/`). They just pick; don't make them type role names.
 
-First you need a couple of writing samples for it to learn from. If you don't have a `voice-samples/` folder yet, either paste 2-3 emails or messages you've actually written into a file, or (can't use work writing?) point it at the ready samples in repo-root `sample-personal-os/Knowledge/voice-samples/`. Then:
+**Important:** Create two subagents from your pick, then run the SAME task through both and compare. (Tell them the agents-folder path for their tool: `.cursor/agents/` in Cursor, `.claude/agents/` in Claude Code — the examples below use the Cursor path; swap if they're in Claude Code.)
+
+Each subagent should pull its context from real repo files — the role definitions in root `AGENTS.md`, the matching skill in `.cursor/skills/`, and the values/anti-patterns already written there. For a voice writer it needs writing samples: paste 2-3 emails or messages you've actually written into a file under `Knowledge/active/`, or (can't use work writing? no Oura access?) point it at the repo's committed `examples/example_files/` and `Knowledge/reference/`, or fall back to `sample-personal-os/Knowledge/voice-samples/`. Then:
 ```
-I want a subagent to help me write emails in my voice. Read my voice-samples/
-for context. Create the agent in .cursor/agents/email-writer.md
+I want a subagent that acts as the Researcher from our root AGENTS.md dream-team.
+Read AGENTS.md (the Researcher role + the product values/anti-patterns) and the
+.cursor/skills/jtbd-writing skill for its lens. Create the agent in
+.cursor/agents/researcher.md
 ```
 ```
-Create a "formal-writer" agent that writes professional, longer emails, more like
-an executive. Save to .cursor/agents/formal-writer.md
+Now create a "product-marketer" subagent — same dream-team, the Product Marketer
+role from AGENTS.md, using the .cursor/skills/story-spine skill for its lens. Save to
+.cursor/agents/product-marketer.md
 ```
 ```
-Draft an email to my manager pushing a deadline back one week — first with
-email-writer, then with formal-writer. Show me both.
+Take the travel-readiness bet in examples/example_files/example_knowledge.md and have
+each subagent give me its take — first researcher, then product-marketer. Show me both.
 ```
 
-**Stretch:** Wire two subagents together — one writes a draft, another reviews it.
+**Stretch:** Wire two subagents together — one drafts (e.g. `feature-pitch`), another reviews it as the `sparring-partner` skill does.
 
-**Super-stretch:** Design the full subagent team you'd want for your real job — what does each one know that the others shouldn't?
+**Super-stretch:** Design the full subagent team you'd want for your real Oura work — which of the six dream-team roles becomes its own subagent, and what does each one know that the others shouldn't?
 
-> 🎬 **Director's note (never say aloud):** Let them run it. React to the two drafts they got back.
+> 🎬 **Director's note (never say aloud):** Let them run it. React to the two clearly different takes they got back.
 ---
 
 ### 🎉 What Just Happened
@@ -92,9 +99,10 @@ email-writer, then with formal-writer. Show me both.
 > "Two clearly different drafts from one request — same model, different clean rooms, different instructions. That's context segregation: 'correlated vs uncorrelated context window' is just fancy for 'same chat thread vs fresh chat thread.' Decision rule going forward: explicit trigger → slash command; agent-recognized → skill; specialized delegated work → subagent. 'Agent teams' and 'swarms' are just your Personal OS with more named specialists reading and writing the same folders."
 
 **What next?**
-- **A)** Lesson 18 — OpenClaw, taken apart (the always-on agent)
-- **B)** Go deeper: wire two subagents together (one drafts, one reviews)
-- **C)** Apply it: design the subagent team you'd want for your real job
+> 🎬 **Director's note (never say aloud):** Deliver this as an AskUserQuestion — keep the A/B/C text below as the option set so they just pick.
+- **A)** Lesson 20 — Make It Compound (voice + compound returns)
+- **B)** Go deeper: wire two subagents together (one drafts a `feature-pitch`, one reviews as `sparring-partner`)
+- **C)** Apply it: split the six-role dream-team in `AGENTS.md` into the subagent team you'd want for your real Oura work
 
 **Share prompt:** "Bring back: which two specialist subagents would you build for your actual work, and what would each one know that the other shouldn't?"
 

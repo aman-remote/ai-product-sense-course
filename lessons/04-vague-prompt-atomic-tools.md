@@ -8,24 +8,26 @@
 
 You are teaching this interactively. You DO the demo live, then the student fires their own vague prompt and inspects the toolkit. Don't lecture — the theory (atomic tools, think→tool loop) was covered live and in Notion. Reinforce in a sentence or two as it happens.
 
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
+
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - Build/demo live: plant the files, run the vague prompt yourself, narrate the tool sequence as it happens.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
 ### Step 1: Watch 3 Words Trigger a Whole Task
 
-> "Watch this. I'm going to plant two files, then give myself the vaguest instruction imaginable and let it run. Watch the sequence, not the result."
+> "Watch this. I'm going to point at your product-os repo and give myself the vaguest instruction imaginable — and let it run against your real `Tasks/` system. Watch the sequence, not the result."
 
-Run it live: create a `song-experiment/` folder inside the student's current project with `song-lyrics.md` (a few original made-up song lines) and `song-workflow.md` (instructions: read the lyrics, rewrite as a pirate sea shanty (an old sailors' work song), save as `pirate-version.md`). Then act on the prompt **"Do this one"** — narrate each move: "Listing the directory… found a workflow file… reading it… reading the lyrics… now writing the shanty."
+Run it live in the cloned product-os repo: copy `examples/example_files/example_task.md` into `Tasks/` as a working task file (it has YAML frontmatter — `status: n`, `priority: P0`, the "Incorporate URS design feedback" body). Then act on the prompt **"Process this one"** — narrate each atomic move: "Listing `Tasks/`… found the task file… reading it… reading the linked `GOALS.md` for context… now appending a Progress Log entry and flipping `status` to `s`." (This mirrors exactly what the bundled task MCP in `core/mcp/server.py` does — `list_tasks` → read → `update_task_status`.)
 
-> "Three words. And I just listed → read → read → wrote a finished task. I never held it all in my head — each step was one tiny action."
+> "Three words. And I just listed → read → read → wrote against your real task system. I never held it all in my head — each step was one tiny action."
 
-> 🎬 **Director's note (never say aloud):** Wait for their reaction. Ask what they noticed about the sequence.
+> 🎬 **Director's note (never say aloud):** Wait for their reaction. Ask what they noticed about the sequence. (No product-os / no Oura access? The repo's own committed `examples/example_files/example_task.md` and `Tasks/` work for this, or fall back to `sample-personal-os/`.)
 ---
 
 ### Step 2: Name It (briefly)
@@ -35,9 +37,9 @@ Run it live: create a `song-experiment/` folder inside the student's current pro
 Show this visual:
 
 ```
-"Do this one"
+"Process this one"
    │
- THINK → list_dir → THINK → read_file → read_file → write_file → DONE
+ THINK → list_tasks → THINK → read_file → read_file → update_task_status → DONE
    each box = ONE atomic action; the model picks which & when
 ```
 
@@ -48,16 +50,18 @@ Show this visual:
 
 ### Step 3: Your Turn — Make the Agent Confess Its Toolkit
 
-> "Now you drive. In your own agent — Cursor chat or Claude Code, whichever you're in — make it narrate its own internals."
+> "Now you drive. In your own Cursor agent, make it narrate its own internals after running against your product-os files."
+
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which probe they want to run first — offer the product-os-anchored options as the choices: (a) have it re-narrate in atoms the `Tasks/` job it just did, (b) list its full toolkit (native tools + the task MCP tools from `core/mcp/server.py`: `list_tasks`, `create_task`, `update_task_status`…), (c) plant their own trap in `Tasks/` and fire a 3-word prompt, (d) show the literal `edit_file`/`apply_patch` schema. Then have them paste the matching prompt below. (No product-os / no Oura access? The repo's own committed `examples/example_files/example_task.md` and `Tasks/` work for this, or fall back to `sample-personal-os/`.)
 
 **Your turn — paste into your agent:**
 ```
 Explain how you just used tools to do that task — in atoms, no jargon, every term and command, step-by-step in order.
 ```
 
-**Important:** Then ask it to list its full toolkit: `What tools do you have access to? List every one with a one-line description. If you can't see your exact tool list, describe the standard set you operate with.` You'll see a short, simple list — and if it can't introspect, the standard set it describes makes the same point.
+**Important:** Then ask it to list its full toolkit: `What tools do you have access to? List every one with a one-line description — include both your native file tools and any task MCP tools from this repo's core/mcp/server.py. If you can't see your exact tool list, describe the standard set you operate with.` You'll see a short, simple list — and if it can't introspect, the standard set it describes makes the same point.
 
-**Stretch:** Plant your own trap (two files + a vague pointer) and fire your own 3-word prompt; watch the sequence.
+**Stretch:** Plant your own trap in `Tasks/` (copy `examples/example_files/example_task.md` and tweak it) plus a vague pointer, then fire your own 3-word prompt; watch the sequence.
 
 **Super-stretch:** Ask `Describe the edit_file (or apply_patch) tool you use — its name and parameters` and see how shockingly simple it is. (If it can't show the literal schema, the plain-English description still makes the point.)
 
@@ -66,10 +70,11 @@ Explain how you just used tools to do that task — in atoms, no jargon, every t
 
 ### 🎉 What Just Happened
 
-> "Three words became a finished task because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on a handful of atomic tools — read, write, search, execute — that's it. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and many coding agents."
+> "Three words became a finished task because the agent loops: THINK → TOOL → THINK → TOOL → DONE, and each tool is one obvious action. The whole agent runs on a handful of atomic tools — read, write, search, execute — that's it. Even product-os's bundled task MCP (`core/mcp/server.py`) is just a few more atoms: `list_tasks`, `create_task`, `update_task_status`. They win precisely *because* they're simple: cheap to explain to the model, yet composable into anything. Same architecture powers Pi, Codex, and many coding agents."
 
 **What next?**
-- **A)** Lesson 5 — markdown & directories as an agent interface
+> 🎬 **Director's note (never say aloud):** Deliver these as an AskUserQuestion choice — keep the A/B/C text as the option set so they just pick.
+- **A)** Lesson 5 — Onboard Your AI Agent with AGENTS.md (system prompts & persistent memory)
 - **B)** Design your own atomic tool set for a product you're building
 - **C)** Try more vague prompts and watch the tool sequence each time
 

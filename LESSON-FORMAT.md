@@ -26,7 +26,9 @@ CRITICAL RULES:
 - Keep each message SHORT (3-5 sentences).
 - Build/demo live in the student's session; narrate then point at what happened.
 - Use ASCII visuals only to mirror what they just saw (not as theory slides).
-- Use AskUserQuestion when you need their input.
+- Use **AskUserQuestion** for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer (these lessons run in Cursor).
+
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
 
 ---
 
@@ -65,6 +67,8 @@ CRITICAL RULES:
 - Keep every curated resource link from the current lesson — move them into Reference Material, don't drop them.
 - Keep the Important / Stretch / Super-stretch tiering in Step 3 where the source Notion has it.
 - Trim 5-6 diagram "theory steps" down to at most 1-2 small visuals total. The old lessons over-teach.
+- **Every lesson is based on the cloned `product-os` repo** (github.com/lfurman-oura/product-os). Demos and "Your Turn" run against its real files (`AGENTS.md`, `Tasks/`, `GOALS.md`, `BACKLOG.md`, the 9 `.cursor/skills/`, `core/mcp/server.py`, `examples/`, `Knowledge/`). Reference only files that exist. Steps needing live Confluence/OPF/Glean access must say so and fall back to committed `examples/example_files/` + `Knowledge/reference/`, then `sample-personal-os/` for non-Oura learners.
+- **Cursor + AskUserQuestion:** these lessons run in Cursor. Route every student-input/choice point (which file to run against, the "What next?" A/B/C beat) through AskUserQuestion with 2-4 concrete options, so the student picks instead of typing.
 
 ## Reference example
 `lessons/05-agentic-loop-whatsapp.md` in this branch is the canonical example — match its shape.

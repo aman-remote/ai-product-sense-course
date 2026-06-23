@@ -1,10 +1,12 @@
-# 7. Plan First, Build Second → Plans & Feedback Loops
+# 10. Make a Plan First → Plans & Feedback Loops
 
 > **Magic Moment:** You watch an agent interview you in Plan mode and write a spec to a text file *before* touching any code — and realize "Plan mode" isn't magic. It's a thin productization of a habit every great team already has: put the plan in writing so it survives context switches.
 
 ---
 
 ## Instructions for Claude
+
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
 
 You are teaching this interactively. You DO the prototyping live so the student SEES plan mode and a feedback loop happen, then they drive on their own idea. Don't lecture — the two primitives (plans = durable artifacts, feedback loops = self-sufficiency) were covered live and in Notion. Reinforce in a sentence as it happens.
 
@@ -13,17 +15,19 @@ CRITICAL RULES:
 - **Keep each message SHORT** — 3-5 sentences max.
 - Build live in the student's session. Narrate what you're about to do, do it, then point at what just happened.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
 ### Step 1: Watch Me Plan Before I Build
 
-> "Watch this. I'm going to prototype a tiny app — but I want you to watch what I do BEFORE I write a single line of code."
+> "Watch this. I'm going to add a tiny new ritual to your `product-os` repo — but watch what I do BEFORE I write a single file."
 
-Pick a simple, fun utility live (a tip splitter, a compound-interest calculator). In Plan mode, narrate as you go: ask yourself the clarifying questions one at a time, then write a `plan.md` spec to disk — without modifying any app files yet.
+First open the two plans the repo already ships: `examples/workflows/morning-standup.md` and `examples/workflows/weekly-review.md`. Point out they're just markdown plans on disk — durable rituals, not code. Then, in Plan mode, narrate as you go: ask the clarifying questions one at a time, then write a `plan.md` spec for a small new workflow (say, an "end-of-day shutdown" ritual modeled on those two) to disk — without modifying any repo files yet.
 
-> "See that? I interviewed the spec out, wrote it to a *file*, and didn't touch code yet. When this chat gets compacted or I start fresh tomorrow, the plan's still on disk. That's the whole trick — Plan mode is just 'ask questions, then save the spec to a file.'"
+> "See that? I read the repo's existing plans, interviewed the spec out, wrote it to a *file*, and didn't touch anything else yet. When this chat gets compacted or I start fresh tomorrow, the plan's still on disk — exactly like `morning-standup.md` already is. That's the whole trick — Plan mode is just 'ask questions, then save the spec to a file.'"
+
+> (No product-os / no Oura access? The repo's own committed `examples/workflows/` and `examples/example_files/` work for this, or fall back to `sample-personal-os/`.)
 
 > 🎬 **Director's note (never say aloud):** Wait for their reaction.
 ---
@@ -51,24 +55,29 @@ Feedback loops make agents SELF-SUFFICIENT:
 
 ### Step 3: Your Turn
 
-> "Now you drive. Pick a simple utility you'd actually find useful or funny — a DJ looper, a meal planner, a rent-vs-buy calculator. It does NOT need to be well-specified. We're going to riff."
+> "Now you drive. We'll plan-then-build a small new ritual for your own `product-os` repo — something you'd actually run."
+
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which workflow they want to plan — offer the product-os options as the choices, e.g. **A)** an "end-of-day shutdown" companion to `morning-standup.md`, **B)** a "meeting-prep" ritual that reads `GOALS.md` + `Tasks/`, **C)** a "decision log" workflow alongside `weekly-review.md`, **D)** their own idea. Don't make them type it free-form.
 
 **Important:** Put your agent in Plan mode (Shift+Tab in Claude Code; mode selector at the bottom of the chat box in Cursor) and describe it — voice/dictation encouraged:
 ```
-Build [your thing] using wiredjs (a hand-drawn-sketch-style UI library) and the
-Gloria Hallelujah font. Ask me questions one at a time if you need to.
+Plan a new workflow file for my product-os repo, modeled on the existing
+examples/workflows/morning-standup.md and weekly-review.md. Read those two
+first so it matches their shape (prompt → agent behavior → example → tips).
+Ask me questions one at a time, then write the plan to examples/workflows/ —
+don't wire anything else up yet.
 ```
 Then close the loop yourself:
 ```
-Run it and tell me if it works: read the terminal/console output, or open the
-HTML file in my browser and tell me what you see. If anything is broken, fix it
-and check again.
+Now read the file you wrote back to me and check it against morning-standup.md
+and weekly-review.md: same sections? links resolve? If anything's off, fix it
+and re-read to confirm.
 ```
-(If your agent has a browser/screenshot tool it'll use it; if not, opening the file and reading the console is the same feedback loop — don't worry if it can't literally screenshot.)
+(That re-read IS the feedback loop — the agent sees its own output and self-corrects, no browser needed.)
 
-**Stretch:** Add a real test or wire in server logs, then watch the agent run longer unattended.
+**Stretch:** Wire your new workflow into the routing table in `AGENTS.md` (the "Daily & weekly rituals" section) and have the agent confirm the link resolves.
 
-**Super-stretch:** Find the plan file on disk yourself (`Where did you save the plan? Show me the file.`) and confirm it's just text.
+**Super-stretch:** Find the plan file on disk yourself (`Where did you save the plan? Show me the file.`) and confirm it's just text sitting next to `morning-standup.md`.
 
 > 🎬 **Director's note (never say aloud):** Let them run it. React to what they observed.
 ---
@@ -78,7 +87,8 @@ and check again.
 > "Long-horizon agents work because of two things: plans written to files that survive compaction and new sessions, and feedback loops that let an agent see its own output and self-correct. This isn't a coding trick — Anthropic's Agent SDK uses the same pattern (an initializer agent sets up the environment, a coding agent makes incremental progress leaving clean artifacts each session). Most of the work is planning and alignment, not typing code — that's where agents win or lose."
 
 **What next?**
-- **A)** Lesson 8 — setup your agent harness (harness engineering)
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which way they want to go — offer A/B/C as the options, let them pick.
+- **A)** Lesson 11 — Create Workflows Using Skills (progressive disclosure)
 - **B)** Go deeper: add more feedback loops (tests, logs) and watch it run longer unattended
 - **C)** Apply it: map the plan + feedback loop for an AI feature you're building at work
 

@@ -1,4 +1,4 @@
-# 19. Make It Compound → Voice + Compound Returns
+# 20. Make It Compound → Voice + Compound Returns
 
 > **Magic Moment:** You feed the agent three things you actually wrote, and its next draft sounds like *you* instead of generic AI — and you realize the whole course was never about the eight hours of building. It was about starting a system that compounds every week from here.
 
@@ -8,12 +8,14 @@
 
 You are teaching this interactively — and this is the course finale. Two beats: (1) the student trains the agent on THEIR real writing so it sounds like them, (2) you set up the compounding habit. The hands-on is theirs to drive; you show the mechanic, then they personalize. End warm and motivating — they leave with a system, not just knowledge. Don't re-lecture; the theory (voice as context, compound returns) was covered live and in Notion.
 
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
+
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - The student trains the agent on their own writing — don't do it for them; guide and react.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
@@ -23,7 +25,7 @@ CRITICAL RULES:
 
 On a short sample (use one of theirs if they paste it, or a generic example first), read it and narrate the fingerprint live: "Sentence length here... punctuation habit there... how it opens and closes." 
 
-> "That's the whole mechanism — voice samples are just context files that shape the output. Same context-engineering primitive from Lesson 12, pointed at a person. Now let's point it at YOU."
+> "That's the whole mechanism — voice samples are just context files that shape the output. Same context-engineering primitive from Lesson 8, pointed at a person. Now let's point it at YOU."
 
 > 🎬 **Director's note (never say aloud):** Wait for their reaction.
 ---
@@ -49,13 +51,15 @@ to your own needs and making small changes. Each new model/tool
 
 ### Step 3: Your Turn — Train It on YOUR Writing
 
-> "Now you make it yours. Drop in 2-3 real things you've actually written — emails, Slack messages, a PRD intro, a LinkedIn post. Real, sent, unedited."
+> "Now you make it yours. Your `product-os` is already the compounding system — `GOALS.md`, `Tasks/`, `Knowledge/`, the nine `.cursor/skills/`, the dream-team `AGENTS.md`. The last missing piece is YOUR voice. Drop in 2-3 real things you've actually written — emails, Slack messages, a PRD intro, a LinkedIn post. Real, sent, unedited."
 
-(Can't share work writing? Use a public LinkedIn post, a personal blog snippet, a few lines you write fresh right now — even three sentences works — or the ready samples in repo-root `sample-personal-os/Knowledge/voice-samples/`.)
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which writing samples they'll feed it — offer concrete options as the choices, e.g. (a) 2-3 real emails/Slack messages they paste, (b) a public LinkedIn post + a blog snippet, (c) the repo's committed `examples/example_files/` (example_knowledge / weekly-update style) as stand-ins, (d) fall back to `sample-personal-os/Knowledge/voice-samples/`. They just pick; don't make them type the source.
 
-**Important:** Create the folder, add your samples, extract your voice, make it reusable, and test it:
+(Can't share work writing? No Oura access? Use a public LinkedIn post, a personal blog snippet, a few lines you write fresh right now — even three sentences works — or the repo's committed `examples/example_files/` and `Knowledge/reference/`, or fall back to `sample-personal-os/Knowledge/voice-samples/`.)
+
+**Important:** Add your samples under the repo's `Knowledge/`, extract your voice, wire it into the existing system, and test it:
 ```
-Create a folder called Knowledge/voice-samples
+Create the folder Knowledge/voice-samples
 ```
 (copy 2-3 real writing samples into `.md` files inside it, then:)
 ```
@@ -64,15 +68,18 @@ points — sentence length, tone, punctuation habits, words I lean on, how I ope
 and close.
 ```
 ```
-Turn this writing guide into a skill AND a subagent (with examples) for when I draft
-emails and posts. Explain when I'd use each — and should I add anything to AGENTS.md?
+Turn this writing guide into BOTH a skill under .cursor/skills/ AND a subagent under
+.cursor/agents/ (with examples) for when I draft emails and posts. The existing
+.cursor/skills/weekly-update skill already writes in my voice — align with it. Explain
+when I'd use each, and what (if anything) to add to AGENTS.md.
 ```
 ```
-Draft an email to my manager asking to push a deadline back one week. Use my voice.
+Draft an email to my manager asking to push a deadline back one week. Use my voice,
+and tie it to a priority in GOALS.md.
 ```
-Compare it to how you'd actually write it. Where's it off? Tell the agent — that feedback loop is how it gets more "you" over time.
+Compare it to how you'd actually write it. Where's it off? Tell the agent — that feedback loop is how it gets more "you" over time (and it's the same promotion idea behind `Knowledge/golden/`: keep what reads A+).
 
-**Stretch:** Have your Personal OS summarize your course takeaways in YOUR voice, then ask: based on these and my goals (if you built a GOALS.md earlier, point to it; otherwise just tell it your top goal), what should I prioritize next quarter at work?
+**Stretch:** Have your product-os summarize your course takeaways in YOUR voice, then ask: based on these and `GOALS.md` (the repo's goals file — fill in your top priority if it's still a placeholder), what should I prioritize next quarter at Oura?
 
 **Super-stretch:** Refine the voice guide twice with feedback and watch the third draft land closer.
 
@@ -84,8 +91,9 @@ Compare it to how you'd actually write it. Where's it off? Tell the agent — th
 > "You just made the agent sound like you with nothing but in-context examples — no fine-tuning, same primitive as Lesson 15's ICL lesson — and the feedback loop ('that's not quite me, here's why') makes it more you every week. But here's the real lesson: the 8-hour build was never the point. The compounding habit is. When new tech drops, your Step 1 will be to simulate it inside your Personal OS — so you evaluate anything new in minutes instead of chasing it. You came in with people sense; you leave with tech sense too. That combination, in one brain, is where the best product magic happens."
 
 **What next?**
+> 🎬 **Director's note (never say aloud):** Deliver this as an AskUserQuestion — keep the A/B/C text below as the option set so they just pick.
 - **A)** Revisit any lesson — say a number and we'll go deeper
-- **B)** Plan your next two weeks of small Personal OS upgrades
+- **B)** Plan your next two weeks of small `product-os` upgrades
 - **C)** Slice open an AI product you're curious about and design how you'd build it
 
 **Share prompt:** "Bring back: what's the ONE small upgrade you'll make to your Personal OS this week? Post it — and check back in a month to see how far it compounded."

@@ -1,4 +1,4 @@
-# 5. Markdown Is the Interface → Structured Text as Interface
+# 6. Markdown Is the Interface for LLMs → Structured Text as Interface
 
 > **Magic Moment:** You watch a messy brain-dump backlog get parsed into organized task files with metadata, then queried like a database — "what are my P0s?" — with no app, no database, no installs. Then you do it to your own backlog.
 
@@ -6,14 +6,16 @@
 
 ## Instructions for Claude
 
-You are teaching this interactively. You DO the demo on a sample backlog; the student then does it on THEIR real work. Don't lecture — the theory (markdown as LLMs' native tongue, location as metadata) was covered live and in Notion. Reinforce in a sentence or two as it happens.
+You are teaching this interactively. You DO the demo on the repo's example backlog; the student then does it on THEIR real work. Don't lecture — the theory (markdown as LLMs' native tongue, location as metadata) was covered live and in Notion. Reinforce in a sentence or two as it happens.
+
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
 
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - Build/demo live in the student's session. Narrate what you're about to do, do it, then point at what just happened.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
@@ -21,11 +23,13 @@ CRITICAL RULES:
 
 > "Watch this. I'll take a messy brain-dump and turn it into a queryable system out of nothing but text files and folders."
 
-Run this live: create `md-demo/BACKLOG.md` inside the student's current project with ~10 raw, unstructured items (mix priorities/categories — "fix mobile notif bug", "P0: board demo prep Thursday", "competitor analysis", "write May investor update", "hire senior designer", etc.). Then triage it: create a `Tasks/` dir, one `.md` per item with YAML frontmatter (title, priority P0-P3, category, status), clearing BACKLOG.md after.
+Run this live: open the repo's **`examples/example_files/BACKLOG_example.md`** — a real PM brain-dump (travel-readiness thesis, PFR deck Thursday, URS feedback, Amplitude question, etc.). Then triage it: create one `.md` per item under `Tasks/` with YAML frontmatter (title, category, priority P0-P3, status) — matching the shape in **`examples/example_files/example_task.md`** and the spec in **`Tasks/AGENTS.md`**.
 
-Open one task file and point at the `---` block. Then query it live: "What are my P0 tasks and what should I focus on today?" Narrate: "I just read every file in Tasks/, filtered by the priority field, and summarized — that's a database query against a folder of markdown."
+Open `examples/example_files/example_task.md` and point at the `---` block. Then query it live: "What are my P0 tasks and what should I focus on today?" Narrate: "I just read every file in Tasks/, filtered by the priority field, and summarized — that's a database query against a folder of markdown."
 
-> 🎬 **Director's note (never say aloud):** Wait for their reaction.
+(No product-os / no Oura access? The repo's own committed `examples/example_files/` work for this with zero internal access — or fall back to `sample-personal-os/BACKLOG.md`.)
+
+> 🎬 **Director's note (never say aloud):** Triage into a scratch/throwaway `Tasks/` location (or note you'd revert) so you don't clobber the repo's real `Tasks/`. Wait for their reaction.
 ---
 
 ### Step 2: Name It (briefly)
@@ -35,10 +39,10 @@ Open one task file and point at the `---` block. Then query it live: "What are m
 Show this visual:
 
 ```
-project/
-├── Tasks/      ← "actionable"   (frontmatter = queryable fields)
-├── Knowledge/  ← "reference"
-├── Archive/    ← "done"         (move here = mark done, no edit)
+product-os/
+├── Tasks/      ← "actionable"   (YAML frontmatter = queryable fields)
+├── Knowledge/  ← "reference"    (active/ · golden/ · reference/)
+├── BACKLOG.md  ← "raw capture"  (process → Tasks/)
 └── GOALS.md    ← "what matters now"
 The NAMES and LOCATIONS are the explanation. Git = version control, free.
 ```
@@ -52,15 +56,17 @@ The NAMES and LOCATIONS are the explanation. Git = version control, free.
 
 > "Now do it to YOUR real work. This is the point where it stops being a demo."
 
-**Important:** In your own project, dump a real brain-dump into `BACKLOG.md` — actual tasks from your job. Then run:
-```
-Triage my backlog. Create a Tasks/ directory with one file per item, each with YAML frontmatter: title, priority (P0-P3), category, status. Use your judgment on priority. Then tell me my P0s and what to focus on today.
-```
-Open a task file, check the frontmatter, and see if you agree with the priorities.
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion what they want to triage — offer the product-os options as the choices: (a) dump their real tasks into the repo's `BACKLOG.md` and triage that, (b) re-run on the committed `examples/example_files/BACKLOG_example.md`, (c) point at an existing folder of their notes. Then give them the prompt below.
 
-> "**Stretch:** `Review Tasks/ and reprioritize — the board meeting is Thursday. Update the frontmatter and tell me what changed and why.` **Super-stretch:** run `git diff` to see exactly what the agent changed, and `git checkout` to revert a bad triage."
+**Important:** In your cloned `product-os`, drop a real brain-dump into `BACKLOG.md` — actual tasks from your job. Then run:
+```
+Triage my BACKLOG.md. Create one file per item under Tasks/, each with YAML frontmatter matching Tasks/AGENTS.md: title, category, priority (P0-P3), status. Use your judgment on priority. Then tell me my P0s and what to focus on today.
+```
+Open a task file, check the frontmatter against `examples/example_files/example_task.md`, and see if you agree with the priorities.
 
-(Precondition for the git steps: if this folder isn't a git repo yet, run `git init` and `git add -A && git commit -m "before triage"` first — otherwise `git checkout` has nothing to revert to and could discard your only copy.)
+> "**Stretch:** `Review Tasks/ and reprioritize — the PFR deck is Thursday. Update the frontmatter and tell me what changed and why.` **Super-stretch:** run `git diff` to see exactly what the agent changed, and `git checkout` to revert a bad triage."
+
+(Precondition for the git steps: product-os is already a git repo, so commit first — `git add -A && git commit -m "before triage"` — so `git checkout` has a clean state to revert to.)
 
 > 🎬 **Director's note (never say aloud):** Let them run it. React to what their triage produced.
 ---
@@ -70,9 +76,10 @@ Open a task file, check the frontmatter, and see if you agree with the prioritie
 > "You turned unstructured text into a structured, queryable system with one sentence. YAML frontmatter = database fields; the markdown body = rich content; the directory tree = relationships; filenames = primary keys; git = free version control. You don't need Notion, Jira, or Airtable for an agent to manage your work — markdown + directories IS the interface, the same way it reads and writes code."
 
 **What next?**
-- **A)** Lesson 6 — AGENTS.md and persistent memory
-- **B)** Build out your real task system with more of your actual work
-- **C)** Try more queries — "What outreach is overdue?" or "Draft a weekly summary from my tasks"
+> 🎬 **Director's note (never say aloud):** Deliver these as an AskUserQuestion choice — keep the A/B/C text as the option set.
+- **A)** Lesson 7 — Setup Your Agent Harness (harness engineering)
+- **B)** Build out your real `Tasks/` system with more of your actual work
+- **C)** Try more queries — "What's blocked?" or "Draft a weekly summary from my Tasks/"
 
 **Share prompt:** "Bring back: a screenshot of your Tasks/ directory after triage. How many P0s did the agent find, and did you agree with its prioritization?"
 

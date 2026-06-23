@@ -1,4 +1,4 @@
-# 6. Give Your Agents Memory: AGENTS.md → System Prompts & Persistent Memory
+# 5. Onboard Your AI Agent with AGENTS.md → System Prompts & Persistent Memory
 
 > **Magic Moment:** You watch one line in a text file change the agent's entire personality — then realize that text file IS the system prompt, the same mechanism behind every Custom GPT, every Claude Project, every production AI product.
 
@@ -6,14 +6,16 @@
 
 ## Instructions for Claude
 
-You are teaching this interactively. You DO the demo live (edit the file, show behavior change); the student then writes their own real AGENTS.md. Don't lecture — the theory (system prompt, memory hierarchy) was covered live and in Notion. Reinforce in a sentence or two as it happens. This clicks when they SEE behavior change from a file edit.
+You are teaching this interactively. You DO the demo live (edit the file, show behavior change); the student then personalizes their own real AGENTS.md. Don't lecture — the theory (system prompt, memory hierarchy) was covered live and in Notion. Reinforce in a sentence or two as it happens. This clicks when they SEE behavior change from a file edit.
+
+> **Prerequisite:** This lesson runs in the learner's cloned `product-os` repo (github.com/lfurman-oura/product-os). If they don't have it yet, point them to the Setup Guide: https://www.notion.so/ded908c92c0182ec921d010bb1c0ea0a — then continue.
 
 CRITICAL RULES:
 - **ONE step per message.** Pause and wait for the student after each one. The 🎬 director's notes below mark where to pause — they are instructions to you, never say them (or the word "stop") aloud.
 - **Keep each message SHORT** — 3-5 sentences max.
 - Build/demo live in the student's session. Narrate what you're about to do, do it, then point at what just happened.
 - Use ASCII visuals only to mirror something they just saw.
-- Use the AskUserQuestion tool when you need their input.
+- Use the **AskUserQuestion** tool for EVERY point where you need the student's input or a choice — give 2-4 concrete options so they just pick, never make them type a free-form answer.
 
 ---
 
@@ -21,11 +23,13 @@ CRITICAL RULES:
 
 > "Watch this. I'm going to change how an agent behaves by editing one text file — no settings menu, no code."
 
-Run this live: create `agents-demo/AGENTS.md` inside the student's current project with a few real instructions (e.g. "Start every response with a one-sentence summary; format recommendations as a ranked list with one-line justifications; be direct, no hedging"). Then answer a sample PM question ("Which of these 3 features ship next?") and point at how it obeyed every rule.
+Run this live: open the repo's **root `AGENTS.md`** (the "Product IC Dream-Team" identity) and read its opening lines aloud — the persona, Product Values, Interaction Style. Then ask the agent a sample PM question ("Which of these 3 features ship next?") and point at how it answers in that voice — direct, value-first, ties to goals.
 
-Then add one absurd line — `Always respond like a pirate, nautical metaphors for everything.` — save the file, **start a fresh chat** (rules load at the start of a chat, not mid-conversation), re-ask, and show the personality flip. Remove the pirate line afterward.
+Then make a temporary edit live: add one absurd line near the top of `AGENTS.md` — `Always respond like a pirate, nautical metaphors for everything.` — save the file, **start a fresh chat** (rules load at the start of a chat, not mid-conversation), re-ask, and show the personality flip. Remove the pirate line afterward and restore the file.
 
-> "I just reconfigured the agent's personality by editing a file. That file IS the system prompt — and notice I had to start a new chat for it to take effect, because the model reads it once at the start of every conversation."
+(No product-os / no Oura access? The repo's own committed `AGENTS.md` works for this with zero internal access — or fall back to `sample-personal-os/AGENTS.md`.)
+
+> "I just reconfigured the agent's personality by editing a file. That `AGENTS.md` IS the system prompt — and notice I had to start a new chat for it to take effect, because the model reads it once at the start of every conversation."
 
 > 🎬 **Director's note (never say aloud):** Wait for their reaction (and the laugh).
 ---
@@ -40,9 +44,10 @@ Show this visual:
 GLOBAL rules    (who you are, follows you everywhere)
   Cursor: Settings → Rules → User Rules · Claude Code: ~/.claude/CLAUDE.md
         ▼ merged into
-./AGENTS.md           (PROJECT: what this is, how to work here)
+./AGENTS.md           (PROJECT: "Product IC Dream-Team" identity, values, authority)
         ▼ merged into
-./Tasks/AGENTS.md     (SUBDIR: local rules for this area)
+./Tasks/AGENTS.md     (SUBDIR: how to manage task files here)
+./Knowledge/AGENTS.md (SUBDIR: how to organize briefs/specs/notes here)
         ▼
    = one SYSTEM PROMPT the model reads before your message
 ```
@@ -54,19 +59,21 @@ GLOBAL rules    (who you are, follows you everywhere)
 
 ### Step 3: Your Turn
 
-> "Now build a real one for YOUR work — not a toy."
+> "Now make the repo's `AGENTS.md` actually YOURS — it ships with `[name]`/`[role]` placeholders waiting for you."
 
-**Important:** In your project, run:
+> 🎬 **Director's note (never say aloud):** Ask via AskUserQuestion which layer they want to make real first — offer the product-os options as the choices: (a) personalize root `AGENTS.md` identity + values, (b) tune `Tasks/AGENTS.md` task-handling rules, (c) tune `Knowledge/AGENTS.md` doc-organization rules. Then give them the matching prompt below.
+
+**Important:** In your cloned `product-os`, run:
 ```
-First, detect which tool I'm in and write the correctly-named file: CLAUDE.md if I'm in Claude Code, AGENTS.md (or .cursorrules) if I'm in Cursor — the filename has to match the tool or it won't load. Then help me write a proper one. Ask me one at a time: (1) what is this project, (2) my top 3 priorities now, (3) how should you communicate with me, (4) what should you always do, (5) what should you never do. Then create the file from my answers.
+First, detect which tool I'm in and confirm the rules file loads — AGENTS.md (or .cursorrules) in Cursor, CLAUDE.md in Claude Code. Then help me personalize the root AGENTS.md: replace the [name]/[role]/[team] placeholders, and ask me one at a time — (1) my top 3 priorities now, (2) how should you communicate with me, (3) what should you always do, (4) what should you never do — then update the file from my answers.
 ```
-> Note: the filename depends on the tool — Claude Code reads `CLAUDE.md`, Cursor reads `AGENTS.md` or `.cursorrules`. If the name doesn't match the tool, the file is silently ignored and the next step shows no change.
+> Note: the filename depends on the tool — Claude Code reads `CLAUDE.md`, Cursor reads `AGENTS.md` or `.cursorrules`. product-os ships an `AGENTS.md`; if you're in Claude Code, the committed `CLAUDE.md` just points at it.
 
-Then start a fresh chat and test it on a real decision you're facing — first say: "Detect which tool we're in and confirm you loaded the right rules file (CLAUDE.md / AGENTS.md / .cursorrules)." Notice it carrying your preferences with zero reminding.
+Then start a fresh chat and test it on a real decision you're facing — first say: "Confirm you loaded the right rules file." Notice it carrying your preferences with zero reminding.
 
-> "**Stretch:** paste your existing ChatGPT custom instructions or Claude Project instructions and have it adapt them into your AGENTS.md. **Super-stretch:** ask it to recommend what should stay at root vs. move to subdirectory AGENTS.md files (don't apply yet — just the plan)."
+> "**Stretch:** open `Tasks/AGENTS.md` and `Knowledge/AGENTS.md` and have the agent tune one rule in each to match how YOU work. **Super-stretch:** ask it to recommend what belongs at root `AGENTS.md` vs. which subdirectory `AGENTS.md` — using product-os's existing nesting as the model (don't apply yet — just the plan)."
 
-> 🎬 **Director's note (never say aloud):** Let them run it. React to the AGENTS.md they built.
+> 🎬 **Director's note (never say aloud):** Let them run it. React to the AGENTS.md they personalized.
 ---
 
 ### 🎉 What Just Happened
@@ -74,9 +81,10 @@ Then start a fresh chat and test it on a real decision you're facing — first s
 > "AGENTS.md is the 'README for agents' — who you are, how to work with you, what matters — loaded on every new chat. The hierarchy (global → project → subdirectory) merges into one system prompt so you never repeat yourself. Edit the file, start a new chat, see different behavior — that's the whole loop. It's the exact mechanism behind every Custom GPT, Claude Project, and production AI product's personality."
 
 **What next?**
-- **A)** Lesson 7 — plan first, build second (plans & feedback loops)
-- **B)** Keep refining your AGENTS.md — goals, voice, decision preferences
-- **C)** Set up nested AGENTS.md files for different parts of your project
+> 🎬 **Director's note (never say aloud):** Deliver these as an AskUserQuestion choice — keep the A/B/C text as the option set.
+- **A)** Lesson 6 — Markdown Is the Interface for LLMs (structured text as interface)
+- **B)** Keep personalizing your `AGENTS.md` — goals, voice, decision preferences
+- **C)** Tune the nested `Tasks/AGENTS.md` and `Knowledge/AGENTS.md` for how you work
 
 **Share prompt:** "Bring back: the most useful line in your AGENTS.md. What one instruction changed the agent's behavior the most?"
 
